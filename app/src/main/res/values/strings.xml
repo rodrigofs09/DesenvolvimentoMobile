@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Acorde</string>
+    <string name="username">Nome de usuário</string>
+    <string name="password">Senha</string>
+    <string name="sign_in">Entrar</string>
+    <string name="invalid_username">Usuário inválido</string>
+    <string name="invalid_password">Senha inválida</string>
+    <string name="developer_name">ACORDE SÃO CARLOS</string>
 </resources>
