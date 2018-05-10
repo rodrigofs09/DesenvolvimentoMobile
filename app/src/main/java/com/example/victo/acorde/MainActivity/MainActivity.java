@@ -1,17 +1,22 @@
 package com.example.victo.acorde.MainActivity;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 
+import com.example.victo.acorde.EmGrupo.AtvGrupoActivity;
+import com.example.victo.acorde.Individual.AtvIndividualActivity;
 import com.example.victo.acorde.R;
 
 import java.util.Calendar;
@@ -22,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView mDisplayDate;
     private DatePickerDialog.OnDateSetListener mDateSetListener;
+
+    private int tipoAtividade; //Variável para selecionar o tipo de atividade
 
     public MainActivity(){
     }
@@ -38,8 +45,33 @@ public class MainActivity extends AppCompatActivity {
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mySpinner.setAdapter(myAdapter);
 
-        mDisplayDate = (TextView) findViewById(R.id.textView); //Declaração da TextView
+        mySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
+                setTipoAtividade(position);
+            }
 
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        final Button button = findViewById(R.id.buttonProximo);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                if(getTipoAtividade() == 0){ //Caso o tipo de atividade seja "Individual"
+                    Intent abrirIndividualActivity = new Intent(MainActivity.this , AtvIndividualActivity.class);
+                    startActivity(abrirIndividualActivity);
+                }
+                if(getTipoAtividade() == 1){ //Caso o tipo de atividade seja "Em Grupo"
+                    Intent abrirEmGrupoActivity = new Intent(MainActivity.this , AtvGrupoActivity.class);
+                    startActivity(abrirEmGrupoActivity);
+                }
+            }
+        });
+
+        mDisplayDate = (TextView) findViewById(R.id.textView); //Declaração da TextView
         //Setar o ClickListener para o TextView
         mDisplayDate.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -66,5 +98,13 @@ public class MainActivity extends AppCompatActivity {
                 mDisplayDate.setText(date);
             }
         };
+    }
+
+    public void setTipoAtividade(int i){
+        tipoAtividade = i;
+    }
+
+    public int getTipoAtividade(){
+        return tipoAtividade;
     }
 }

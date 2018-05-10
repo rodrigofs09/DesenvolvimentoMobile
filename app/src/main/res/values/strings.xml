@@ -9,6 +9,5 @@
     <string-array name="names">
         <item>Individual</item>
         <item>Em Grupo</item>
-        <item>Familiar</item>
     </string-array>
 </resources>
