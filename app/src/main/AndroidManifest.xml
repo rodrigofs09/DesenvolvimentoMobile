@@ -19,7 +19,11 @@
         <activity android:name=".Login.LoginActivity" />
         <activity android:name=".MainActivity.MainActivity" />
         <activity android:name=".Individual.AtvIndividualActivity" />
-        <activity android:name=".EmGrupo.AtvGrupoActivity"></activity>
+        <activity android:name=".EmGrupo.AtvGrupoActivity" />
+        <activity android:name=".Psicopedagoga.PsicopedagogaActivity" />
+        <activity android:name=".Nutricionista.NutricionistaActivity" />
+        <activity android:name=".EducadoraFisica.EducadoraFisicaActivity" />
+        <activity android:name=".EducadoraEspecial.EducadoraEspecialActivity"></activity>
     </application>
 
 </manifest>

@@ -15,8 +15,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 
+import com.example.victo.acorde.EducadoraEspecial.EducadoraEspecialActivity;
 import com.example.victo.acorde.EmGrupo.AtvGrupoActivity;
-import com.example.victo.acorde.Individual.AtvIndividualActivity;
 import com.example.victo.acorde.R;
 
 import java.util.Calendar;
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 if(getTipoAtividade() == 0){ //Caso o tipo de atividade seja "Individual"
-                    Intent abrirIndividualActivity = new Intent(MainActivity.this , AtvIndividualActivity.class);
+                    Intent abrirIndividualActivity = new Intent(MainActivity.this , EducadoraEspecialActivity.class);
                     startActivity(abrirIndividualActivity);
                 }
                 if(getTipoAtividade() == 1){ //Caso o tipo de atividade seja "Em Grupo"
