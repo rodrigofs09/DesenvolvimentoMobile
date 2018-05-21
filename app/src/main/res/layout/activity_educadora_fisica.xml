@@ -50,16 +50,279 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:hint="Encaminhamento" />
-        </LinearLayout>
 
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/editTextObservacao"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:hint="Observação" />
+            <TextView
+                android:id="@+id/textViewArco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Arco de Movimento" />
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editTextArco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:hint="[Adiciona Linha ao digitar ou clicar no botão]" />
+
+            <TextView
+                android:id="@+id/textViewForca"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Força Muscular" />
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editTextMMS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:hint="MMS" />
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editTextMMII"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:hint="MMII" />
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editTextTronco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:hint="Tronco" />
+
+            <TextView
+                android:id="@+id/textViewEquilibrio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Equilíbrio - Marcha com olho fechado" />
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editTextMarcha1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:hint="Primeira Tentativa" />
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editTextMarcha2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:hint="Segunda Tentativa" />
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editTextMarcha3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:hint="Terceira Tentativa" />
+
+            <TextView
+                android:id="@+id/textViewCoordenacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Coordenação Motora" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editTextPolichinelo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:hint="Qtd. Polichinelo"
+                    android:inputType="numberDecimal"/>
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editTextPolichineloObs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:hint="Observação" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editTextLego"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:hint="Qtd. Legos na Torre"
+                    android:inputType="numberDecimal"/>
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editTextLegoObs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:hint="Observação" />
+
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editTextPintar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:hint="Pintar o Quadro" />
+
+            <TextView
+                android:id="@+id/textViewCoordenacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Outras Informações" />
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editTextControle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:hint="Controle de Corpo" />
+
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editTextDimensaoC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:hint="Dimensão Corporal" />
+
+            <TextView
+                android:id="@+id/textViewDimensaoE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Dimensão Espacial" />
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editTextDimensaoFrente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:hint="Para Frente" />
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editTextDimensaoTras"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:hint="Para Trás" />
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editTextDimensaoDireito"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:hint="Direito" />
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editTextDimensaoEsquerdo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:hint="Esquerdo" />
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editTextDimensaoCima"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:hint="Para Cima" />
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editTextDimensaoBaixo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:hint="Para Baixo" />
+
+            <TextView
+                android:id="@+id/textViewFim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Finalização do Atendimento" />
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editTextObservacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:hint="Observações Gerais" />
+
+
+
+
+
+        </LinearLayout>
 
         <Button
             android:id="@+id/buttonFinalizar"
