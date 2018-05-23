@@ -25,241 +25,139 @@ public class EducadoraEspecialActivity extends AppCompatActivity {
 
     @BindView(R.id.RadioGroup01)
     RadioGroup comunicacaoVerbal;
-    @BindView(R.id.r1sim)
-    RadioButton comunicacaoVerbalSim;
-    @BindView(R.id.r1nao)
-    RadioButton comunicacaoVerbalNao;
+    RadioButton rComunicacaoVerbal;
 
     @BindView(R.id.RadioGroup02)
     RadioGroup segueInstrucoes;
-    @BindView(R.id.r2sim)
-    RadioButton segueInstrucoesSim;
-    @BindView(R.id.r2nao)
-    RadioButton segueInstrucoesNao;
+    RadioButton rSegueInstrucoes;
 
     @BindView(R.id.RadioGroup03)
     RadioGroup respondePerguntas;
-    @BindView(R.id.r3sim)
-    RadioButton respondePerguntasSim;
-    @BindView(R.id.r3nao)
-    RadioButton respondePerguntasNao;
+    RadioButton rRespondePerguntas;
 
     @BindView(R.id.RadioGroup04)
     RadioGroup imitaModelos;
-    @BindView(R.id.r4sim)
-    RadioButton imitaModelosSim;
-    @BindView(R.id.r4nao)
-    RadioButton imitaModelosNao;
+    RadioButton rImitaModelos;
 
     @BindView(R.id.RadioGroup05)
     RadioGroup permaneceTarefas;
-    @BindView(R.id.r5sim)
-    RadioButton permaneceTarefasSim;
-    @BindView(R.id.r5nao)
-    RadioButton permaneceTarefasNao;
+    RadioButton rPermaneceTarefas;
 
     @BindView(R.id.RadioGroup06)
     RadioGroup completaTarefas;
-    @BindView(R.id.r6sim)
-    RadioButton completaTarefasSim;
-    @BindView(R.id.r6nao)
-    RadioButton completaTarefasNao;
+    RadioButton rCompletaTarefas;
 
     @BindView(R.id.RadioGroup07)
     RadioGroup reconheceAtividades;
-    @BindView(R.id.r7sim)
-    RadioButton reconheceAtividadesSim;
-    @BindView(R.id.r7nao)
-    RadioButton reconheceAtividadesNao;
+    RadioButton rReconheceAtividades;
 
     @BindView(R.id.RadioGroup08)
     RadioGroup reconheceTrabalho;
-    @BindView(R.id.r8sim)
-    RadioButton reconheceTrabalhoSim;
-    @BindView(R.id.r8nao)
-    RadioButton reconheceTrabalhoNao;
+    RadioButton rReconheceTrabalho;
 
     @BindView(R.id.RadioGroup09)
     RadioGroup reconheceErro;
-    @BindView(R.id.r9sim)
-    RadioButton reconheceErroSim;
-    @BindView(R.id.r9nao)
-    RadioButton reconheceErroNao;
+    RadioButton rReconheceErro;
 
     @BindView(R.id.RadioGroup10)
     RadioGroup reconheceAlgo;
-    @BindView(R.id.r10sim)
-    RadioButton reconheceAlgoSim;
-    @BindView(R.id.r10nao)
-    RadioButton reconheceAlgoNao;
+    RadioButton rReconheceAlgo;
 
     @BindView(R.id.RadioGroup11)
     RadioGroup compreendeOrdemSimples;
-    @BindView(R.id.r11sim)
-    RadioButton compreendeOrdemSimplesSim;
-    @BindView(R.id.r11nao)
-    RadioButton compreendeOrdemSimplesNao;
+    RadioButton rCompreendeOrdemSimples;
 
     @BindView(R.id.RadioGroup12)
     RadioGroup compreendeOrdensComplexas;
-    @BindView(R.id.r12sim)
-    RadioButton compreendeOrdensComplexasSim;
-    @BindView(R.id.r12nao)
-    RadioButton compreendeOrdensComplexasNao;
+    RadioButton rCompreendeOrdensComplexas;
 
     @BindView(R.id.RadioGroup13)
     RadioGroup raciocinio;
-    @BindView(R.id.r13sim)
-    RadioButton raciocinioSim;
-    @BindView(R.id.r13nao)
-    RadioButton raciocinioNao;
+    RadioButton rRaciocinio;
 
     @BindView(R.id.RadioGroup14)
     RadioGroup memRemota;
-    @BindView(R.id.r14sim)
-    RadioButton memRemotaSim;
-    @BindView(R.id.r14nao)
-    RadioButton memRemotaNao;
+    RadioButton rMemRemota;
 
     @BindView(R.id.RadioGroup15)
     RadioGroup memRecente;
-    @BindView(R.id.r15sim)
-    RadioButton memRecenteSim;
-    @BindView(R.id.r15nao)
-    RadioButton memRecenteNao;
+    RadioButton rMemRecente;
 
     @BindView(R.id.RadioGroup16)
     RadioGroup memImediata;
-    @BindView(R.id.r16sim)
-    RadioButton memImediataSim;
-    @BindView(R.id.r16nao)
-    RadioButton memImediataNao;
+    RadioButton rMemImediata;
 
     @BindView(R.id.RadioGroup17)
     RadioGroup assimilaAtividades;
-    @BindView(R.id.r17sim)
-    RadioButton assimilaAtividadesSim;
-    @BindView(R.id.r17nao)
-    RadioButton assimilaAtividadesNao;
+    RadioButton rAssimilaAtividades;
 
     @BindView(R.id.RadioGroup18)
     RadioGroup verbalizaPensamentos;
-    @BindView(R.id.r18sim)
-    RadioButton verbalizaPensamentosSim;
-    @BindView(R.id.r18nao)
-    RadioButton verbalizaPensamentosNao;
+    RadioButton rVerbalizaPensamentos;
 
     @BindView(R.id.RadioGroup19)
     RadioGroup escreve;
-    @BindView(R.id.r19sim)
-    RadioButton escreveSim;
-    @BindView(R.id.r19nao)
-    RadioButton escreveNao;
+    RadioButton rEscreve;
 
     @BindView(R.id.RadioGroup20)
     RadioGroup consegueLer;
-    @BindView(R.id.r20sim)
-    RadioButton consegueLerSim;
-    @BindView(R.id.r20nao)
-    RadioButton consegueLerNao;
+    RadioButton rConsegueLer;
 
     @BindView(R.id.RadioGroup21)
     RadioGroup gestualizaMaos;
-    @BindView(R.id.r21sim)
-    RadioButton gestualizaMaosSim;
-    @BindView(R.id.r21nao)
-    RadioButton gestualizaMaosNao;
+    RadioButton rGestualizaMaos;
 
     @BindView(R.id.RadioGroup22)
     RadioGroup garatuja;
-    @BindView(R.id.r22sim)
-    RadioButton garatujaSim;
-    @BindView(R.id.r22nao)
-    RadioButton garatujaNao;
+    RadioButton rGaratuja;
 
     @BindView(R.id.RadioGroup23)
     RadioGroup assinaNome;
-    @BindView(R.id.r23sim)
-    RadioButton assinaNomeSim;
-    @BindView(R.id.r23nao)
-    RadioButton assinaNomeNao;
+    RadioButton rAssinaNome;
 
     @BindView(R.id.RadioGroup24)
     RadioGroup coloriFiguras;
-    @BindView(R.id.r24sim)
-    RadioButton coloriFigurasSim;
-    @BindView(R.id.r24nao)
-    RadioButton coloriFigurasNao;
+    RadioButton rColoriFiguras;
 
     @BindView(R.id.RadioGroup25)
     RadioGroup copiaLinhas;
-    @BindView(R.id.r25sim)
-    RadioButton copiaLinhasSim;
-    @BindView(R.id.r25nao)
-    RadioButton copiaLinhasNao;
+    RadioButton rCopiaLinhas;
 
     @BindView(R.id.RadioGroup26)
     RadioGroup escreveCaneta;
-    @BindView(R.id.r26sim)
-    RadioButton escreveCanetaSim;
-    @BindView(R.id.r26nao)
-    RadioButton escreveCanetaNao;
+    RadioButton rEscreveCaneta;
 
     @BindView(R.id.RadioGroup27)
     RadioGroup borracha;
-    @BindView(R.id.r27sim)
-    RadioButton borrachaSim;
-    @BindView(R.id.r27nao)
-    RadioButton borrachaNao;
+    RadioButton rBorracha;
 
     @BindView(R.id.RadioGroup28)
     RadioGroup reconheceCores;
-    @BindView(R.id.r28sim)
-    RadioButton reconheceCoresSim;
-    @BindView(R.id.r28nao)
-    RadioButton reconheceCoresNao;
+    RadioButton rReconheceCores;
 
     @BindView(R.id.RadioGroup29)
     RadioGroup reconheceAlfabeto;
-    @BindView(R.id.r29sim)
-    RadioButton reconheceAlfabetoSim;
-    @BindView(R.id.r29nao)
-    RadioButton reconheceAlfabetoNao;
+    RadioButton rReconheceAlfabeto;
 
     @BindView(R.id.RadioGroup30)
     RadioGroup reconheceLetras;
-    @BindView(R.id.r30sim)
-    RadioButton reconheceLetrasSim;
-    @BindView(R.id.r30nao)
-    RadioButton reconheceLetrasNao;
+    RadioButton rReconheceLetras;
 
     @BindView(R.id.RadioGroup31)
     RadioGroup fazPareamento;
-    @BindView(R.id.r31sim)
-    RadioButton fazPareamentoSim;
-    @BindView(R.id.r31nao)
-    RadioButton fazPareamentoNao;
+    RadioButton rFazPareamento;
 
     @BindView(R.id.RadioGroup32)
     RadioGroup reconheceNumeros;
-    @BindView(R.id.r32sim)
-    RadioButton reconheceNumerosSim;
-    @BindView(R.id.r32nao)
-    RadioButton reconheceNumerosNao;
+    RadioButton rReconheceNumeros;
 
     @BindView(R.id.RadioGroup33)
     RadioGroup nocaoTempo;
-    @BindView(R.id.r33sim)
-    RadioButton nocaoTempoSim;
-    @BindView(R.id.r33nao)
-    RadioButton nocaoTempoNao;
+    RadioButton rNocaoTempo;
 
     @BindView(R.id.RadioGroup34)
     RadioGroup possuiAtencao;
-    @BindView(R.id.r34sim)
-    RadioButton possuiAtencaoSim;
-    @BindView(R.id.r34nao)
-    RadioButton possuiAtencaoNao;
+    RadioButton rPossuiAtencao;
 
     @BindView(R.id.editTextObservacao)
     EditText observacao;
@@ -310,149 +208,46 @@ public class EducadoraEspecialActivity extends AppCompatActivity {
         int selecao33 = nocaoTempo.getCheckedRadioButtonId();
         int selecao34 = possuiAtencao.getCheckedRadioButtonId();
 
+        rComunicacaoVerbal = findViewById(selecao1);
+        rSegueInstrucoes = findViewById(selecao2);
+        rRespondePerguntas = findViewById(selecao3);
+        rImitaModelos = findViewById(selecao4);
+        rPermaneceTarefas = findViewById(selecao5);
+        rCompletaTarefas = findViewById(selecao6);
+        rReconheceAtividades = findViewById(selecao7);
+        rReconheceTrabalho = findViewById(selecao8);
+        rReconheceErro = findViewById(selecao9);
+        rReconheceAlgo = findViewById(selecao10);
+        rCompreendeOrdemSimples = findViewById(selecao11);
+        rCompreendeOrdensComplexas = findViewById(selecao12);
+        rRaciocinio = findViewById(selecao13);
+        rMemRemota = findViewById(selecao14);
+        rMemRecente = findViewById(selecao15);
+        rMemImediata = findViewById(selecao16);
+        rAssimilaAtividades = findViewById(selecao17);
+        rVerbalizaPensamentos = findViewById(selecao18);
+        rEscreve = findViewById(selecao19);
+        rConsegueLer = findViewById(selecao20);
+        rGestualizaMaos = findViewById(selecao21);
+        rGaratuja = findViewById(selecao22);
+        rAssinaNome = findViewById(selecao23);
+        rColoriFiguras = findViewById(selecao24);
+        rCopiaLinhas = findViewById(selecao25);
+        rEscreveCaneta = findViewById(selecao26);
+        rBorracha = findViewById(selecao27);
+        rReconheceCores = findViewById(selecao28);
+        rReconheceAlfabeto = findViewById(selecao29);
+        rReconheceLetras = findViewById(selecao30);
+        rFazPareamento = findViewById(selecao31);
+        rReconheceNumeros = findViewById(selecao32);
+        rNocaoTempo = findViewById(selecao33);
+        rPossuiAtencao = findViewById(selecao34);
+
         // Verifica o botao selecionado
-        if (selecao1 == comunicacaoVerbalSim.getId()) {
-            Toast.makeText(view.getContext(),
-                    comunicacaoVerbalSim.getText(),
+        Toast.makeText(view.getContext(),
+                rComunicacaoVerbal.getText(),
                     Toast.LENGTH_SHORT).show();
-        }
-        if (selecao1 == comunicacaoVerbalNao.getId()) {
-            Toast.makeText(view.getContext(),
-                    comunicacaoVerbalNao.getText(),
-                    Toast.LENGTH_SHORT).show();
-        }
-        if (selecao2 == segueInstrucoesSim.getId()) {
-        }
-        if (selecao2 == segueInstrucoesNao.getId()) {
-        }
-        if (selecao3 == respondePerguntasSim.getId()) {
-        }
-        if (selecao3 == respondePerguntasNao.getId()) {
-        }
-        if (selecao4 == imitaModelosSim.getId()) {
-        }
-        if (selecao4 == imitaModelosNao.getId()) {
-        }
-        if (selecao5 == permaneceTarefasSim.getId()) {
-        }
-        if (selecao5 == permaneceTarefasNao.getId()) {
-        }
-        if (selecao6 == completaTarefasSim.getId()) {
-        }
-        if (selecao6 == completaTarefasNao.getId()) {
-        }
-        if (selecao7 == reconheceAtividadesSim.getId()) {
-        }
-        if (selecao7 == reconheceAtividadesNao.getId()) {
-        }
-        if (selecao8 == reconheceTrabalhoSim.getId()) {
-        }
-        if (selecao8 == reconheceTrabalhoNao.getId()) {
-        }
-        if (selecao9 == reconheceErroSim.getId()) {
-        }
-        if (selecao9 == reconheceErroNao.getId()) {
-        }
-        if (selecao10 == reconheceAlgoSim.getId()) {
-        }
-        if (selecao10 == reconheceAlgoNao.getId()) {
-        }
-        if (selecao11 == compreendeOrdemSimplesSim.getId()) {
-        }
-        if (selecao11 == compreendeOrdemSimplesNao.getId()) {
-        }
-        if (selecao12 == compreendeOrdensComplexasSim.getId()) {
-        }
-        if (selecao12 == compreendeOrdensComplexasNao.getId()) {
-        }
-        if (selecao13 == raciocinioSim.getId()) {
-        }
-        if (selecao13 == raciocinioNao.getId()) {
-        }
-        if (selecao14 == memRemotaSim.getId()) {
-        }
-        if (selecao14 == memRemotaNao.getId()) {
-        }
-        if (selecao15 == memRecenteSim.getId()) {
-        }
-        if (selecao15 == memRecenteNao.getId()) {
-        }
-        if (selecao16 == memImediataSim.getId()) {
-        }
-        if (selecao16 == memImediataNao.getId()) {
-        }
-        if (selecao17 == assimilaAtividadesSim.getId()) {
-        }
-        if (selecao17 == assimilaAtividadesNao.getId()) {
-        }
-        if (selecao18 == verbalizaPensamentosSim.getId()) {
-        }
-        if (selecao18 == verbalizaPensamentosNao.getId()) {
-        }
-        if (selecao19 == escreveSim.getId()) {
-        }
-        if (selecao19 == escreveNao.getId()) {
-        }
-        if (selecao20 == consegueLerSim.getId()) {
-        }
-        if (selecao20 == consegueLerNao.getId()) {
-        }
-        if (selecao21 == gestualizaMaosSim.getId()) {
-        }
-        if (selecao21 == gestualizaMaosNao.getId()) {
-        }
-        if (selecao22 == garatujaSim.getId()) {
-        }
-        if (selecao22 == garatujaNao.getId()) {
-        }
-        if (selecao23 == assinaNomeSim.getId()) {
-        }
-        if (selecao23 == assinaNomeNao.getId()) {
-        }
-        if (selecao24 == coloriFigurasSim.getId()) {
-        }
-        if (selecao24 == coloriFigurasNao.getId()) {
-        }
-        if (selecao25 == copiaLinhasSim.getId()) {
-        }
-        if (selecao25 == copiaLinhasNao.getId()) {
-        }
-        if (selecao26 == escreveCanetaSim.getId()) {
-        }
-        if (selecao26 == escreveCanetaNao.getId()) {
-        }
-        if (selecao27 == borrachaSim.getId()) {
-        }
-        if (selecao27 == borrachaNao.getId()) {
-        }
-        if (selecao28 == reconheceCoresSim.getId()) {
-        }
-        if (selecao28 == reconheceCoresNao.getId()) {
-        }
-        if (selecao29 == reconheceAlfabetoSim.getId()) {
-        }
-        if (selecao29 == reconheceAlfabetoNao.getId()) {
-        }
-        if (selecao30 == reconheceLetrasSim.getId()) {
-        }
-        if (selecao30 == reconheceLetrasNao.getId()) {
-        }
-        if (selecao31 == fazPareamentoSim.getId()) {
-        }
-        if (selecao31 == fazPareamentoNao.getId()) {
-        }
-        if (selecao32 == reconheceNumerosSim.getId()) {
-        }
-        if (selecao32 == reconheceNumerosNao.getId()) {
-        }
-        if (selecao33 == nocaoTempoSim.getId()) {
-        }
-        if (selecao33 == nocaoTempoNao.getId()) {
-        }
-        if (selecao34 == possuiAtencaoSim.getId()) {
-        }
-        if (selecao34 == possuiAtencaoNao.getId()) {
-        }
+
     }
 
 }
