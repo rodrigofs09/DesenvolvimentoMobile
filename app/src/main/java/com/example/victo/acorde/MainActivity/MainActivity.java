@@ -17,6 +17,7 @@ import android.widget.TextView;
 
 import com.example.victo.acorde.EducadoraEspecial.EducadoraEspecialActivity;
 import com.example.victo.acorde.EmGrupo.AtvGrupoActivity;
+import com.example.victo.acorde.Nutricionista.NutricionistaActivity;
 import com.example.victo.acorde.R;
 
 import java.util.Calendar;
@@ -65,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(abrirIndividualActivity);
                 }
                 if(getTipoAtividade() == 1){ //Caso o tipo de atividade seja "Em Grupo"
-                    Intent abrirEmGrupoActivity = new Intent(MainActivity.this , AtvGrupoActivity.class);
+                    Intent abrirEmGrupoActivity = new Intent(MainActivity.this , NutricionistaActivity.class);
                     startActivity(abrirEmGrupoActivity);
                 }
             }

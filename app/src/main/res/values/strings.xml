@@ -4,6 +4,7 @@
     <string name="password">Senha</string>
     <string name="sign_in">Entrar</string>
     <string name="invalid_username">Usuário inválido</string>
+    <string name="invalid_name">Nome inválido</string>
     <string name="invalid_password">Senha inválida</string>
     <string name="developer_name">ACORDE SÃO CARLOS</string>
     <string-array name="names">

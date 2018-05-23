@@ -41,7 +41,7 @@
             android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="172dp"
-            android:text="Criar Atividade"
+            android:text="Criar Relatório"
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"

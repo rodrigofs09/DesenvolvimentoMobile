@@ -61,25 +61,26 @@
             android:layout_marginTop="8dp"
             android:text="Possui comunicação verbal?" />
 
-        <LinearLayout
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/RadioGroup01" >
 
-            <CheckBox
-                android:id="@+id/c1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sim" />
+        <RadioButton
+            android:id="@+id/r1sim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sim" />
 
-            <CheckBox
-                android:id="@+id/c2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:text="Não" />
+        <RadioButton
+            android:id="@+id/r1nao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="Não" />
 
-        </LinearLayout>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/textView2"
@@ -90,25 +91,26 @@
             android:layout_marginTop="8dp"
             android:text="Segue instruções?" />
 
-        <LinearLayout
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/RadioGroup02" >
 
-            <CheckBox
-                android:id="@+id/c3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sim" />
+        <RadioButton
+            android:id="@+id/r2sim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sim" />
 
-            <CheckBox
-                android:id="@+id/c4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:text="Não" />
+        <RadioButton
+            android:id="@+id/r2nao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="Não" />
 
-        </LinearLayout>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/textView3"
@@ -117,27 +119,28 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:text="Possui comunicação verbal?" />
+            android:text="Responde perguntas?" />
 
-        <LinearLayout
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/RadioGroup03" >
 
-            <CheckBox
-                android:id="@+id/c5"
+            <RadioButton
+                android:id="@+id/r3sim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sim" />
 
-            <CheckBox
-                android:id="@+id/c6"
+            <RadioButton
+                android:id="@+id/r3nao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:text="Não" />
 
-        </LinearLayout>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/textView4"
@@ -148,25 +151,26 @@
             android:layout_marginTop="8dp"
             android:text="Imita modelos?" />
 
-        <LinearLayout
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/RadioGroup04" >
 
-            <CheckBox
-                android:id="@+id/c7"
+            <RadioButton
+                android:id="@+id/r4sim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sim" />
 
-            <CheckBox
-                android:id="@+id/c8"
+            <RadioButton
+                android:id="@+id/r4nao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:text="Não" />
 
-        </LinearLayout>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/textView5"
@@ -177,25 +181,26 @@
             android:layout_marginTop="8dp"
             android:text="Permanece nas tarefas?" />
 
-        <LinearLayout
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/RadioGroup05" >
 
-            <CheckBox
-                android:id="@+id/c9"
+            <RadioButton
+                android:id="@+id/r5sim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sim" />
 
-            <CheckBox
-                android:id="@+id/c10"
+            <RadioButton
+                android:id="@+id/r5nao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:text="Não" />
 
-        </LinearLayout>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/textView6"
@@ -206,25 +211,26 @@
             android:layout_marginTop="8dp"
             android:text="Completa a tarefa em tempo apropriado e com desempenho?" />
 
-        <LinearLayout
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/RadioGroup06" >
 
-            <CheckBox
-                android:id="@+id/c11"
+            <RadioButton
+                android:id="@+id/r6sim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sim" />
 
-            <CheckBox
-                android:id="@+id/c12"
+            <RadioButton
+                android:id="@+id/r6nao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:text="Não" />
 
-        </LinearLayout>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/textView7"
@@ -235,25 +241,26 @@
             android:layout_marginTop="8dp"
             android:text="Reconhece quando sua atividade está correta ou incorreta?" />
 
-        <LinearLayout
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/RadioGroup07" >
 
-            <CheckBox
-                android:id="@+id/c13"
+            <RadioButton
+                android:id="@+id/r7sim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sim" />
 
-            <CheckBox
-                android:id="@+id/c14"
+            <RadioButton
+                android:id="@+id/r7nao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:text="Não" />
 
-        </LinearLayout>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/textView8"
@@ -264,25 +271,26 @@
             android:layout_marginTop="8dp"
             android:text="Reconhece quando seu trabalho está completo?" />
 
-        <LinearLayout
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/RadioGroup08" >
 
-            <CheckBox
-                android:id="@+id/c15"
+            <RadioButton
+                android:id="@+id/r8sim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sim" />
 
-            <CheckBox
-                android:id="@+id/c16"
+            <RadioButton
+                android:id="@+id/r8nao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:text="Não" />
 
-        </LinearLayout>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/textView9"
@@ -293,25 +301,26 @@
             android:layout_marginTop="8dp"
             android:text="Reconhece quando cometeu um erro?" />
 
-        <LinearLayout
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/RadioGroup09" >
 
-            <CheckBox
-                android:id="@+id/c17"
+            <RadioButton
+                android:id="@+id/r9sim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sim" />
 
-            <CheckBox
-                android:id="@+id/c18"
+            <RadioButton
+                android:id="@+id/r9nao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:text="Não" />
 
-        </LinearLayout>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/textView10"
@@ -322,25 +331,26 @@
             android:layout_marginTop="8dp"
             android:text="Reconhece quando algo necessita ser realizado?" />
 
-        <LinearLayout
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/RadioGroup10" >
 
-            <CheckBox
-                android:id="@+id/c19"
+            <RadioButton
+                android:id="@+id/r10sim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sim" />
 
-            <CheckBox
-                android:id="@+id/c110"
+            <RadioButton
+                android:id="@+id/r10nao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:text="Não" />
 
-        </LinearLayout>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/textView11"
@@ -351,25 +361,26 @@
             android:layout_marginTop="8dp"
             android:text="Compreensão de ordens simples:" />
 
-        <LinearLayout
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/RadioGroup11" >
 
-            <CheckBox
-                android:id="@+id/c111"
+            <RadioButton
+                android:id="@+id/r11sim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sim" />
 
-            <CheckBox
-                android:id="@+id/c112"
+            <RadioButton
+                android:id="@+id/r11nao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:text="Não" />
 
-        </LinearLayout>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/textView12"
@@ -380,25 +391,26 @@
             android:layout_marginTop="8dp"
             android:text="Compreensão de ordens complexas:" />
 
-        <LinearLayout
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/RadioGroup12" >
 
-            <CheckBox
-                android:id="@+id/c113"
+            <RadioButton
+                android:id="@+id/r12sim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sim" />
 
-            <CheckBox
-                android:id="@+id/c114"
+            <RadioButton
+                android:id="@+id/r12nao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:text="Não" />
 
-        </LinearLayout>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/textView13"
@@ -409,25 +421,26 @@
             android:layout_marginTop="8dp"
             android:text="Raciocinio:" />
 
-        <LinearLayout
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/RadioGroup13" >
 
-            <CheckBox
-                android:id="@+id/c115"
+            <RadioButton
+                android:id="@+id/r13sim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sim" />
 
-            <CheckBox
-                android:id="@+id/c116"
+            <RadioButton
+                android:id="@+id/r13nao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:text="Não" />
 
-        </LinearLayout>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/textView14"
@@ -438,25 +451,26 @@
             android:layout_marginTop="8dp"
             android:text="Memória remota:" />
 
-        <LinearLayout
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/RadioGroup14" >
 
-            <CheckBox
-                android:id="@+id/c117"
+            <RadioButton
+                android:id="@+id/r14sim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sim" />
 
-            <CheckBox
-                android:id="@+id/c118"
+            <RadioButton
+                android:id="@+id/r14nao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:text="Não" />
 
-        </LinearLayout>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/textView15"
@@ -467,25 +481,26 @@
             android:layout_marginTop="8dp"
             android:text="Memória recente:" />
 
-        <LinearLayout
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/RadioGroup15" >
 
-            <CheckBox
-                android:id="@+id/c119"
+            <RadioButton
+                android:id="@+id/r15sim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sim" />
 
-            <CheckBox
-                android:id="@+id/c120"
+            <RadioButton
+                android:id="@+id/r15nao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:text="Não" />
 
-        </LinearLayout>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/textView16"
@@ -496,25 +511,26 @@
             android:layout_marginTop="8dp"
             android:text="Memória imediata:" />
 
-        <LinearLayout
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/RadioGroup16" >
 
-            <CheckBox
-                android:id="@+id/c121"
+            <RadioButton
+                android:id="@+id/r16sim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sim" />
 
-            <CheckBox
-                android:id="@+id/c122"
+            <RadioButton
+                android:id="@+id/r16nao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:text="Não" />
 
-        </LinearLayout>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/textView17"
@@ -525,25 +541,26 @@
             android:layout_marginTop="8dp"
             android:text="Assimila atividades:" />
 
-        <LinearLayout
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/RadioGroup17" >
 
-            <CheckBox
-                android:id="@+id/c123"
+            <RadioButton
+                android:id="@+id/r17sim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sim" />
 
-            <CheckBox
-                android:id="@+id/c124"
+            <RadioButton
+                android:id="@+id/r17nao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:text="Não" />
 
-        </LinearLayout>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/textView18"
@@ -554,25 +571,26 @@
             android:layout_marginTop="8dp"
             android:text="Verbaliza pensamentos:" />
 
-        <LinearLayout
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/RadioGroup18" >
 
-            <CheckBox
-                android:id="@+id/c125"
+            <RadioButton
+                android:id="@+id/r18sim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sim" />
 
-            <CheckBox
-                android:id="@+id/c126"
+            <RadioButton
+                android:id="@+id/r18nao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:text="Não" />
 
-        </LinearLayout>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/textView19"
@@ -583,25 +601,26 @@
             android:layout_marginTop="8dp"
             android:text="Escreve:" />
 
-        <LinearLayout
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/RadioGroup19" >
 
-            <CheckBox
-                android:id="@+id/c127"
+            <RadioButton
+                android:id="@+id/r19sim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sim" />
 
-            <CheckBox
-                android:id="@+id/c128"
+            <RadioButton
+                android:id="@+id/r19nao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:text="Não" />
 
-        </LinearLayout>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/textView20"
@@ -612,25 +631,26 @@
             android:layout_marginTop="8dp"
             android:text="Consegue ler:" />
 
-        <LinearLayout
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/RadioGroup20" >
 
-            <CheckBox
-                android:id="@+id/c129"
+            <RadioButton
+                android:id="@+id/r20sim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sim" />
 
-            <CheckBox
-                android:id="@+id/c130"
+            <RadioButton
+                android:id="@+id/r20nao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:text="Não" />
 
-        </LinearLayout>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/textView21"
@@ -641,25 +661,26 @@
             android:layout_marginTop="8dp"
             android:text="Gestualiza com as mãos:" />
 
-        <LinearLayout
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/RadioGroup21" >
 
-            <CheckBox
-                android:id="@+id/c131"
+            <RadioButton
+                android:id="@+id/r21sim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sim" />
 
-            <CheckBox
-                android:id="@+id/c132"
+            <RadioButton
+                android:id="@+id/r21nao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:text="Não" />
 
-        </LinearLayout>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/textView22"
@@ -670,25 +691,26 @@
             android:layout_marginTop="8dp"
             android:text="Faz garatuja com o lápis:" />
 
-        <LinearLayout
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/RadioGroup22" >
 
-            <CheckBox
-                android:id="@+id/c133"
+            <RadioButton
+                android:id="@+id/r22sim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sim" />
 
-            <CheckBox
-                android:id="@+id/c134"
+            <RadioButton
+                android:id="@+id/r22nao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:text="Não" />
 
-        </LinearLayout>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/textView23"
@@ -699,25 +721,26 @@
             android:layout_marginTop="8dp"
             android:text="Assina o nome?" />
 
-        <LinearLayout
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/RadioGroup23" >
 
-            <CheckBox
-                android:id="@+id/c135"
+            <RadioButton
+                android:id="@+id/r23sim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sim" />
 
-            <CheckBox
-                android:id="@+id/c136"
+            <RadioButton
+                android:id="@+id/r23nao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:text="Não" />
 
-        </LinearLayout>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/textView24"
@@ -728,25 +751,26 @@
             android:layout_marginTop="8dp"
             android:text="Colori figuras?" />
 
-        <LinearLayout
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/RadioGroup24" >
 
-            <CheckBox
-                android:id="@+id/c137"
+            <RadioButton
+                android:id="@+id/r24sim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sim" />
 
-            <CheckBox
-                android:id="@+id/c138"
+            <RadioButton
+                android:id="@+id/r24nao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:text="Não" />
 
-        </LinearLayout>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/textView25"
@@ -757,25 +781,26 @@
             android:layout_marginTop="8dp"
             android:text="Copia linha com lápis?" />
 
-        <LinearLayout
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/RadioGroup25" >
 
-            <CheckBox
-                android:id="@+id/c139"
+            <RadioButton
+                android:id="@+id/r25sim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sim" />
 
-            <CheckBox
-                android:id="@+id/c140"
+            <RadioButton
+                android:id="@+id/r25nao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:text="Não" />
 
-        </LinearLayout>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/textView26"
@@ -786,25 +811,26 @@
             android:layout_marginTop="8dp"
             android:text="Escreve com caneta e/ou lápis?" />
 
-        <LinearLayout
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/RadioGroup26" >
 
-            <CheckBox
-                android:id="@+id/c141"
+            <RadioButton
+                android:id="@+id/r26sim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sim" />
 
-            <CheckBox
-                android:id="@+id/c142"
+            <RadioButton
+                android:id="@+id/r26nao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:text="Não" />
 
-        </LinearLayout>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/textView27"
@@ -815,25 +841,26 @@
             android:layout_marginTop="8dp"
             android:text="Utiliza borracha, apontador, régua e cola?" />
 
-        <LinearLayout
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/RadioGroup27" >
 
-            <CheckBox
-                android:id="@+id/c143"
+            <RadioButton
+                android:id="@+id/r27sim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sim" />
 
-            <CheckBox
-                android:id="@+id/c144"
+            <RadioButton
+                android:id="@+id/r27nao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:text="Não" />
 
-        </LinearLayout>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/textView28"
@@ -844,25 +871,26 @@
             android:layout_marginTop="8dp"
             android:text="Reconhece cores primárias e secundárias?" />
 
-        <LinearLayout
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/RadioGroup28" >
 
-            <CheckBox
-                android:id="@+id/c145"
+            <RadioButton
+                android:id="@+id/r28sim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sim" />
 
-            <CheckBox
-                android:id="@+id/c146"
+            <RadioButton
+                android:id="@+id/r28nao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:text="Não" />
 
-        </LinearLayout>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/textView29"
@@ -873,25 +901,26 @@
             android:layout_marginTop="8dp"
             android:text="Reconhece as letras do alfabeto?" />
 
-        <LinearLayout
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/RadioGroup29" >
 
-            <CheckBox
-                android:id="@+id/c147"
+            <RadioButton
+                android:id="@+id/r29sim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sim" />
 
-            <CheckBox
-                android:id="@+id/c148"
+            <RadioButton
+                android:id="@+id/r29nao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:text="Não" />
 
-        </LinearLayout>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/textView30"
@@ -902,25 +931,26 @@
             android:layout_marginTop="8dp"
             android:text="Reconhece as letras do seu nome isolado ou em conjunto?" />
 
-        <LinearLayout
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/RadioGroup30" >
 
-            <CheckBox
-                android:id="@+id/c149"
+            <RadioButton
+                android:id="@+id/r30sim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sim" />
 
-            <CheckBox
-                android:id="@+id/c150"
+            <RadioButton
+                android:id="@+id/r30nao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:text="Não" />
 
-        </LinearLayout>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/textView31"
@@ -931,25 +961,26 @@
             android:layout_marginTop="8dp"
             android:text="Faz pareamento com figuras?" />
 
-        <LinearLayout
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/RadioGroup31" >
 
-            <CheckBox
-                android:id="@+id/c151"
+            <RadioButton
+                android:id="@+id/r31sim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sim" />
 
-            <CheckBox
-                android:id="@+id/c152"
+            <RadioButton
+                android:id="@+id/r31nao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:text="Não" />
 
-        </LinearLayout>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/textView32"
@@ -960,25 +991,26 @@
             android:layout_marginTop="8dp"
             android:text="Reconhece os números? Quais?" />
 
-        <LinearLayout
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/RadioGroup32" >
 
-            <CheckBox
-                android:id="@+id/c153"
+            <RadioButton
+                android:id="@+id/r32sim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sim" />
 
-            <CheckBox
-                android:id="@+id/c154"
+            <RadioButton
+                android:id="@+id/r32nao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:text="Não" />
 
-        </LinearLayout>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/textView33"
@@ -989,25 +1021,26 @@
             android:layout_marginTop="8dp"
             android:text="Possui noção de tempo e espaço?" />
 
-        <LinearLayout
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/RadioGroup33" >
 
-            <CheckBox
-                android:id="@+id/c155"
+            <RadioButton
+                android:id="@+id/r33sim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sim" />
 
-            <CheckBox
-                android:id="@+id/c156"
+            <RadioButton
+                android:id="@+id/r33nao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:text="Não" />
 
-        </LinearLayout>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/textView34"
@@ -1018,25 +1051,26 @@
             android:layout_marginTop="8dp"
             android:text="O aluno possui atenção durante as atividades?" />
 
-        <LinearLayout
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/RadioGroup34" >
 
-            <CheckBox
-                android:id="@+id/c157"
+            <RadioButton
+                android:id="@+id/r34sim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sim" />
 
-            <CheckBox
-                android:id="@+id/c158"
+            <RadioButton
+                android:id="@+id/r34nao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:text="Não" />
 
-        </LinearLayout>
+        </RadioGroup>
 
         <android.support.design.widget.TextInputEditText
             android:id="@+id/editTextObservacao"
@@ -1054,7 +1088,8 @@
             android:layout_gravity="center"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
-            android:text="Finalizar" />
+            android:text="Finalizar"
+            android:onClick="enviarDados"/>
 
     </LinearLayout>
 
