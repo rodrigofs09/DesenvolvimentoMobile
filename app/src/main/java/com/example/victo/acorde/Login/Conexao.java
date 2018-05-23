@@ -34,10 +34,12 @@ public class Conexao{
             String linha;
             StringBuffer resposta = new StringBuffer();
 
-            while((linha = entrada.readline()) != null){
+            /*FIX LINE
+            while((linha = entrada.readLine()) != null){
                 resposta.append(linha);
                 resposta.append('\r');
             }
+            */
 
             leituraBuffer.close();
 
