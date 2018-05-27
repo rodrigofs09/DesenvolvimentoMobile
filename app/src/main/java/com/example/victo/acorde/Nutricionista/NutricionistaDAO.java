@@ -15,7 +15,7 @@ public class NutricionistaDAO extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sql = "CREATE TABLE EducadoraFisica (" +
+        String sql = "CREATE TABLE Nutricionista (" +
                 "    id INTEGER PRIMARY KEY, " +
                 "    data DATE NOT NULL, " +
                 "    tipoAtendimento TEXT, " +
@@ -47,7 +47,8 @@ public class NutricionistaDAO extends SQLiteOpenHelper{
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        db.execSQL("DROP TABLE IF EXISTS" + " NUTRICIONISTA");
+        onCreate(db);
     }
 
     public void insereRelatorioNU(Nutricionista nu) {
