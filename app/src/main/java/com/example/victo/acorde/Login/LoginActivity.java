@@ -4,7 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.victo.acorde.MainActivity.MainActivity;
+import com.example.victo.acorde.Main.MainActivity;
+import com.example.victo.acorde.Nutricionista.NutricionistaActivity;
 import com.example.victo.acorde.R;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.*;

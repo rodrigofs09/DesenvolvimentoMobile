@@ -9,8 +9,8 @@ import java.util.Date;
 
 public class NutricionistaHelper {
 
-    private final EditText campoData;
-    private final EditText campoTipoAtendimento;
+    //private final EditText campoData;
+    //private final EditText campoTipoAtendimento;
     private final EditText campoMotivo;
     private final EditText campoEncaminhamento;
     private final EditText campoNome;
@@ -34,8 +34,8 @@ public class NutricionistaHelper {
 
     public NutricionistaHelper(NutricionistaActivity activity) {
 
-        campoData = (EditText) activity.findViewById(R.id.editTextData);
-        campoTipoAtendimento = (EditText) activity.findViewById(R.id.editTextTipo);
+        //campoData = (EditText) activity.findViewById(R.id.editTextData);
+        //campoTipoAtendimento = (EditText) activity.findViewById(R.id.editTextTipo);
         campoMotivo = (EditText) activity.findViewById(R.id.editTextMotivo);
         campoEncaminhamento = (EditText) activity.findViewById(R.id.editTextEncaminhamento);
         campoNome = (EditText) activity.findViewById(R.id.editTextNome);
@@ -50,7 +50,7 @@ public class NutricionistaHelper {
     public Nutricionista pegaNutricionista() {
 
         //nutricionista.setData(campoData.getText().toString());
-        nutricionista.setTipoAtendimento(campoTipoAtendimento.getText().toString());
+        //nutricionista.setTipoAtendimento(campoTipoAtendimento.getText().toString());
         nutricionista.setMotivo(campoMotivo.getText().toString());
         nutricionista.setEncaminhamento(campoEncaminhamento.getText().toString());
         nutricionista.setNome(campoNome.getText().toString());
@@ -67,7 +67,7 @@ public class NutricionistaHelper {
     public void preencheFormulario(Nutricionista nutricionista) {
 
         //campoData.setText(nutricionista.getData().toString());
-        campoTipoAtendimento.setText(nutricionista.getTipoAtendimento());
+        //campoTipoAtendimento.setText(nutricionista.getTipoAtendimento());
         campoMotivo.setText(nutricionista.getMotivo());
         campoEncaminhamento.setText(nutricionista.getEncaminhamento());
         campoNome.setText(nutricionista.getNome());

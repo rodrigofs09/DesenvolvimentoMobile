@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Login.LoginActivity" />
-        <activity android:name=".MainActivity.MainActivity" />
+        <activity android:name=".Main.MainActivity" />
         <activity android:name=".Individual.AtvIndividualActivity" />
         <activity android:name=".EmGrupo.AtvGrupoActivity" />
         <activity android:name=".Psicopedagoga.PsicopedagogaActivity" />
