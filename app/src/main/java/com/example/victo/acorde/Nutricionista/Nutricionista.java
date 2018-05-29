@@ -3,33 +3,31 @@ package com.example.victo.acorde.Nutricionista;
 import java.io.Serializable;
 import java.util.Date;
 
-public class Nutricionista implements Serializable{
+public class Nutricionista implements Serializable {
 
     private Long id;
-    private Date data;
-    private String tipoAtendimento;
-    private String motivo;
-    private String impressoes;
+    //private Date data;
+    //private String tipoAtendimento;
+    private String nomeAssistido;
+    private String motivoAtendimento;
     private String encaminhamento;
-    private String profissional;
-    private String nome;
-    private Date dataNascimento;
-    private String diagnostico;
-    private String peso;
+    //private String profissional;
     private String altura;
-    private String imc;
+    private String peso;
     private String cintura;
     private String quadril;
     private String bracos;
-    private String alimentar;
-    private String servir;
+    private String alimentarSozinho;
+    private String servirSozinho;
     private String qtdAlimento;
-    private String preparar;
-    private String patologia;
+    private String prepararSozinho;
     private String habitoIntestinal;
+    private String mastigacao;
+    private String patologia;
     private String intoleranciAlimentar;
     private String alergiaAlimentar;
     private String preferenciaAlimentar;
+    private String naoConsome;
     private String observacao;
 
     public Long getId() {
@@ -40,36 +38,20 @@ public class Nutricionista implements Serializable{
         this.id = id;
     }
 
-    public Date getData() {
-        return data;
+    public String getNomeAssistido() {
+        return nomeAssistido;
     }
 
-    public void setData(Date data) {
-        this.data = data;
+    public void setNomeAssistido(String nomeAssistido) {
+        this.nomeAssistido = nomeAssistido;
     }
 
-    public String getTipoAtendimento() {
-        return tipoAtendimento;
+    public String getMotivoAtendimento() {
+        return motivoAtendimento;
     }
 
-    public void setTipoAtendimento(String tipoAtendimento) {
-        this.tipoAtendimento = tipoAtendimento;
-    }
-
-    public String getMotivo() {
-        return motivo;
-    }
-
-    public void setMotivo(String motivo) {
-        this.motivo = motivo;
-    }
-
-    public String getImpressoes() {
-        return impressoes;
-    }
-
-    public void setImpressoes(String impressoes) {
-        this.impressoes = impressoes;
+    public void setMotivoAtendimento(String motivoAtendimento) {
+        this.motivoAtendimento = motivoAtendimento;
     }
 
     public String getEncaminhamento() {
@@ -80,46 +62,6 @@ public class Nutricionista implements Serializable{
         this.encaminhamento = encaminhamento;
     }
 
-    public String getProfissional() {
-        return profissional;
-    }
-
-    public void setProfissional(String profissional) {
-        this.profissional = profissional;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public Date getDataNascimento() {
-        return dataNascimento;
-    }
-
-    public void setDataNascimento(Date dataNascimento) {
-        this.dataNascimento = dataNascimento;
-    }
-
-    public String getDiagnostico() {
-        return diagnostico;
-    }
-
-    public void setDiagnostico(String diagnostico) {
-        this.diagnostico = diagnostico;
-    }
-
-    public String getPeso() {
-        return peso;
-    }
-
-    public void setPeso(String peso) {
-        this.peso = peso;
-    }
-
     public String getAltura() {
         return altura;
     }
@@ -128,12 +70,12 @@ public class Nutricionista implements Serializable{
         this.altura = altura;
     }
 
-    public String getImc() {
-        return imc;
+    public String getPeso() {
+        return peso;
     }
 
-    public void setImc(String imc) {
-        this.imc = imc;
+    public void setPeso(String peso) {
+        this.peso = peso;
     }
 
     public String getCintura() {
@@ -160,20 +102,20 @@ public class Nutricionista implements Serializable{
         this.bracos = bracos;
     }
 
-    public String getAlimentar() {
-        return alimentar;
+    public String getAlimentarSozinho() {
+        return alimentarSozinho;
     }
 
-    public void setAlimentar(String alimentar) {
-        this.alimentar = alimentar;
+    public void setAlimentarSozinho(String alimentarSozinho) {
+        this.alimentarSozinho = alimentarSozinho;
     }
 
-    public String getServir() {
-        return servir;
+    public String getServirSozinho() {
+        return servirSozinho;
     }
 
-    public void setServir(String servir) {
-        this.servir = servir;
+    public void setServirSozinho(String servirSozinho) {
+        this.servirSozinho = servirSozinho;
     }
 
     public String getQtdAlimento() {
@@ -184,20 +126,12 @@ public class Nutricionista implements Serializable{
         this.qtdAlimento = qtdAlimento;
     }
 
-    public String getPreparar() {
-        return preparar;
+    public String getPrepararSozinho() {
+        return prepararSozinho;
     }
 
-    public void setPreparar(String preparar) {
-        this.preparar = preparar;
-    }
-
-    public String getPatologia() {
-        return patologia;
-    }
-
-    public void setPatologia(String patologia) {
-        this.patologia = patologia;
+    public void setPrepararSozinho(String prepararSozinho) {
+        this.prepararSozinho = prepararSozinho;
     }
 
     public String getHabitoIntestinal() {
@@ -206,6 +140,22 @@ public class Nutricionista implements Serializable{
 
     public void setHabitoIntestinal(String habitoIntestinal) {
         this.habitoIntestinal = habitoIntestinal;
+    }
+
+    public String getMastigacao() {
+        return mastigacao;
+    }
+
+    public void setMastigacao(String mastigacao) {
+        this.mastigacao = mastigacao;
+    }
+
+    public String getPatologia() {
+        return patologia;
+    }
+
+    public void setPatologia(String patologia) {
+        this.patologia = patologia;
     }
 
     public String getIntoleranciAlimentar() {
@@ -230,6 +180,14 @@ public class Nutricionista implements Serializable{
 
     public void setPreferenciaAlimentar(String preferenciaAlimentar) {
         this.preferenciaAlimentar = preferenciaAlimentar;
+    }
+
+    public String getNaoConsome() {
+        return naoConsome;
+    }
+
+    public void setNaoConsome(String naoConsome) {
+        this.naoConsome = naoConsome;
     }
 
     public String getObservacao() {

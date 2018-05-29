@@ -15,33 +15,28 @@ public class NutricionistaDAO extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sql = "CREATE TABLE Nutricionista (" +
+        String sql = "CREATE TABLE IF NOT EXISTS Nutricionista (" +
                 "    id INTEGER PRIMARY KEY, " +
-                "    data DATE NOT NULL, " +
-                "    tipoAtendimento TEXT, " +
-                "    motivo TEXT, " +
-                "    impressoes TEXT, " +
-                "    encaminhamento TEXT, " +
-                "    profissional TEXT NOT NULL, " +
-                "    nome TEXT NOT NULL, " +
-                "    dataNascimento DATE NOT NULL, " +
-                "    diagnostico TEXT NOT NULL, " +
-                "    peso TEXT NOT NULL, " +
-                "    altura TEXT NOT NULL, " +
-                "    imc TEXT NOT NULL, " +
-                "    cintura TEXT NOT NULL, " +
-                "    quadril TEXT NOT NULL, " +
-                "    bracos TEXT NOT NULL, " +
-                "    alimentar TEXT NOT NULL, " +
-                "    servir TEXT NOT NULL, " +
-                "    qtdAlimento TEXT NOT NULL, " +
-                "    preparar TEXT NOT NULL, " +
-                "    patologia TEXT NOT NULL, " +
-                "    habitoIntestinal TEXT NOT NULL, " +
-                "    intoleranciAlimentar TEXT NOT NULL, " +
-                "    alergiaAlimentar TEXT NOT NULL, " +
-                "    preferenciaAlimentar TEXT NOT NULL, " +
-                "    observacao TEXT);";
+                "    nomeAssistido VARCHAR, " +
+                "    motivoAtendimento VARCHAR, " +
+                "    encaminhamento VARCHAR, " +
+                "    altura VARCHAR, " +
+                "    peso VARCHAR, " +
+                "    cintura VARCHAR, " +
+                "    quadril VARCHAR, " +
+                "    bracos VARCHAR, " +
+                "    alimentarSozinho VARCHAR, " +
+                "    servirSozinho VARCHAR, " +
+                "    qtdAlimento VARCHAR, " +
+                "    prepararSozinho VARCHAR, " +
+                "    habitoIntestinal VARCHAR, " +
+                "    mastigacao VARCHAR, " +
+                "    patologia VARCHAR, " +
+                "    intoleranciAlimentar VARCHAR, " +
+                "    alergiaAlimentar VARCHAR, " +
+                "    preferenciaAlimentar VARCHAR, " +
+                "    naoConsome VARCHAR, " +
+                "    observacao VARCHAR);";
         db.execSQL(sql);
     }
 
@@ -73,35 +68,29 @@ public class NutricionistaDAO extends SQLiteOpenHelper{
         db.delete("Nutricionista", "id = ?", params);
     }
 
-    private ContentValues pegaDadosRelatorioNU(Nutricionista nu) {
+    private ContentValues pegaDadosRelatorioNU(Nutricionista nutricionista) {
         ContentValues dados = new ContentValues();
 
-        /*VERIFICAR AQUI*/
-        dados.put("data", nu.getData().toString());
-        dados.put("tipoAtendimento", nu.getTipoAtendimento());
-        dados.put("motivo", nu.getMotivo());
-        dados.put("impressoes", nu.getImpressoes());
-        dados.put("encaminhamento", nu.getEncaminhamento());
-        dados.put("profissional", nu.getProfissional());
-        dados.put("nome", nu.getNome());
-        dados.put("dataNascimento", nu.getDataNascimento().toString());
-        dados.put("diagnostico", nu.getDiagnostico());
-        dados.put("peso", nu.getPeso());
-        dados.put("altura", nu.getAltura());
-        dados.put("imc", nu.getImc());
-        dados.put("cintura", nu.getCintura());
-        dados.put("quadril", nu.getQuadril());
-        dados.put("bracos", nu.getBracos());
-        dados.put("alimentar", nu.getAlimentar());
-        dados.put("servir", nu.getServir());
-        dados.put("qtdAlimento", nu.getQtdAlimento());
-        dados.put("preparar", nu.getPreparar());
-        dados.put("patologia", nu.getPatologia());
-        dados.put("habitoIntestinal", nu.getHabitoIntestinal());
-        dados.put("intoleranciAlimentar", nu.getIntoleranciAlimentar());
-        dados.put("alergiaAlimentar", nu.getAlergiaAlimentar());
-        dados.put("preferenciaAlimentar", nu.getPreferenciaAlimentar());
-        dados.put("observacao", nu.getObservacao());
+        dados.put("nomeAssistido", nutricionista.getNomeAssistido());
+        dados.put("motivo", nutricionista.getMotivoAtendimento());
+        dados.put("encaminhamento", nutricionista.getEncaminhamento());
+        dados.put("altura", nutricionista.getAltura());
+        dados.put("peso", nutricionista.getPeso());
+        dados.put("cintura", nutricionista.getCintura());
+        dados.put("quadril", nutricionista.getQuadril());
+        dados.put("bracos", nutricionista.getBracos());
+        dados.put("alimentarSozinho", nutricionista.getAlimentarSozinho());
+        dados.put("servirSozinho", nutricionista.getServirSozinho());
+        dados.put("qtdAlimento", nutricionista.getQtdAlimento());
+        dados.put("prepararSozinho", nutricionista.getPrepararSozinho());
+        dados.put("habitoIntestinal", nutricionista.getHabitoIntestinal());
+        dados.put("mastigacao", nutricionista.getMastigacao());
+        dados.put("patologia", nutricionista.getPatologia());
+        dados.put("intoleranciAlimentar", nutricionista.getIntoleranciAlimentar());
+        dados.put("alergiaAlimentar", nutricionista.getAlergiaAlimentar());
+        dados.put("preferenciaAlimentar", nutricionista.getPreferenciaAlimentar());
+        dados.put("naoConsome", nutricionista.getNaoConsome());
+        dados.put("observacao", nutricionista.getObservacao());
 
         return dados;
     }
