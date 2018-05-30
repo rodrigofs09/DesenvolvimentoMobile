@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#9c9c9c</color>
-    <color name="colorPrimaryDark">#2d2d2d</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#283593</color>
+    <color name="colorPrimaryDark">#001064</color>
+    <color name="colorPrimaryLight">#003c8f</color>
+    <color name="colorAccent">#ffffff</color>
     <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
     <color name="blue_chalk">#ECD7FF</color>
-    <color name="havelock_blue">#4A90E2</color>
 </resources>

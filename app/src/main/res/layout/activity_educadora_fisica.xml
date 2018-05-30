@@ -1,73 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EducadoraFisica.EducadoraFisicaActivity">
+    tools:context=".EducadoraFisica.EducadoraFisicaActivity"
+    android:theme="@style/FormTheme">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbarNU"
-            style="@style/AlertDialog.AppCompat.Light"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:theme="@style/Base.ThemeOverlay.AppCompat.ActionBar"
-            app:popupTheme="@style/Base.ThemeOverlay.AppCompat.ActionBar"></android.support.v7.widget.Toolbar>
+        <include layout="@layout/toolbar"></include>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true">
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/editTextNome"
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_layout_nome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:hint="Nome do Assistido" />
+                android:textColorHint="@color/black"
+                android:layout_marginTop="8dp">
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/editTextMotivo"
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editTextNome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:textColor="@color/black"
+                    android:imeOptions="actionNext"
+                    android:hint="Nome do Assistido"
+                    android:textColorHint="@color/black"
+                    android:inputType="text"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_layout_motivo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:hint="Motivo do Atendimento" />
+                android:textColorHint="@color/black">
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/editTextEncaminhamento"
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editTextMotivo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:hint="Motivo do Atendimento"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:textColor="@color/black"
+                    android:imeOptions="actionNext"
+                    android:textColorHint="@color/black"
+                    android:inputType="text"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_layout_encaminhamento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:hint="Encaminhamento" />
+                android:textColorHint="@color/black">
 
-            <TextView
-                android:id="@+id/textViewArco"
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editTextEncaminhamento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:hint="Encaminhamento"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_layout_arco"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="Arco de Movimento" />
+                android:textColorHint="@color/black">
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/editTextArco"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:hint="[Adiciona Linha ao digitar ou clicar no botão]" />
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editTextArco"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    android:hint="Arco de movimento"/>
+
+            </android.support.design.widget.TextInputLayout>
 
             <TextView
                 android:id="@+id/textViewForca"
@@ -76,250 +120,525 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:text="Força Muscular" />
+                android:text="Força Muscular"
+                android:textColor="@color/black"/>
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/editTextMMS"
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_layout_mms"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:hint="MMS" />
+                android:textColorHint="@color/black">
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/editTextMMII"
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editTextMMS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    android:hint="MMS"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_layout_mm2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:hint="MMII" />
+                android:textColorHint="@color/black">
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/editTextTronco"
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editTextMMII"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    android:hint="MMII"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_layout_tronco"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:hint="Tronco" />
+                android:textColorHint="@color/black">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editTextTronco"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    android:hint="Tronco"/>
+            </android.support.design.widget.TextInputLayout>
 
             <TextView
                 android:id="@+id/textViewEquilibrio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
                 android:layout_marginTop="8dp"
-                android:text="Equilíbrio - Marcha com olho fechado" />
+                android:text="Equilíbrio - Marcha com olho fechado"
+                android:textColor="@color/black"/>
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/editTextMarcha1"
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_layout_marcha1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:hint="Primeira Tentativa" />
+                android:textColorHint="@color/black">
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/editTextMarcha2"
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editTextMarcha1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    android:hint="Primeira Tentativa"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_layout_marcha2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:hint="Segunda Tentativa" />
+                android:textColorHint="@color/black">
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/editTextMarcha3"
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editTextMarcha2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    android:hint="Segunda Tentativa"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_layout_marcha3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:hint="Terceira Tentativa" />
+                android:textColorHint="@color/black">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editTextMarcha3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    android:hint="Terceira Tentativa"/>
+            </android.support.design.widget.TextInputLayout>
 
             <TextView
                 android:id="@+id/textViewCoordenacao"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
                 android:layout_marginTop="8dp"
-                android:text="Coordenação Motora" />
+                android:text="Coordenação Motora"
+                android:textColor="@color/black"/>
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:descendantFocusability="beforeDescendants"
+                android:focusableInTouchMode="true">
 
-                <android.support.design.widget.TextInputEditText
-                    android:id="@+id/editTextPolichinelo"
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_layout_polichinelo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/black">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/editTextPolichinelo"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:inputType="numberDecimal"
+                        android:imeOptions="actionNext"
+                        android:hint="Qtd. Polichinelo"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_layout_polichinelo_obs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:hint="Qtd. Polichinelo"
-                    android:inputType="numberDecimal"/>
+                    android:textColorHint="@color/black">
 
-                <android.support.design.widget.TextInputEditText
-                    android:id="@+id/editTextPolichineloObs"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:hint="Observação" />
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/editTextPolichineloObs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:inputType="text"
+                        android:imeOptions="actionNext"
+                        android:hint="Observação"/>
+                </android.support.design.widget.TextInputLayout>
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:descendantFocusability="beforeDescendants"
+                android:focusableInTouchMode="true">
 
-                <android.support.design.widget.TextInputEditText
-                    android:id="@+id/editTextLego"
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_layout_lego"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/black">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/editTextLego"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:inputType="numberDecimal"
+                        android:imeOptions="actionNext"
+                        android:hint="Qtd. Legos na torre"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_layout_lego_obs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:hint="Qtd. Legos na Torre"
-                    android:inputType="numberDecimal"/>
+                    android:textColorHint="@color/black">
 
-                <android.support.design.widget.TextInputEditText
-                    android:id="@+id/editTextLegoObs"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:hint="Observação" />
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/editTextLegoObs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:inputType="text"
+                        android:imeOptions="actionNext"
+                        android:hint="Observação"/>
+                </android.support.design.widget.TextInputLayout>
 
             </LinearLayout>
 
-            <android.support.design.widget.TextInputEditText
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_layout_pintar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/black">
+
+                <android.support.design.widget.TextInputEditText
                     android:id="@+id/editTextPintar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginStart="12dp"
                     android:layout_marginTop="8dp"
-                    android:hint="Pintar o Quadro" />
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    android:hint="Pintar o quadro"/>
+            </android.support.design.widget.TextInputLayout>
 
             <TextView
-                android:id="@+id/textViewCoordenacao"
+                android:id="@+id/textViewOutrasInformacoes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
                 android:layout_marginTop="8dp"
-                android:text="Outras Informações" />
+                android:text="Outras Informações"
+                android:textColor="@color/black"/>
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/editTextControle"
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_layout_controle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:hint="Controle de Corpo" />
+                android:textColorHint="@color/black">
 
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editTextControle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    android:hint="Controle de corpo"/>
+            </android.support.design.widget.TextInputLayout>
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/editTextDimensaoC"
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_layout_dimencao_C"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:hint="Dimensão Corporal" />
+                android:textColorHint="@color/black">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editTextDimensaoC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    android:hint="Dimensão Corporal"/>
+            </android.support.design.widget.TextInputLayout>
 
             <TextView
                 android:id="@+id/textViewDimensaoE"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
                 android:layout_marginTop="8dp"
-                android:text="Dimensão Espacial" />
+                android:text="Dimensão Espacial"
+                android:textColor="@color/black"/>
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/editTextDimensaoFrente"
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_layout_dimencao_frente"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:hint="Para Frente" />
+                android:textColorHint="@color/black">
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/editTextDimensaoTras"
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editTextDimensaoFrente"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    android:hint="Para Frente"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_layout_dimencao_tras"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:hint="Para Trás" />
+                android:textColorHint="@color/black">
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/editTextDimensaoDireito"
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editTextDimensaoTras"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    android:hint="Para Trás"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_layout_dimencao_direito"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:hint="Direito" />
+                android:textColorHint="@color/black">
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/editTextDimensaoEsquerdo"
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editTextDimensaoDireito"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    android:hint="Direito"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_layout_dimencao_esquerdo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:hint="Esquerdo" />
+                android:textColorHint="@color/black">
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/editTextDimensaoCima"
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editTextDimensaoEsquerdo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    android:hint="Esquerdo"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_layout_dimencao_cima"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:hint="Para Cima" />
+                android:textColorHint="@color/black">
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/editTextDimensaoBaixo"
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editTextDimensaoCima"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    android:hint="Para Cima"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_layout_dimencao_baixo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:hint="Para Baixo" />
+                android:textColorHint="@color/black">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editTextDimensaoBaixo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    android:hint="Para Baixo"/>
+
+            </android.support.design.widget.TextInputLayout>
 
             <TextView
                 android:id="@+id/textViewFim"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
                 android:layout_marginTop="8dp"
-                android:text="Finalização do Atendimento" />
+                android:text="Finalização do Atendimento"
+                android:textColor="@color/black"/>
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/editTextObservacao"
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_layout_observacao"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:hint="Observações Gerais" />
+                android:textColorHint="@color/black"
+                android:layout_marginTop="8dp">
 
-
-
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editTextObservacao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:textColor="@color/black"
+                    android:imeOptions="actionDone"
+                    android:hint="Observações Gerais"
+                    android:textColorHint="@color/black"
+                    android:inputType="text"/>
+            </android.support.design.widget.TextInputLayout>
+            />
 
 
         </LinearLayout>
@@ -331,6 +650,10 @@
             android:layout_gravity="center"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:background="@drawable/havelock_blue_rounded_corners"
             android:text="Finalizar" />
 
     </LinearLayout>

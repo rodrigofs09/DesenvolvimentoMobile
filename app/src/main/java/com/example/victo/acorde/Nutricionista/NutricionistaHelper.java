@@ -44,7 +44,7 @@ public class NutricionistaHelper {
         campoPeso = activity.findViewById(R.id.editTextPeso);
         campoCintura = activity.findViewById(R.id.editTextCintura);
         campoQuadril = activity.findViewById(R.id.editTextQuadril);
-        campoBracos = activity.findViewById(R.id.editTextBraços);
+        campoBracos = activity.findViewById(R.id.editTextBracos);
         campoAlimentarSozinho = verificaRadioButton(activity, (RadioGroup) activity.findViewById(R.id.RadioGroupAlimentarSozinho));
         /*campoServirSozinho = activity.findViewById(R.id.RadioGroupServirSozinho);
         campoQtdAlimento = activity.findViewById(R.id.RadioGroupQtdAlimento);

@@ -8,22 +8,29 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ac_launcher"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".SplashScreen.SplashScreenActivity">
+        android:theme="@style/AppTheme">
+        <activity android:name=".SplashScreen.SplashScreenActivity"
+            android:theme="@style/AppThemeNoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Login.LoginActivity" />
-        <activity android:name=".Main.MainActivity" />
-        <activity android:name=".Individual.AtvIndividualActivity" />
-        <activity android:name=".EmGrupo.AtvGrupoActivity" />
-        <activity android:name=".Psicopedagoga.PsicopedagogaActivity" />
-        <activity android:name=".Nutricionista.NutricionistaActivity" />
-        <activity android:name=".EducadoraFisica.EducadoraFisicaActivity" />
-        <activity android:name=".EducadoraEspecial.EducadoraEspecialActivity"></activity>
+        <activity android:name=".Login.LoginActivity"
+            android:theme="@style/AppThemeNoActionBar"/>
+        <activity android:name=".Main.MainActivity"
+            android:theme="@style/AppThemeNoActionBar"/>
+        <activity android:name=".EmGrupo.AtvGrupoActivity"
+            android:theme="@style/AppThemeNoActionBar"/>
+        <activity android:name=".Psicopedagoga.PsicopedagogaActivity"
+            android:theme="@style/AppThemeNoActionBar"/>
+        <activity android:name=".Nutricionista.NutricionistaActivity"
+            android:theme="@style/AppThemeNoActionBar"/>
+        <activity android:name=".EducadoraFisica.EducadoraFisicaActivity"
+            android:theme="@style/AppThemeNoActionBar"/>
+        <activity android:name=".EducadoraEspecial.EducadoraEspecialActivity"
+            android:theme="@style/AppThemeNoActionBar"></activity>
     </application>
 
 </manifest>

@@ -3,16 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Main.BuscaRelatorioPPFragment">
+    tools:context=".Main.BuscaRelatorioPPFragment"
+    android:theme="@style/FormTheme">
 
     <TextView
         android:id="@+id/busca_relatorio"
-        android:text="Buscar Atendimento"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:textColor="#000"
-        android:paddingLeft="80dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="Buscar Atendimento"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:layout_gravity="center_vertical"
+        android:textColorHint="@color/black"
+        />
 
 </RelativeLayout>

@@ -1,14 +1,18 @@
 package com.example.victo.acorde.EducadoraEspecial;
 
+import android.content.Intent;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.example.victo.acorde.Main.MainActivity;
 import com.example.victo.acorde.R;
 
 import butterknife.BindView;
@@ -23,139 +27,139 @@ public class EducadoraEspecialActivity extends AppCompatActivity {
     @BindView(R.id.editTextEncaminhamento)
     EditText encaminhamento;
 
-    @BindView(R.id.RadioGroup01)
+    @BindView(R.id.RadioGroupComunicacaoVerbal)
     RadioGroup comunicacaoVerbal;
     RadioButton rComunicacaoVerbal;
 
-    @BindView(R.id.RadioGroup02)
+    @BindView(R.id.RadioGroupSegueInstrucoes)
     RadioGroup segueInstrucoes;
     RadioButton rSegueInstrucoes;
 
-    @BindView(R.id.RadioGroup03)
+    @BindView(R.id.RadioGroupRespondePerguntas)
     RadioGroup respondePerguntas;
     RadioButton rRespondePerguntas;
 
-    @BindView(R.id.RadioGroup04)
+    @BindView(R.id.RadioGroupImitaModelos)
     RadioGroup imitaModelos;
     RadioButton rImitaModelos;
 
-    @BindView(R.id.RadioGroup05)
+    @BindView(R.id.RadioGroupPermaneceNasTarefas)
     RadioGroup permaneceTarefas;
     RadioButton rPermaneceTarefas;
 
-    @BindView(R.id.RadioGroup06)
+    @BindView(R.id.RadioGroupCompletaTarefas)
     RadioGroup completaTarefas;
     RadioButton rCompletaTarefas;
 
-    @BindView(R.id.RadioGroup07)
+    @BindView(R.id.RadioGroupReconheceAtividades)
     RadioGroup reconheceAtividades;
     RadioButton rReconheceAtividades;
 
-    @BindView(R.id.RadioGroup08)
+    @BindView(R.id.RadioGroupReconheceTrabalhos)
     RadioGroup reconheceTrabalho;
     RadioButton rReconheceTrabalho;
 
-    @BindView(R.id.RadioGroup09)
+    @BindView(R.id.RadioGroupReconheceErros)
     RadioGroup reconheceErro;
     RadioButton rReconheceErro;
 
-    @BindView(R.id.RadioGroup10)
+    @BindView(R.id.ReconheceNecessidade)
     RadioGroup reconheceAlgo;
     RadioButton rReconheceAlgo;
 
-    @BindView(R.id.RadioGroup11)
+    @BindView(R.id.RadioGroupCompreendeOrdensSimples)
     RadioGroup compreendeOrdemSimples;
     RadioButton rCompreendeOrdemSimples;
 
-    @BindView(R.id.RadioGroup12)
+    @BindView(R.id.RadioGroupCompreendeOrdensComplexas)
     RadioGroup compreendeOrdensComplexas;
     RadioButton rCompreendeOrdensComplexas;
 
-    @BindView(R.id.RadioGroup13)
+    @BindView(R.id.RadioGroupRaciocinio)
     RadioGroup raciocinio;
     RadioButton rRaciocinio;
 
-    @BindView(R.id.RadioGroup14)
+    @BindView(R.id.RadioGroupMemoriaRemota)
     RadioGroup memRemota;
     RadioButton rMemRemota;
 
-    @BindView(R.id.RadioGroup15)
+    @BindView(R.id.RadioGroupMemoriaRecente)
     RadioGroup memRecente;
     RadioButton rMemRecente;
 
-    @BindView(R.id.RadioGroup16)
+    @BindView(R.id.RadioGroupMemoriaImediata)
     RadioGroup memImediata;
     RadioButton rMemImediata;
 
-    @BindView(R.id.RadioGroup17)
+    @BindView(R.id.RadioGroupAssimilaAtividades)
     RadioGroup assimilaAtividades;
     RadioButton rAssimilaAtividades;
 
-    @BindView(R.id.RadioGroup18)
+    @BindView(R.id.RadioGroupVerbalizaPensamentos)
     RadioGroup verbalizaPensamentos;
     RadioButton rVerbalizaPensamentos;
 
-    @BindView(R.id.RadioGroup19)
+    @BindView(R.id.RadioGroupEscreve)
     RadioGroup escreve;
     RadioButton rEscreve;
 
-    @BindView(R.id.RadioGroup20)
+    @BindView(R.id.RadioGroupConsegueLer)
     RadioGroup consegueLer;
     RadioButton rConsegueLer;
 
-    @BindView(R.id.RadioGroup21)
+    @BindView(R.id.RadioGroupGestualizaMaos)
     RadioGroup gestualizaMaos;
     RadioButton rGestualizaMaos;
 
-    @BindView(R.id.RadioGroup22)
+    @BindView(R.id.RadioGroupFazGaratuja)
     RadioGroup garatuja;
     RadioButton rGaratuja;
 
-    @BindView(R.id.RadioGroup23)
+    @BindView(R.id.RadioGroupAssinaNome)
     RadioGroup assinaNome;
     RadioButton rAssinaNome;
 
-    @BindView(R.id.RadioGroup24)
+    @BindView(R.id.RadioGroupColoriFiguras)
     RadioGroup coloriFiguras;
     RadioButton rColoriFiguras;
 
-    @BindView(R.id.RadioGroup25)
+    @BindView(R.id.RadioGroupCopiaLinhas)
     RadioGroup copiaLinhas;
     RadioButton rCopiaLinhas;
 
-    @BindView(R.id.RadioGroup26)
+    @BindView(R.id.RadioGroupEscreveCaneta)
     RadioGroup escreveCaneta;
     RadioButton rEscreveCaneta;
 
-    @BindView(R.id.RadioGroup27)
+    @BindView(R.id.RadioGroupUsaBorracha)
     RadioGroup borracha;
     RadioButton rBorracha;
 
-    @BindView(R.id.RadioGroup28)
+    @BindView(R.id.ReconheceCores)
     RadioGroup reconheceCores;
     RadioButton rReconheceCores;
 
-    @BindView(R.id.RadioGroup29)
+    @BindView(R.id.RadioGroupReconhceLetrasAlfabeto)
     RadioGroup reconheceAlfabeto;
     RadioButton rReconheceAlfabeto;
 
-    @BindView(R.id.RadioGroup30)
+    @BindView(R.id.RadioGroupReconheceLetrasNome)
     RadioGroup reconheceLetras;
     RadioButton rReconheceLetras;
 
-    @BindView(R.id.RadioGroup31)
+    @BindView(R.id.RadioGroupFazPareamento)
     RadioGroup fazPareamento;
     RadioButton rFazPareamento;
 
-    @BindView(R.id.RadioGroup32)
+    @BindView(R.id.RadioGroupReconheceNumeros)
     RadioGroup reconheceNumeros;
     RadioButton rReconheceNumeros;
 
-    @BindView(R.id.RadioGroup33)
+    @BindView(R.id.RadioGroupPossuiNocao)
     RadioGroup nocaoTempo;
     RadioButton rNocaoTempo;
 
-    @BindView(R.id.RadioGroup34)
+    @BindView(R.id.RadioGroupPossuiAtencao)
     RadioGroup possuiAtencao;
     RadioButton rPossuiAtencao;
 
@@ -169,6 +173,30 @@ public class EducadoraEspecialActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
+        //cria a toolbar
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        //adiciona titulo e define o botao <- na toolbar
+        if(getSupportActionBar()!=null){
+            getSupportActionBar().setTitle(R.string.educadoraEspecial);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+        }
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                Intent intent = new Intent(EducadoraEspecialActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
 
@@ -246,7 +274,7 @@ public class EducadoraEspecialActivity extends AppCompatActivity {
         // Verifica o botao selecionado
         Toast.makeText(view.getContext(),
                 rComunicacaoVerbal.getText(),
-                    Toast.LENGTH_SHORT).show();
+                Toast.LENGTH_SHORT).show();
 
     }
 
