@@ -171,10 +171,24 @@ public class CriaRelatorioPPFragment extends Fragment implements View.OnClickLis
 
         switch (view.getId()) {
             case R.id.proximo:
-                Intent vaiProFormulario = new Intent(getActivity(), NutricionistaActivity.class);
-                vaiProFormulario.putExtra("tipo", selectedItemText);
-                vaiProFormulario.putExtra("data", date);
-                startActivity(vaiProFormulario);
+                if(getTipoAtividade() == 0){ //Abre o formulario da nutricionista
+                    Intent vaiProFormulario = new Intent(getActivity() , NutricionistaActivity.class);
+                    vaiProFormulario.putExtra("tipo", selectedItemText);
+                    vaiProFormulario.putExtra("data", date);
+                    startActivity(vaiProFormulario);
+                }
+                if(getTipoAtividade() == 1){ //Abre o formulario da educadora fisica
+                    Intent vaiProFormulario = new Intent(getActivity() , EducadoraFisicaActivity.class);
+                    vaiProFormulario.putExtra("tipo", selectedItemText);
+                    vaiProFormulario.putExtra("data", date);
+                    startActivity(vaiProFormulario);
+                }
+                if(getTipoAtividade() == 2){ //Abre o formulario da educadora especial
+                    Intent vaiProFormulario = new Intent(getActivity() , EducadoraEspecialActivity.class);
+                    vaiProFormulario.putExtra("tipo", selectedItemText);
+                    vaiProFormulario.putExtra("data", date);
+                    startActivity(vaiProFormulario);
+                }
                 //Toast.makeText(getContext(), "Calendario", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.calendario:

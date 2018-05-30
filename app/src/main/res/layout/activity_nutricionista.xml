@@ -1,119 +1,226 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Nutricionista.NutricionistaActivity">
+    tools:context=".Nutricionista.NutricionistaActivity"
+    android:theme="@style/FormTheme">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbarNutricionista"
-            style="@style/AlertDialog.AppCompat.Light"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:theme="@style/Base.ThemeOverlay.AppCompat.ActionBar"
-            app:popupTheme="@style/Base.ThemeOverlay.AppCompat.ActionBar">
-
-        </android.support.v7.widget.Toolbar>
+        <include layout="@layout/toolbar"></include>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true">
 
-            <EditText
-                android:id="@+id/editTextNome"
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_layout_nome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:hint="Nome do Assistido" />
+                android:textColorHint="@color/black"
+                android:layout_marginTop="8dp">
 
-            <EditText
-                android:id="@+id/editTextMotivo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:hint="Motivo do Atendimento" />
-
-            <EditText
-                android:id="@+id/editTextEncaminhamento"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:hint="Encaminhamento" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent">
-
-                <EditText
-                    android:id="@+id/editTextAltura"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:hint="Altura (cm)"
-                    android:inputType="numberDecimal" />
-
-                <EditText
-                    android:id="@+id/editTextPeso"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:hint="Peso (kg)"
-                    android:inputType="numberDecimal" />
-
-                <EditText
-                    android:id="@+id/editTextCintura"
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editTextNome"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    android:hint="Cintura (cm)"
-                    android:inputType="numberDecimal" />
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:textColor="@color/black"
+                    android:imeOptions="actionNext"
+                    android:hint="Nome do Assistido"
+                    android:textColorHint="@color/black"
+                    android:inputType="text"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_layout_motivo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/black">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editTextMotivo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:hint="Motivo do Atendimento"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:textColor="@color/black"
+                    android:imeOptions="actionNext"
+                    android:textColorHint="@color/black"
+                    android:inputType="text"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_layout_encaminhamento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/black">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editTextEncaminhamento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:hint="Encaminhamento"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:descendantFocusability="beforeDescendants"
+                android:focusableInTouchMode="true">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_layout_altura"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/black">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/editTextAltura"
+                        android:layout_width="115dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:hint="Altura (Cm)"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:inputType="numberDecimal"
+                        android:imeOptions="actionNext"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_layout_peso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/black">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/editTextPeso"
+                        android:layout_width="115dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:hint="Peso (Kg)"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:inputType="numberDecimal"
+                        android:imeOptions="actionNext"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_layout_bracos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/black">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/editTextBracos"
+                        android:layout_width="115dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:hint="Braços (Cm)"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:inputType="numberDecimal"
+                        android:imeOptions="actionNext"/>
+
+                </android.support.design.widget.TextInputLayout>
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:descendantFocusability="beforeDescendants"
+                android:focusableInTouchMode="true">
 
-                <EditText
-                    android:id="@+id/editTextQuadril"
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_layout_quadril"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:hint="Quadril (cm)"
-                    android:inputType="numberDecimal" />
+                    android:textColorHint="@color/black">
 
-                <EditText
-                    android:id="@+id/editTextBraços"
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/editTextQuadril"
+                        android:layout_width="115dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:hint="Quadril (Cm)"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_layout_cintura"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:hint="Braços (cm)"
-                    android:inputType="numberDecimal" />
+                    android:textColorHint="@color/black">
 
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/editTextCintura"
+                        android:layout_width="115dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:hint="Cintura (Cm)"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:inputType="numberDecimal"
+                        android:imeOptions="actionDone"/>
+
+                </android.support.design.widget.TextInputLayout>
 
             </LinearLayout>
 
@@ -121,16 +228,20 @@
                 android:id="@+id/textView1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
                 android:layout_marginTop="8dp"
-                android:text="Alimenta-se sozinho?" />
+                android:text="Alimenta-se sozinho?"
+                android:textColor="@color/black"/>
 
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:id="@+id/RadioGroupAlimentarSozinho" >
+                android:id="@+id/RadioGroupAlimentarSozinho"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp">
 
                 <RadioButton
                     android:id="@+id/r1sim"
@@ -147,21 +258,24 @@
 
             </RadioGroup>
 
-
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
                 android:layout_marginTop="8dp"
-                android:text="Serve-se sozinho?" />
+                android:text="Serve-se sozinho?"
+                android:textColor="@color/black"/>
 
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:id="@+id/RadioGroupServirSozinho" >
+                android:id="@+id/RadioGroupServirSozinho"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp">
 
                 <RadioButton
                     android:id="@+id/r2sim"
@@ -182,16 +296,19 @@
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
                 android:layout_marginTop="8dp"
-                android:text="Sabe a quantidade de alimento que deve comer?" />
+                android:text="Sabe a quantidade de alimento que deve comer?"
+                android:textColor="@color/black"				/>
 
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:id="@+id/RadioGroupQtdAlimento" >
+                android:id="@+id/RadioGroupQtdAlimento"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp">
 
                 <RadioButton
                     android:id="@+id/r3sim"
@@ -212,16 +329,19 @@
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
                 android:layout_marginTop="8dp"
+                android:textColor="@color/black"
                 android:text="Sabe preparar o proprio alimento" />
 
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:id="@+id/RadioGroupPrepararAlimento" >
+                android:id="@+id/RadioGroupPrepararAlimento"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp">
 
                 <RadioButton
                     android:id="@+id/r4sim"
@@ -242,16 +362,19 @@
                 android:id="@+id/textView5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
                 android:layout_marginTop="8dp"
+                android:textColor="@color/black"
                 android:text="Hábito intestinal?" />
 
             <RadioGroup
+                android:id="@+id/RadioGroupHabitoIntestinal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:id="@+id/RadioGroupHabitoIntestinal" >
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
+                android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/r5abaixo"
@@ -263,14 +386,14 @@
                     android:id="@+id/r5regular"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="50dp"
+                    android:layout_marginLeft="31dp"
                     android:text="Regular" />
 
                 <RadioButton
                     android:id="@+id/r5bom"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="50dp"
+                    android:layout_marginLeft="56dp"
                     android:text="Bom" />
 
 
@@ -280,16 +403,19 @@
                 android:id="@+id/textView6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
                 android:layout_marginTop="8dp"
+                android:textColor="@color/black"
                 android:text="Mastigação" />
 
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:id="@+id/RadioGroupMastigacao" >
+                android:id="@+id/RadioGroupMastigacao"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp">
 
                 <RadioButton
                     android:id="@+id/r6rapida"
@@ -301,14 +427,14 @@
                     android:id="@+id/r6moderada"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="50dp"
+                    android:layout_marginLeft="31dp"
                     android:text="Moderada" />
 
                 <RadioButton
                     android:id="@+id/r6devagar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="50dp"
+                    android:layout_marginLeft="40dp"
                     android:text="Devagar" />
 
 
@@ -318,16 +444,19 @@
                 android:id="@+id/textView7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
                 android:layout_marginTop="8dp"
+                android:textColor="@color/black"
                 android:text="Patologia" />
 
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:id="@+id/RadioGroupPatologia" >
+                android:id="@+id/RadioGroupPatologia"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp">
 
                 <RadioButton
                     android:id="@+id/r7sim"
@@ -344,7 +473,7 @@
 
             </RadioGroup>
 
-            <EditText
+            <android.support.design.widget.TextInputEditText
                 android:id="@+id/editTextPatologia"
                 android:visibility="gone"
                 android:layout_width="match_parent"
@@ -359,16 +488,19 @@
                 android:id="@+id/textView8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
                 android:layout_marginTop="8dp"
+                android:textColor="@color/black"
                 android:text="Intolerância" />
 
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:id="@+id/RadioGroupIntoleranciaAlimentar" >
+                android:id="@+id/RadioGroupIntoleranciaAlimentar"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp">
 
                 <RadioButton
                     android:id="@+id/r8sim"
@@ -389,16 +521,19 @@
                 android:id="@+id/textView9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
                 android:layout_marginTop="8dp"
+                android:textColor="@color/black"
                 android:text="Alergia" />
 
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:id="@+id/RadioGroupAlergiaAlimentar" >
+                android:id="@+id/RadioGroupAlergiaAlimentar"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp">
 
                 <RadioButton
                     android:id="@+id/r9sim"
@@ -415,7 +550,7 @@
 
             </RadioGroup>
 
-            <EditText
+            <android.support.design.widget.TextInputEditText
                 android:id="@+id/editTextAlergia"
                 android:visibility="gone"
                 android:layout_width="match_parent"
@@ -430,16 +565,19 @@
                 android:id="@+id/textView10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
                 android:layout_marginTop="8dp"
+                android:textColor="@color/black"
                 android:text="Possui preferência por alguns alimentos?" />
 
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:id="@+id/RadioGroupPreferenciaAlimentar" >
+                android:id="@+id/RadioGroupPreferenciaAlimentar"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp">
 
                 <RadioButton
                     android:id="@+id/r10sim"
@@ -456,7 +594,7 @@
 
             </RadioGroup>
 
-            <EditText
+            <android.support.design.widget.TextInputEditText
                 android:id="@+id/editTextAlimentosPreferidos"
                 android:visibility="gone"
                 android:layout_width="match_parent"
@@ -471,16 +609,19 @@
                 android:id="@+id/textView11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
                 android:layout_marginTop="8dp"
+                android:textColor="@color/black"
                 android:text="Não consome algum alimento?" />
 
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:id="@+id/RadioGroupNaoConsome" >
+                android:id="@+id/RadioGroupNaoConsome"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp">
 
                 <RadioButton
                     android:id="@+id/r11sim"
@@ -497,7 +638,7 @@
 
             </RadioGroup>
 
-            <EditText
+            <android.support.design.widget.TextInputEditText
                 android:id="@+id/editTextNaoConsomeAlimento"
                 android:visibility="gone"
                 android:layout_width="match_parent"
@@ -508,14 +649,28 @@
                 android:hint="Quais"
                 android:inputType="text" />
 
-            <EditText
-                android:id="@+id/editTextObservacao"
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_layout_observacao"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:hint="Observação" />
+                android:textColorHint="@color/black"
+                android:layout_marginTop="8dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editTextObservacao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:textColor="@color/black"
+                    android:imeOptions="actionDone"
+                    android:hint="Observação"
+                    android:textColorHint="@color/black"
+                    android:inputType="text"/>
+            </android.support.design.widget.TextInputLayout>
 
         </LinearLayout>
 
@@ -526,6 +681,10 @@
             android:layout_gravity="center"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:background="@drawable/havelock_blue_rounded_corners"
             android:text="Finalizar" />
 
     </LinearLayout>

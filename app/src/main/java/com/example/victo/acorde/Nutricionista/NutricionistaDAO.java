@@ -2,10 +2,14 @@ package com.example.victo.acorde.Nutricionista;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import com.example.victo.acorde.EducadoraFisica.EducadoraFisica;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class NutricionistaDAO extends SQLiteOpenHelper{
 
@@ -72,7 +76,7 @@ public class NutricionistaDAO extends SQLiteOpenHelper{
         ContentValues dados = new ContentValues();
 
         dados.put("nomeAssistido", nutricionista.getNomeAssistido());
-        dados.put("motivo", nutricionista.getMotivoAtendimento());
+        dados.put("motivoAtendimento", nutricionista.getMotivoAtendimento());
         dados.put("encaminhamento", nutricionista.getEncaminhamento());
         dados.put("altura", nutricionista.getAltura());
         dados.put("peso", nutricionista.getPeso());
@@ -93,5 +97,35 @@ public class NutricionistaDAO extends SQLiteOpenHelper{
         dados.put("observacao", nutricionista.getObservacao());
 
         return dados;
+    }
+
+    public List<Nutricionista> buscaRelatorio() {
+
+        String sql = "SELECT * FROM Nutricionista;";
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.rawQuery(sql, null);
+
+        List<Nutricionista> nutricionistas = new ArrayList<Nutricionista>();
+
+        while(cursor.moveToNext()){
+
+            Nutricionista nutricionista = new Nutricionista();
+            nutricionista.setId(cursor.getLong(cursor.getColumnIndex("id")));
+            nutricionista.setNomeAssistido((cursor.getString(cursor.getColumnIndex("nomeAssistido"))));
+            nutricionista.setMotivoAtendimento((cursor.getString(cursor.getColumnIndex("motivoAtendimento"))));
+            nutricionista.setEncaminhamento((cursor.getString(cursor.getColumnIndex("encaminhamento"))));
+            nutricionista.setAltura((cursor.getString(cursor.getColumnIndex("altura"))));
+            nutricionista.setPeso((cursor.getString(cursor.getColumnIndex("peso"))));
+            nutricionista.setCintura((cursor.getString(cursor.getColumnIndex("cintura"))));
+            nutricionista.setQuadril((cursor.getString(cursor.getColumnIndex("quadril"))));
+            nutricionista.setBracos((cursor.getString(cursor.getColumnIndex("bracos"))));
+            nutricionista.setObservacao((cursor.getString(cursor.getColumnIndex("observacao"))));
+
+            nutricionistas.add(nutricionista);
+        }
+
+        cursor.close();
+
+        return nutricionistas;
     }
 }
