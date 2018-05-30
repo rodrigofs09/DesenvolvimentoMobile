@@ -99,7 +99,7 @@ public class NutricionistaDAO extends SQLiteOpenHelper{
         return dados;
     }
 
-    public List<Nutricionista> buscaRelatorio() {
+    public List<Nutricionista> buscaRelatorioNU() {
 
         String sql = "SELECT * FROM Nutricionista;";
         SQLiteDatabase db = getReadableDatabase();

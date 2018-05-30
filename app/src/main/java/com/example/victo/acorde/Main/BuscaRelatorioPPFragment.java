@@ -114,7 +114,7 @@ public class BuscaRelatorioPPFragment extends Fragment{
 
     private void carregaListaNutricionista() {
         NutricionistaDAO dao = new NutricionistaDAO(getContext());
-        List<Nutricionista> nutricionistas = dao.buscaRelatorio();
+        List<Nutricionista> nutricionistas = dao.buscaRelatorioNU();
         dao.close();
 
         NutricionistaAdapter adapter = new NutricionistaAdapter(getContext(), nutricionistas);

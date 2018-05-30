@@ -2,8 +2,14 @@ package com.example.victo.acorde.EducadoraFisica;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import com.example.victo.acorde.Nutricionista.Nutricionista;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class EducadoraFisicaDAO extends SQLiteOpenHelper{
 
@@ -15,22 +21,30 @@ public class EducadoraFisicaDAO extends SQLiteOpenHelper{
     public void onCreate(SQLiteDatabase db) {
         String sql = "CREATE TABLE EducadoraFisica (" +
                 "    id INTEGER PRIMARY KEY, " +
-                "    data DATE NOT NULL, " +
-                "    tipoAtendimento TEXT, " +
-                "    motivo TEXT, " +
-                "    impressoes TEXT, " +
-                "    encaminhamento TEXT, " +
-                "    profissional TEXT NOT NULL, " +
-                "    nome TEXT NOT NULL, " +
-                "    dataNascimento DATE NOT NULL, " +
-                "    diagnostico TEXT NOT NULL, " +
-                "    altura TEXT NOT NULL, " +
-                "    peso TEXT NOT NULL, " +
-                "    cintura TEXT NOT NULL, " +
-                "    quadril TEXT NOT NULL, " +
-                "    bracos TEXT NOT NULL, " +
-                "    imc TEXT NOT NULL, " +
-                "    observacao TEXT);";
+                "    nomeAssistido VARCHAR, " +
+                "    motivoAtendimento VARCHAR, " +
+                "    encaminhamento VARCHAR, " +
+                "    arco VARCHAR, " +
+                "    mms VARCHAR, " +
+                "    mmii VARCHAR, " +
+                "    tronco VARCHAR, " +
+                "    marcha1 VARCHAR, " +
+                "    marcha2 VARCHAR, " +
+                "    marcha3 VARCHAR, " +
+                "    polichinelo VARCHAR, " +
+                "    polichineloObs VARCHAR, " +
+                "    lego VARCHAR, " +
+                "    legoObs VARCHAR, " +
+                "    pintar VARCHAR, " +
+                "    controle VARCHAR, " +
+                "    dimensao VARCHAR, " +
+                "    dimensaoFrente VARCHAR, " +
+                "    dimensaoTras VARCHAR, " +
+                "    dimensaoDireita VARCHAR, " +
+                "    dimensaoEsquerda VARCHAR, " +
+                "    dimensaoCima VARCHAR, " +
+                "    dimensaoBaixo VARCHAR, " +
+                "    observacao VARCHAR);";
         db.execSQL(sql);
     }
 
@@ -39,49 +53,101 @@ public class EducadoraFisicaDAO extends SQLiteOpenHelper{
 
     }
 
-    public void insereRelatorioEF(EducadoraFisica ef) {
+    public void insereRelatorioEF(EducadoraFisica educadoraFisica) {
 
         SQLiteDatabase db = getWritableDatabase();
-        ContentValues dados = pegaDadosRelatorioEF(ef);
+        ContentValues dados = pegaDadosRelatorioEF(educadoraFisica);
         db.insert("EducadoraFisica", null, dados);
     }
 
-    public void alteraRelatorioEF(EducadoraFisica ef) {
+    public void alteraRelatorioEF(EducadoraFisica educadoraFisica) {
 
         SQLiteDatabase db = getWritableDatabase();
-        ContentValues dados = pegaDadosRelatorioEF(ef);
-        String[] params = {ef.getId().toString()};
+        ContentValues dados = pegaDadosRelatorioEF(educadoraFisica);
+        String[] params = {educadoraFisica.getId().toString()};
         db.update("EducadoraFisica", dados, "id = ?", params);
     }
 
-    public void deletaRelatorioEF(EducadoraFisica ef) {
+    public void deletaRelatorioEF(EducadoraFisica educadoraFisica) {
 
         SQLiteDatabase db = getWritableDatabase();
-        String[] params = {ef.getId().toString()};
+        String[] params = {educadoraFisica.getId().toString()};
         db.delete("EducadoraFisica", "id = ?", params);
     }
 
-    private ContentValues pegaDadosRelatorioEF(EducadoraFisica ef) {
+    private ContentValues pegaDadosRelatorioEF(EducadoraFisica educadoraFisica) {
         ContentValues dados = new ContentValues();
 
-        /*VERIFICAR AQUI*/
-        dados.put("data", ef.getData().toString());
-        dados.put("tipoAtendimento", ef.getTipoAtendimento());
-        dados.put("motivo", ef.getMotivo());
-        dados.put("impressoes", ef.getImpressoes());
-        dados.put("encaminhamento", ef.getEncaminhamento());
-        dados.put("profissional", ef.getProfissional());
-        dados.put("nome", ef.getNome());
-        dados.put("dataNascimento", ef.getDataNascimento().toString());
-        dados.put("diagnostico", ef.getDiagnostico());
-        dados.put("altura", ef.getAltura());
-        dados.put("peso", ef.getPeso());
-        dados.put("cintura", ef.getCintura());
-        dados.put("quadril", ef.getQuadril());
-        dados.put("bracos", ef.getBracos());
-        dados.put("imc", ef.getImc());
-        dados.put("observacao", ef.getObservacao());
+        dados.put("nomeAssistido", educadoraFisica.getNomeAssistido());
+        dados.put("motivoAtendimento", educadoraFisica.getMotivoAtendimento());
+        dados.put("encaminhamento", educadoraFisica.getEncaminhamento());
+        dados.put("arco", educadoraFisica.getArco());
+        dados.put("mms", educadoraFisica.getMms());
+        dados.put("mmii", educadoraFisica.getMmii());
+        dados.put("tronco", educadoraFisica.getTronco());
+        dados.put("marcha1", educadoraFisica.getMarcha1());
+        dados.put("marcha2", educadoraFisica.getMarcha2());
+        dados.put("marcha3", educadoraFisica.getMarcha3());
+        dados.put("polichinelo", educadoraFisica.getPolichinelo());
+        dados.put("polichineloObs", educadoraFisica.getPolichineloObs());
+        dados.put("lego", educadoraFisica.getLego());
+        dados.put("legoObs", educadoraFisica.getLegoObs());
+        dados.put("pintar", educadoraFisica.getPintar());
+        dados.put("controle", educadoraFisica.getControle());
+        dados.put("dimensaoC", educadoraFisica.getDimensaoC());
+        dados.put("dimensaoFrente", educadoraFisica.getDimensaoFrente());
+        dados.put("dimensaoTras", educadoraFisica.getDimensaoTras());
+        dados.put("dimensaoDireita", educadoraFisica.getDimensaoDireita());
+        dados.put("dimensaoEsquerda", educadoraFisica.getDimensaoEsquerda());
+        dados.put("dimensaoCima", educadoraFisica.getDimensaoCima());
+        dados.put("dimensaoBaixo", educadoraFisica.getDimensaoBaixo());
+        dados.put("observacao", educadoraFisica.getObservacao());
 
         return dados;
+    }
+
+    public List<EducadoraFisica> buscaRelatorioEF() {
+
+        String sql = "SELECT * FROM EducadoraFisica;";
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.rawQuery(sql, null);
+
+        List<EducadoraFisica> educadoraFisicas = new ArrayList<EducadoraFisica>();
+
+        while(cursor.moveToNext()){
+
+            EducadoraFisica educadoraFisica = new EducadoraFisica();
+            educadoraFisica.setId(cursor.getLong(cursor.getColumnIndex("id")));
+            educadoraFisica.setNomeAssistido((cursor.getString(cursor.getColumnIndex("nomeAssistido"))));
+            educadoraFisica.setMotivoAtendimento((cursor.getString(cursor.getColumnIndex("motivoAtendimento"))));
+            educadoraFisica.setEncaminhamento((cursor.getString(cursor.getColumnIndex("encaminhamento"))));
+            educadoraFisica.setArco((cursor.getString(cursor.getColumnIndex("arco"))));
+            educadoraFisica.setMms((cursor.getString(cursor.getColumnIndex("mms"))));
+            educadoraFisica.setMmii((cursor.getString(cursor.getColumnIndex("mmii"))));
+            educadoraFisica.setTronco((cursor.getString(cursor.getColumnIndex("tronco"))));
+            educadoraFisica.setMarcha1((cursor.getString(cursor.getColumnIndex("marcha1"))));
+            educadoraFisica.setMarcha2((cursor.getString(cursor.getColumnIndex("marcha2"))));
+            educadoraFisica.setMarcha3((cursor.getString(cursor.getColumnIndex("marcha3"))));
+            educadoraFisica.setPolichinelo((cursor.getString(cursor.getColumnIndex("polichinelo"))));
+            educadoraFisica.setPolichineloObs((cursor.getString(cursor.getColumnIndex("polichineloObs"))));
+            educadoraFisica.setLego((cursor.getString(cursor.getColumnIndex("lego"))));
+            educadoraFisica.setLegoObs((cursor.getString(cursor.getColumnIndex("legoObs"))));
+            educadoraFisica.setPintar((cursor.getString(cursor.getColumnIndex("pintar"))));
+            educadoraFisica.setControle((cursor.getString(cursor.getColumnIndex("controle"))));
+            educadoraFisica.setDimensaoC((cursor.getString(cursor.getColumnIndex("dimensaoC"))));
+            educadoraFisica.setDimensaoFrente((cursor.getString(cursor.getColumnIndex("dimensaoFrente"))));
+            educadoraFisica.setDimensaoTras((cursor.getString(cursor.getColumnIndex("dimensaoTras"))));
+            educadoraFisica.setDimensaoDireita((cursor.getString(cursor.getColumnIndex("dimensaoDireita"))));
+            educadoraFisica.setDimensaoEsquerda((cursor.getString(cursor.getColumnIndex("dimensaoEsquerda"))));
+            educadoraFisica.setDimensaoCima((cursor.getString(cursor.getColumnIndex("dimensaoCima"))));
+            educadoraFisica.setDimensaoBaixo((cursor.getString(cursor.getColumnIndex("dimensaoBaixo"))));
+            educadoraFisica.setObservacao((cursor.getString(cursor.getColumnIndex("observacao"))));
+
+            educadoraFisicas.add(educadoraFisica);
+        }
+
+        cursor.close();
+
+        return educadoraFisicas;
     }
 }

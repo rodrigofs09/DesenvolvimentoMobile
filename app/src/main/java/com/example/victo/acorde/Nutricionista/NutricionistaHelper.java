@@ -86,7 +86,7 @@ public class NutricionistaHelper {
         return nutricionista;
     }
 
-    public void preencheFormulario(Nutricionista nutricionista) {
+    public void preencheFormularioNU(Nutricionista nutricionista) {
 
         campoNomeAssistido.setText(nutricionista.getNomeAssistido());
         campoMotivoAtendimento.setText(nutricionista.getMotivoAtendimento());

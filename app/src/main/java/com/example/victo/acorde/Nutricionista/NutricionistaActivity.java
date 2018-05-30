@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 import android.support.v7.widget.Toolbar;
 
 import com.example.victo.acorde.Main.MainActivity;
@@ -23,11 +22,9 @@ public class NutricionistaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nutricionista);
 
-        //cria a toolbar
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        //adiciona titulo e define o botao <- na toolbar
         if(getSupportActionBar()!=null){
             getSupportActionBar().setTitle(R.string.nutricionista);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -35,6 +32,14 @@ public class NutricionistaActivity extends AppCompatActivity {
         }
 
         helper = new NutricionistaHelper(this);
+
+        final Intent intent = getIntent();
+        nutricionista = (Nutricionista) intent.getSerializableExtra("nutricionista");
+
+        if(nutricionista != null){
+            helper.preencheFormularioNU(nutricionista);
+        }
+
 
         Button enviarDados = findViewById(R.id.buttonFinalizar);
         enviarDados.setOnClickListener(new View.OnClickListener() {
@@ -44,7 +49,6 @@ public class NutricionistaActivity extends AppCompatActivity {
                 NutricionistaDAO dao = new NutricionistaDAO(getApplicationContext());
                 dao.insereRelatorioNU(nutricionista);
                 dao.close();
-                //Toast.makeText(getApplicationContext(),nutricionista.getAlimentarSozinho(), Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
@@ -62,5 +66,4 @@ public class NutricionistaActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
 }

@@ -1,7 +1,6 @@
 package com.example.victo.acorde.Main;
 
 import android.app.DatePickerDialog;
-import android.app.DialogFragment;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -16,15 +15,12 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.victo.acorde.EducadoraEspecial.EducadoraEspecialActivity;
-import com.example.victo.acorde.EducadoraFisica.EducadoraFisica;
 import com.example.victo.acorde.EducadoraFisica.EducadoraFisicaActivity;
-import com.example.victo.acorde.Nutricionista.Nutricionista;
 import com.example.victo.acorde.Nutricionista.NutricionistaActivity;
 import com.example.victo.acorde.R;
 
@@ -35,22 +31,21 @@ public class CriaRelatorioPPFragment extends Fragment implements View.OnClickLis
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    View view;
-    Button proximo, calendario;
-    //TextView tipo;
-
-    private int tipoAtividade;
-
-    private String mParam1;
-    private String mParam2;
-    private String selectedItemText;
-    private String date;
-    private OnFragmentInteractionListener mListener;
-
+    private View view;
+    private Button proximo;
+    private Spinner mySpinner;
     private TextView mDisplayDate;
     private DatePickerDialog.OnDateSetListener mDateSetListener;
     private Context context;
-    private int tipo;
+
+    private String mParam1;
+    private String mParam2;
+
+    private int tipoAtividade;
+    private String selectedItemText;
+    private String date;
+
+    private OnFragmentInteractionListener mListener;
 
     public CriaRelatorioPPFragment() {
 
@@ -89,12 +84,11 @@ public class CriaRelatorioPPFragment extends Fragment implements View.OnClickLis
 
         view = inflater.inflate(R.layout.fragment_cria_relatorio_p, container, false);
         proximo = view.findViewById(R.id.proximo);
-        calendario = view.findViewById(R.id.calendario);
-        //tipo = view.findViewById(R.id.formulario_tipo);
-        proximo.setOnClickListener(this);
-        calendario.setOnClickListener(this);
+        mySpinner = view.findViewById(R.id.tipo);
+        mDisplayDate = view.findViewById(R.id.formulario_data);
 
-        Spinner mySpinner = (Spinner) view.findViewById(R.id.tipo);
+        proximo.setOnClickListener(this);
+
         final ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(context,
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.names));
 
@@ -114,10 +108,6 @@ public class CriaRelatorioPPFragment extends Fragment implements View.OnClickLis
             }
         });
 
-        // Date picker
-        mDisplayDate = (TextView) view.findViewById(R.id.formulario_data); //Declaração da TextView
-
-        //Setar o ClickListener para o TextView
         mDisplayDate.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -132,7 +122,7 @@ public class CriaRelatorioPPFragment extends Fragment implements View.OnClickLis
                 dialog.show();
             }
         });
-        //Inicializar o OnDateSetListener
+
         mDateSetListener = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int day) {
