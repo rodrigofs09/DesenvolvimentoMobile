@@ -41,7 +41,6 @@ public class EducadoraFisicaActivity extends AppCompatActivity {
             helper.preencheFormularioEF(educadoraFisica);
         }
 
-
         Button enviarDados = findViewById(R.id.buttonFinalizar);
         enviarDados.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,8 +58,6 @@ public class EducadoraFisicaActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                Intent intent = new Intent(EducadoraFisicaActivity.this, MainActivity.class);
-                startActivity(intent);
                 finish();
                 return true;
             default:

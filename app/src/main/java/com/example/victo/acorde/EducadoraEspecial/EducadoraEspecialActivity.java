@@ -1,7 +1,6 @@
 package com.example.victo.acorde.EducadoraEspecial;
 
 import android.content.Intent;
-import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -190,8 +189,6 @@ public class EducadoraEspecialActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                Intent intent = new Intent(EducadoraEspecialActivity.this, MainActivity.class);
-                startActivity(intent);
                 finish();
                 return true;
             default:

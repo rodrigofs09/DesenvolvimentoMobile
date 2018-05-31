@@ -90,7 +90,7 @@ public class CriaRelatorioPPFragment extends Fragment implements View.OnClickLis
         proximo.setOnClickListener(this);
 
         final ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(context,
-                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.names));
+                android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.names));
 
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mySpinner.setAdapter(myAdapter);
@@ -200,5 +200,10 @@ public class CriaRelatorioPPFragment extends Fragment implements View.OnClickLis
 
     public interface OnFragmentInteractionListener {
         void onFragmentInteraction(Uri uri);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
     }
 }

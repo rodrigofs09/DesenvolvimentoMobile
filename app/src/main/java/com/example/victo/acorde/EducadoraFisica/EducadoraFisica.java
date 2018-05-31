@@ -1,7 +1,6 @@
 package com.example.victo.acorde.EducadoraFisica;
 
 import java.io.Serializable;
-import java.util.Date;
 
 public class EducadoraFisica implements Serializable {
 

@@ -6,7 +6,7 @@
     app:popupTheme="@style/AppTheme.PopupOverlay"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/colorPrimary"
+    android:background="@color/colorPrimaryLight"
     android:minHeight="?attr/actionBarSize"
     android:titleTextColor="@color/white"
     android:elevation="3dp"/>

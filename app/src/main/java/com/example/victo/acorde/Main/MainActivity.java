@@ -1,16 +1,11 @@
 package com.example.victo.acorde.Main;
 
-import android.content.Intent;
 import android.net.Uri;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 
-import com.example.victo.acorde.Nutricionista.Nutricionista;
-import com.example.victo.acorde.Nutricionista.NutricionistaActivity;
 import com.example.victo.acorde.R;
 
 public class MainActivity extends AppCompatActivity implements CriaRelatorioPPFragment.OnFragmentInteractionListener, BuscaRelatorioPPFragment.OnFragmentInteractionListener, MensagensPPFragment.OnFragmentInteractionListener {
@@ -26,9 +21,9 @@ public class MainActivity extends AppCompatActivity implements CriaRelatorioPPFr
         final ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
         final PagerAdapter viewAdapter = new PagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(viewAdapter);
-        viewPager.setOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 
-        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 viewPager.setCurrentItem(tab.getPosition());

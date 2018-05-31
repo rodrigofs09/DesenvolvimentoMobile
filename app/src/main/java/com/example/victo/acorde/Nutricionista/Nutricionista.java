@@ -1,7 +1,6 @@
 package com.example.victo.acorde.Nutricionista;
 
 import java.io.Serializable;
-import java.util.Date;
 
 public class Nutricionista implements Serializable {
 

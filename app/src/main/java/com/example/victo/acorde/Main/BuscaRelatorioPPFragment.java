@@ -9,31 +9,45 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ListView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.Spinner;
 
-import com.example.victo.acorde.Nutricionista.Nutricionista;
-import com.example.victo.acorde.Nutricionista.NutricionistaActivity;
-import com.example.victo.acorde.Nutricionista.NutricionistaAdapter;
-import com.example.victo.acorde.Nutricionista.NutricionistaDAO;
+import com.example.victo.acorde.EducadoraEspecial.EducadoraEspecialLista;
+import com.example.victo.acorde.EducadoraFisica.EducadoraFisicaLista;
+import com.example.victo.acorde.Nutricionista.NutricionistaLista;
 import com.example.victo.acorde.R;
 
 import java.util.List;
 
-public class BuscaRelatorioPPFragment extends Fragment{
+public class BuscaRelatorioPPFragment extends Fragment implements View.OnClickListener {
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
+    private View view;
+    private Button proximo;
+    private Spinner mySpinner;
+    private Context context;
+
     private String mParam1;
     private String mParam2;
 
-    private OnFragmentInteractionListener mListener;
+    private int tipoFuncionaria;
+    private String selectedItemText;
 
-    View view;
-    private ListView listaNutricionistas;
+    private OnFragmentInteractionListener mListener;
 
     public BuscaRelatorioPPFragment() {
 
+    }
+
+    public void setTipoFuncionaria(int tipoFuncionaria) {
+        this.tipoFuncionaria = tipoFuncionaria;
+    }
+
+    public int getTipoFuncionaria() {
+        return tipoFuncionaria;
     }
 
     public static BuscaRelatorioPPFragment newInstance(String param1, String param2) {
@@ -59,40 +73,35 @@ public class BuscaRelatorioPPFragment extends Fragment{
                              Bundle savedInstanceState) {
 
         view = inflater.inflate(R.layout.fragment_busca_relatorio_p, container, false);
+        proximo = view.findViewById(R.id.proximo);
+        mySpinner = view.findViewById(R.id.funcionariaBuscaSpinner);
 
-        listaNutricionistas = view.findViewById(R.id.lista_nutricionista);
+        proximo.setOnClickListener(this);
 
-        listaNutricionistas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        final ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(getContext(),
+                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.names));
+
+        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        mySpinner.setAdapter(myAdapter);
+
+        mySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Nutricionista nutricionista = (Nutricionista)listaNutricionistas.getItemAtPosition(position);
+            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
+                setTipoFuncionaria(position);
+                selectedItemText = (String) adapterView.getItemAtPosition(position);
+            }
 
-                Intent intentVaiProFormulario = new Intent(getContext(), NutricionistaActivity.class);
-                intentVaiProFormulario.putExtra("nutricionista", nutricionista);
-                startActivity(intentVaiProFormulario);
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
             }
         });
 
-        carregaListaNutricionista();
-
-        registerForContextMenu(listaNutricionistas);
         return view;
     }
 
     @Override
-    public void onResume() {
-        super.onResume();
-        carregaListaNutricionista();
-    }
-
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
-    }
-
-    @Override
-    public void onAttach(Context context) {
+    public void onAttach(final Context context) {
         super.onAttach(context);
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
@@ -108,17 +117,37 @@ public class BuscaRelatorioPPFragment extends Fragment{
         mListener = null;
     }
 
+    @Override
+    public void onClick(View view) {
+
+        switch (view.getId()) {
+            case R.id.proximo:
+                if(getTipoFuncionaria() == 0){ //Abre a lista da nutricionista
+                    Intent vaiPraLista = new Intent(getActivity() , NutricionistaLista.class);
+                    startActivity(vaiPraLista);
+                }
+                if(getTipoFuncionaria() == 1){ //Abre a lista da educadora fisica
+                    Intent vaiPraLista = new Intent(getActivity() , EducadoraFisicaLista.class);
+                    startActivity(vaiPraLista);
+                }
+                if(getTipoFuncionaria() == 2){ //Abre a lista da educadora especial
+                    Intent vaiPraLista = new Intent(getActivity() , EducadoraEspecialLista.class);
+                    startActivity(vaiPraLista);
+                }
+                break;
+            default:
+                break;
+        }
+
+    }
+
     public interface OnFragmentInteractionListener {
         void onFragmentInteraction(Uri uri);
     }
 
-    private void carregaListaNutricionista() {
-        NutricionistaDAO dao = new NutricionistaDAO(getContext());
-        List<Nutricionista> nutricionistas = dao.buscaRelatorioNU();
-        dao.close();
-
-        NutricionistaAdapter adapter = new NutricionistaAdapter(getContext(), nutricionistas);
-        listaNutricionistas.setAdapter(adapter);
+    @Override
+    public void onResume() {
+        super.onResume();
     }
 }
 

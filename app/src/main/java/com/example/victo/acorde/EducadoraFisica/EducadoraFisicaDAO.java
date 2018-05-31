@@ -6,20 +6,18 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.example.victo.acorde.Nutricionista.Nutricionista;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class EducadoraFisicaDAO extends SQLiteOpenHelper{
 
     public EducadoraFisicaDAO(Context context){
-        super(context,"Acorde", null, 1);
+        super(context,"Acorde", null, 2);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sql = "CREATE TABLE EducadoraFisica (" +
+        String sql = "CREATE TABLE IF NOT EXISTS EducadoraFisica (" +
                 "    id INTEGER PRIMARY KEY, " +
                 "    nomeAssistido VARCHAR, " +
                 "    motivoAtendimento VARCHAR, " +
@@ -50,7 +48,12 @@ public class EducadoraFisicaDAO extends SQLiteOpenHelper{
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        onCreate(db);
+    }
 
+    @Override
+    public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        onCreate(db);
     }
 
     public void insereRelatorioEF(EducadoraFisica educadoraFisica) {
@@ -94,7 +97,7 @@ public class EducadoraFisicaDAO extends SQLiteOpenHelper{
         dados.put("legoObs", educadoraFisica.getLegoObs());
         dados.put("pintar", educadoraFisica.getPintar());
         dados.put("controle", educadoraFisica.getControle());
-        dados.put("dimensaoC", educadoraFisica.getDimensaoC());
+        dados.put("dimensao", educadoraFisica.getDimensaoC());
         dados.put("dimensaoFrente", educadoraFisica.getDimensaoFrente());
         dados.put("dimensaoTras", educadoraFisica.getDimensaoTras());
         dados.put("dimensaoDireita", educadoraFisica.getDimensaoDireita());
@@ -134,7 +137,7 @@ public class EducadoraFisicaDAO extends SQLiteOpenHelper{
             educadoraFisica.setLegoObs((cursor.getString(cursor.getColumnIndex("legoObs"))));
             educadoraFisica.setPintar((cursor.getString(cursor.getColumnIndex("pintar"))));
             educadoraFisica.setControle((cursor.getString(cursor.getColumnIndex("controle"))));
-            educadoraFisica.setDimensaoC((cursor.getString(cursor.getColumnIndex("dimensaoC"))));
+            educadoraFisica.setDimensaoC((cursor.getString(cursor.getColumnIndex("dimensao"))));
             educadoraFisica.setDimensaoFrente((cursor.getString(cursor.getColumnIndex("dimensaoFrente"))));
             educadoraFisica.setDimensaoTras((cursor.getString(cursor.getColumnIndex("dimensaoTras"))));
             educadoraFisica.setDimensaoDireita((cursor.getString(cursor.getColumnIndex("dimensaoDireita"))));

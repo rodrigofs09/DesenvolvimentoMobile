@@ -40,7 +40,6 @@ public class NutricionistaActivity extends AppCompatActivity {
             helper.preencheFormularioNU(nutricionista);
         }
 
-
         Button enviarDados = findViewById(R.id.buttonFinalizar);
         enviarDados.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,8 +57,6 @@ public class NutricionistaActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                Intent intent = new Intent(NutricionistaActivity.this, MainActivity.class);
-                startActivity(intent);
                 finish();
                 return true;
             default:

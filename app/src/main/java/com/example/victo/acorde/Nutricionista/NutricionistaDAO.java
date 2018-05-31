@@ -6,8 +6,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.example.victo.acorde.EducadoraFisica.EducadoraFisica;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -46,7 +44,11 @@ public class NutricionistaDAO extends SQLiteOpenHelper{
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS" + " NUTRICIONISTA");
+        onCreate(db);
+    }
+
+    @Override
+    public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         onCreate(db);
     }
 

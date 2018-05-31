@@ -1,7 +1,6 @@
 package com.example.victo.acorde.Nutricionista;
 
 import android.widget.EditText;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.example.victo.acorde.R;
