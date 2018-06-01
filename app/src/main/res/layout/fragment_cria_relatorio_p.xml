@@ -53,8 +53,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="60dp"
-                android:layout_marginLeft="60dp"
-                android:drawableBottom="@drawable/ic_calendario"/>
+                android:layout_marginLeft="60dp" />
 
         </LinearLayout>
 

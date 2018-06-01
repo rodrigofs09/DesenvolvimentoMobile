@@ -47,7 +47,12 @@ public class EducadoraFisicaActivity extends AppCompatActivity {
             public void onClick(View v) {
                 educadoraFisica = helper.pegaEducadoraFisica();
                 EducadoraFisicaDAO dao = new EducadoraFisicaDAO(getApplicationContext());
-                dao.insereRelatorioEF(educadoraFisica);
+
+                if(educadoraFisica.getId()!=null){
+                    dao.alteraRelatorioEF(educadoraFisica);
+                }else{
+                    dao.insereRelatorioEF(educadoraFisica);
+                }
                 dao.close();
                 finish();
             }

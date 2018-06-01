@@ -4,13 +4,13 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.ContextMenu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.victo.acorde.Main.MainActivity;
 import com.example.victo.acorde.R;
 
 import java.util.List;
@@ -22,6 +22,8 @@ public class EducadoraFisicaLista extends AppCompatActivity {
 
     @BindView(R.id.vazio)
     TextView vazio;
+
+    ListView listaEducadoraFisicas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,21 +42,14 @@ public class EducadoraFisicaLista extends AppCompatActivity {
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
 
-        EducadoraFisicaDAO dao = new EducadoraFisicaDAO(getApplicationContext());
-        List<EducadoraFisica> educadoraFisicas = dao.buscaRelatorioEF();
-        dao.close();
+        listaEducadoraFisicas = findViewById(R.id.lista_educadoraFisica);
 
-        final ListView listaEducadoraFisica = (ListView) findViewById(R.id.lista_educadoraFisica);
+        listaEducadoraFisicas.setEmptyView(vazio);
 
-        listaEducadoraFisica.setEmptyView(vazio);
-
-        EducadoraFisicaAdapter adapter = new EducadoraFisicaAdapter(this, educadoraFisicas);
-        listaEducadoraFisica.setAdapter(adapter);
-
-        listaEducadoraFisica.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listaEducadoraFisicas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                EducadoraFisica educadoraFisica = (EducadoraFisica)listaEducadoraFisica.getItemAtPosition(position);
+                EducadoraFisica educadoraFisica = (EducadoraFisica)listaEducadoraFisicas.getItemAtPosition(position);
 
                 Intent intentVaiProFormulario = new Intent(getApplicationContext(), EducadoraFisicaActivity.class);
                 intentVaiProFormulario.putExtra("educadoraFisica", educadoraFisica);
@@ -62,6 +57,13 @@ public class EducadoraFisicaLista extends AppCompatActivity {
             }
         });
 
+        registerForContextMenu(listaEducadoraFisicas);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        carregaLista();
     }
 
     @Override
@@ -74,4 +76,36 @@ public class EducadoraFisicaLista extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+
+        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) menuInfo;
+        final EducadoraFisica educadoraFisica = (EducadoraFisica) listaEducadoraFisicas.getItemAtPosition(info.position);
+
+        MenuItem deletar = menu.add("Deletar");
+        deletar.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+
+                EducadoraFisicaDAO dao = new EducadoraFisicaDAO(EducadoraFisicaLista.this);
+                dao.deletaRelatorioEF(educadoraFisica);
+                dao.close();
+                carregaLista();
+
+                return false;
+            }
+        });
+    }
+
+    private void carregaLista() {
+        EducadoraFisicaDAO dao = new EducadoraFisicaDAO(this);
+        List<EducadoraFisica> educadoraFisicas = dao.buscaRelatorioEF();
+        dao.close();
+
+        EducadoraFisicaAdapter adapter = new EducadoraFisicaAdapter(EducadoraFisicaLista.this, educadoraFisicas);
+        listaEducadoraFisicas.setAdapter(adapter);
+    }
 }
+

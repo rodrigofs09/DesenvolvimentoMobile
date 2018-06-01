@@ -46,7 +46,12 @@ public class NutricionistaActivity extends AppCompatActivity {
             public void onClick(View v) {
                 nutricionista = helper.pegaNutricionista();
                 NutricionistaDAO dao = new NutricionistaDAO(getApplicationContext());
-                dao.insereRelatorioNU(nutricionista);
+
+                if(nutricionista.getId()!=null){
+                    dao.alteraRelatorioNU(nutricionista);
+                }else{
+                    dao.insereRelatorioNU(nutricionista);
+                }
                 dao.close();
                 finish();
             }
