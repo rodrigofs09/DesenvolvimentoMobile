@@ -3,7 +3,11 @@ package com.example.victo.acorde.Nutricionista;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.SearchView;
+import android.text.TextUtils;
 import android.view.ContextMenu;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -107,5 +111,41 @@ public class NutricionistaLista extends AppCompatActivity {
 
         NutricionistaAdapter adapter = new NutricionistaAdapter(NutricionistaLista.this,nutricionistas);
         listaNutricionistas.setAdapter(adapter);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_search, menu);
+        MenuItem item = menu.findItem(R.id.menuSearch);
+        SearchView searchView = (SearchView)item.getActionView();
+
+        NutricionistaDAO dao = new NutricionistaDAO(this);
+        List<Nutricionista> nutricionistas = dao.buscaRelatorioNU();
+        dao.close();
+
+        final NutricionistaAdapter adapter = new NutricionistaAdapter(NutricionistaLista.this,nutricionistas);
+        listaNutricionistas.setAdapter(adapter);
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                if (TextUtils.isEmpty(newText)) {
+                    adapter.getFilter().filter(null);
+                } else {
+                    adapter.getFilter().filter(newText);
+                }
+                adapter.notifyDataSetChanged();
+                return false;
+            }
+
+        });
+
+        return super.onCreateOptionsMenu(menu);
     }
 }

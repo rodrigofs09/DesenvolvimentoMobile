@@ -42,6 +42,7 @@ public class EducadoraFisicaDAO extends SQLiteOpenHelper{
                 "    dimensaoEsquerda VARCHAR, " +
                 "    dimensaoCima VARCHAR, " +
                 "    dimensaoBaixo VARCHAR, " +
+                "    data VARCHAR, " +
                 "    observacao VARCHAR);";
         db.execSQL(sql);
     }

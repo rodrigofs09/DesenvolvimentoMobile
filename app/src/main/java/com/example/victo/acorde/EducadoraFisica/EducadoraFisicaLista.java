@@ -3,8 +3,12 @@ package com.example.victo.acorde.EducadoraFisica;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.view.ContextMenu;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -107,5 +111,40 @@ public class EducadoraFisicaLista extends AppCompatActivity {
         EducadoraFisicaAdapter adapter = new EducadoraFisicaAdapter(EducadoraFisicaLista.this, educadoraFisicas);
         listaEducadoraFisicas.setAdapter(adapter);
     }
-}
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_search, menu);
+        MenuItem item = menu.findItem(R.id.menuSearch);
+        SearchView searchView = (SearchView)item.getActionView();
+
+        EducadoraFisicaDAO dao = new EducadoraFisicaDAO(this);
+        List<EducadoraFisica> educadoraFisicas = dao.buscaRelatorioEF();
+        dao.close();
+
+        final EducadoraFisicaAdapter adapter = new EducadoraFisicaAdapter(EducadoraFisicaLista.this, educadoraFisicas);
+        listaEducadoraFisicas.setAdapter(adapter);
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                if (TextUtils.isEmpty(newText)) {
+                    adapter.getFilter().filter(null);
+                } else {
+                    adapter.getFilter().filter(newText);
+                }
+                adapter.notifyDataSetChanged();
+                return false;
+            }
+
+        });
+
+        return super.onCreateOptionsMenu(menu);
+    }
+}

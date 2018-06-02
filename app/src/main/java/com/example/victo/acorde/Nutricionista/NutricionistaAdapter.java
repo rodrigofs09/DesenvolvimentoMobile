@@ -5,19 +5,25 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.TextView;
 import java.util.List;
 
 import com.example.victo.acorde.R;
 
-public class NutricionistaAdapter extends BaseAdapter {
+public class NutricionistaAdapter extends BaseAdapter implements Filterable {
 
-    private final List<Nutricionista> nutricionistas;
+    List<Nutricionista> nutricionistas;
     private final Context context;
+    private List<Nutricionista> filterList;
+
+    NutricionistaFiltro filter;
 
     public NutricionistaAdapter(Context context, List<Nutricionista> nutricionistas) {
         this.context = context;
         this.nutricionistas = nutricionistas;
+        this.filterList=nutricionistas;
     }
 
     @Override
@@ -51,4 +57,16 @@ public class NutricionistaAdapter extends BaseAdapter {
 
         return tela;
     }
+
+    @Override
+    public Filter getFilter() {
+
+        if(filter==null)
+        {
+            filter=new NutricionistaFiltro(filterList,this);
+        }
+
+        return filter;
+    }
+
 }

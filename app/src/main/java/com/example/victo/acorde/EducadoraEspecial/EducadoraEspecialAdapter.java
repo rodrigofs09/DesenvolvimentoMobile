@@ -1,4 +1,4 @@
-package com.example.victo.acorde.EducadoraFisica;
+package com.example.victo.acorde.EducadoraEspecial;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,23 +9,22 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.TextView;
 
-import java.util.List;
-
 import com.example.victo.acorde.R;
 
-public class EducadoraFisicaAdapter extends BaseAdapter implements Filterable {
+import java.util.List;
 
-    List<EducadoraFisica> educadoraFisicas;
-    private List<EducadoraFisica> filterList;
+public class EducadoraEspecialAdapter extends BaseAdapter implements Filterable {
+    List<EducadoraEspecial> educadoraEspecials;
+    private List<EducadoraEspecial> filterList;
 
-    EducadoraFisicaFiltro filter;
+    EducadoraEspecialFiltro filter;
 
     private final Context context;
 
-    public EducadoraFisicaAdapter(Context context, List<EducadoraFisica> educadoraFisicas) {
+    public EducadoraEspecialAdapter(Context context, List<EducadoraEspecial> educadoraEspecials) {
         this.context = context;
-        this.educadoraFisicas = educadoraFisicas;
-        this.filterList=educadoraFisicas;
+        this.educadoraEspecials = educadoraEspecials;
+        this.filterList=educadoraEspecials;
     }
 
     @Override
@@ -33,7 +32,7 @@ public class EducadoraFisicaAdapter extends BaseAdapter implements Filterable {
 
         if(filter==null)
         {
-            filter=new EducadoraFisicaFiltro(filterList,this);
+            filter=new EducadoraEspecialFiltro(filterList,this);
         }
 
         return filter;
@@ -41,23 +40,23 @@ public class EducadoraFisicaAdapter extends BaseAdapter implements Filterable {
 
     @Override
     public int getCount() {
-        return educadoraFisicas.size();
+        return educadoraEspecials.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return educadoraFisicas.get(position);
+        return educadoraEspecials.get(position);
     }
 
     @Override
     public long getItemId(int position) {
-        return educadoraFisicas.get(position).getId();
+        return educadoraEspecials.get(position).getId();
     }
 
     @Override
     public View getView(int position, View view, ViewGroup parent) {
 
-        EducadoraFisica educadoraFisica = educadoraFisicas.get(position);
+        EducadoraEspecial educadoraEspecial = educadoraEspecials.get(position);
         LayoutInflater inflater = LayoutInflater.from(context);
         View tela = view;
 
@@ -66,9 +65,8 @@ public class EducadoraFisicaAdapter extends BaseAdapter implements Filterable {
         }
 
         TextView campoNome = tela.findViewById(R.id.item_nome);
-        campoNome.setText(educadoraFisica.getNomeAssistido());
+        campoNome.setText(educadoraEspecial.getNomeAssistido());
 
         return tela;
     }
-
 }
