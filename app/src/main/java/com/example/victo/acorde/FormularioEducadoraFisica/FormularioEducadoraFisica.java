@@ -1,6 +1,7 @@
 package com.example.victo.acorde.FormularioEducadoraFisica;
 
 import java.io.Serializable;
+import java.sql.Date;
 
 public class FormularioEducadoraFisica implements Serializable {
 
@@ -229,4 +230,5 @@ public class FormularioEducadoraFisica implements Serializable {
     public void setObservacao(String obseracao) {
         this.observacao = obseracao;
     }
+
 }
