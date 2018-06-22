@@ -25,27 +25,17 @@
             android:name=".Main.MainActivity"
             android:theme="@style/AppThemeNoActionBar" />
         <activity
-            android:name=".EmGrupo.AtvGrupoActivity"
+            android:name=".FormularioNutricionista.CriaFormularioNutricionista.CriaFormularioNutricionistaActivity"
             android:theme="@style/AppThemeNoActionBar" />
         <activity
-            android:name=".Psicopedagoga.PsicopedagogaActivity"
+            android:name=".FormularioNutricionista.ListaFormulariosNutricionista.ListaFormulariosNutricionistaActivity"
             android:theme="@style/AppThemeNoActionBar" />
-        <activity
-            android:name=".Nutricionista.NutricionistaActivity"
-            android:theme="@style/AppThemeNoActionBar" />
-        <activity
-            android:name=".EducadoraFisica.EducadoraFisicaActivity"
-            android:theme="@style/AppThemeNoActionBar" />
-        <activity
-            android:name=".EducadoraEspecial.EducadoraEspecialActivity"
-            android:theme="@style/AppThemeNoActionBar" />
-        <activity
-            android:name=".EducadoraFisica.EducadoraFisicaLista"
-            android:theme="@style/AppThemeNoActionBar"/>
-        <activity android:name=".EducadoraEspecial.EducadoraEspecialLista"
-            android:theme="@style/AppThemeNoActionBar"/>
-        <activity android:name=".Nutricionista.NutricionistaLista"
-            android:theme="@style/AppThemeNoActionBar"></activity>
+        <activity android:name=".FormularioEducadoraFisica.CriaFormularioEducadoraFisica.CriaFormularioEducadoraFisicaActivity" />
+        <activity android:name=".FormularioEducadoraFisica.ListaFormulariosEducadoraFisica.ListaFormulariosEducadoraFisicaActivity" />
+        <activity android:name=".FormularioEducadoraEspecial.CriaFormularioEducadoraEspecial.CriaFormularioEducadoraEspecialActivity" />
+        <activity android:name=".FormularioEducadoraEspecial.ListaFormulariosEducadoraEspecial.ListaFormulariosEducadoraEspecialActivity" />
+        <activity android:name=".FomularioPsicopedagoga.CriaFormularioPsicopedagoga.CriaFormularioPsicopedagogaActivity" />
+        <activity android:name=".FomularioPsicopedagoga.ListaFormulariosPsicopedagoga.ListaFormulariosPsicopedagogaActivity"></activity>
     </application>
 
 </manifest>

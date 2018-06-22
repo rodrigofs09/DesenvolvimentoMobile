@@ -1,0 +1,4 @@
+package com.example.victo.acorde.FormularioEducadoraEspecial.ListaFormulariosEducadoraEspecial;
+
+public interface ListaFormulariosEducadoraEspecialContract {
+}

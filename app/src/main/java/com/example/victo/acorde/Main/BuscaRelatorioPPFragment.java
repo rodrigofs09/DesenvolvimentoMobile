@@ -13,12 +13,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
-import com.example.victo.acorde.EducadoraEspecial.EducadoraEspecialLista;
-import com.example.victo.acorde.EducadoraFisica.EducadoraFisicaLista;
-import com.example.victo.acorde.Nutricionista.NutricionistaLista;
+import com.example.victo.acorde.FormularioEducadoraFisica.ListaFormulariosEducadoraFisica.ListaFormulariosEducadoraFisicaActivity;
+import com.example.victo.acorde.FormularioNutricionista.ListaFormulariosNutricionista.ListaFormulariosNutricionistaActivity;
 import com.example.victo.acorde.R;
-
-import java.util.List;
 
 public class BuscaRelatorioPPFragment extends Fragment implements View.OnClickListener {
 
@@ -123,17 +120,17 @@ public class BuscaRelatorioPPFragment extends Fragment implements View.OnClickLi
         switch (view.getId()) {
             case R.id.proximo:
                 if(getTipoFuncionaria() == 0){ //Abre a lista da nutricionista
-                    Intent vaiPraLista = new Intent(getActivity() , NutricionistaLista.class);
+                    Intent vaiPraLista = new Intent(getActivity() , ListaFormulariosNutricionistaActivity.class);
                     startActivity(vaiPraLista);
                 }
-                if(getTipoFuncionaria() == 1){ //Abre a lista da educadora fisica
-                    Intent vaiPraLista = new Intent(getActivity() , EducadoraFisicaLista.class);
+                /*if(getTipoFuncionaria() == 1){ //Abre a lista da educadora fisica
+                    Intent vaiPraLista = new Intent(getActivity() , ListaFormulariosEducadoraFisicaActivity.this);
                     startActivity(vaiPraLista);
-                }
-                if(getTipoFuncionaria() == 2){ //Abre a lista da educadora especial
+                }*/
+                /*if(getTipoFuncionaria() == 2){ //Abre a lista da educadora especial
                     Intent vaiPraLista = new Intent(getActivity() , EducadoraEspecialLista.class);
                     startActivity(vaiPraLista);
-                }
+                }*/
                 break;
             default:
                 break;

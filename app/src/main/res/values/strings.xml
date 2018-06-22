@@ -7,8 +7,8 @@
     <string name="invalid_name">Nome inválido</string>
     <string name="invalid_password">Senha inválida</string>
     <string name="developer_name">ACORDE SÃO CARLOS</string>
-    <string name="nutricionista">Nutricionista</string>
-    <string name="educadoraFisica">Educadora Física</string>
+    <string name="formularioNutricionista">Nutricionista</string>
+    <string name="formularioEducadoraFisica">Educadora Física</string>
     <string name="educadoraEspecial">Educadora Especial</string>
     <string-array name="names">
         <item>Nutricionista</item>

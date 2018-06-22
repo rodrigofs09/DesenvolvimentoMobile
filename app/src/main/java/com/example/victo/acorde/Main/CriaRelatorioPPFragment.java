@@ -19,9 +19,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.victo.acorde.EducadoraEspecial.EducadoraEspecialActivity;
-import com.example.victo.acorde.EducadoraFisica.EducadoraFisicaActivity;
-import com.example.victo.acorde.Nutricionista.NutricionistaActivity;
+import com.example.victo.acorde.FormularioEducadoraFisica.CriaFormularioEducadoraFisica.CriaFormularioEducadoraFisicaActivity;
+import com.example.victo.acorde.FormularioNutricionista.CriaFormularioNutricionista.CriaFormularioNutricionistaActivity;
 import com.example.victo.acorde.R;
 
 import java.util.Calendar;
@@ -162,23 +161,23 @@ public class CriaRelatorioPPFragment extends Fragment implements View.OnClickLis
         switch (view.getId()) {
             case R.id.proximo:
                 if(getTipoAtividade() == 0){ //Abre o formulario da nutricionista
-                    Intent vaiProFormulario = new Intent(getActivity() , NutricionistaActivity.class);
+                    Intent vaiProFormulario = new Intent(getActivity() , CriaFormularioNutricionistaActivity.class);
                     vaiProFormulario.putExtra("tipo", selectedItemText);
                     vaiProFormulario.putExtra("data", date);
                     startActivity(vaiProFormulario);
                 }
-                if(getTipoAtividade() == 1){ //Abre o formulario da educadora fisica
-                    Intent vaiProFormulario = new Intent(getActivity() , EducadoraFisicaActivity.class);
+                /*if(getTipoAtividade() == 1){ //Abre o formulario da educadora fisica
+                    Intent vaiProFormulario = new Intent(getActivity() , CriaFormularioEducadoraFisicaActivity.this);
                     vaiProFormulario.putExtra("tipo", selectedItemText);
                     vaiProFormulario.putExtra("data", date);
                     startActivity(vaiProFormulario);
-                }
-                if(getTipoAtividade() == 2){ //Abre o formulario da educadora especial
+                }*/
+                /*if(getTipoAtividade() == 2){ //Abre o formulario da educadora especial
                     Intent vaiProFormulario = new Intent(getActivity() , EducadoraEspecialActivity.class);
                     vaiProFormulario.putExtra("tipo", selectedItemText);
                     vaiProFormulario.putExtra("data", date);
                     startActivity(vaiProFormulario);
-                }
+                }*/
                 //Toast.makeText(getContext(), "Calendario", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.calendario:
