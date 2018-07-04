@@ -1,26 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:theme="@style/FormTheme">
+    android:theme="@style/FormTheme"
+    android:orientation="vertical"
+    android:gravity="center_vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center_vertical">
+    <TextView
+        android:id="@+id/item_nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nomeAssistido"
+        android:textSize="24sp"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="@color/black"/>
 
-        <TextView
-            android:id="@+id/item_nome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="NomeAssistido"
-            android:textSize="24sp"
-            android:paddingLeft="10dp"
-            android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/item_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/data"
+        android:textSize="24sp"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="@color/black"/>
 
-
-    </LinearLayout>
+    <TextView
+        android:id="@+id/item_motivo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/motivoAtendimento"
+        android:textSize="24sp"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="@color/black"/>
 
 </LinearLayout>

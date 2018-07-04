@@ -1,73 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:theme="@style/FormTheme"
+    android:orientation="vertical"
     tools:context=".Main.BuscaRelatorioPPFragment">
+
+    <TextView
+        android:id="@+id/procuraRelatorio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/buscaRelatorio"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:layout_gravity="center_vertical"
+        android:textColorHint="@color/black"
+        android:gravity="center"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/procuraRelatorio"
+
+        <Spinner
+            android:id="@+id/funcionariaBuscaSpinner"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:hint="Buscar Relatório"
-            android:textSize="24sp"
-            android:textColor="@color/black"
-            android:layout_gravity="center_vertical"
-            android:textColorHint="@color/black"
-            android:gravity="center"
-            />
+            android:textSize="30sp"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginTop="40dp"
-            android:orientation="horizontal">
-
-
-            <Spinner
-                android:id="@+id/funcionariaBuscaSpinner"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:textSize="30sp"/>
-
-
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/proximo"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="50dp"
-            android:text="Próximo"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="17sp"
-            android:background="@drawable/havelock_blue_rounded_corners"/>
 
     </LinearLayout>
 
-</RelativeLayout>
+    <Button
+        android:id="@+id/proximo"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/proximo"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:background="@drawable/havelock_blue_rounded_corners"/>
+
+</LinearLayout>
 

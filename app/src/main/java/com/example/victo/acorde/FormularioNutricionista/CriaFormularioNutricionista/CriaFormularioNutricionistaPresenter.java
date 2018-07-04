@@ -7,11 +7,11 @@ import com.example.victo.acorde.FormularioNutricionista.FormularioNutricionistaD
 
 public class CriaFormularioNutricionistaPresenter implements CriaFormularioNutricionistaContract.Presenter {
 
-    FormularioNutricionista formularioNutricionista;
-    CriaFormularioNutricionistaContract.View view;
-    Context context;
+    private FormularioNutricionista formularioNutricionista;
+    private CriaFormularioNutricionistaContract.View view;
+    private Context context;
 
-    public CriaFormularioNutricionistaPresenter(CriaFormularioNutricionistaContract.View view, Context context) {
+    CriaFormularioNutricionistaPresenter(CriaFormularioNutricionistaContract.View view, Context context) {
         this.view = view;
         this.context = context;
         this.formularioNutricionista = new FormularioNutricionista();
@@ -23,10 +23,12 @@ public class CriaFormularioNutricionistaPresenter implements CriaFormularioNutri
             this.formularioNutricionista = formularioNutricionista;
     }
 
-    public void setFormularioNutricionista(String nomeAssistido, String motivoAtendimento, String encaminhamento,
-                                      String altura, String peso, String cintura, String quadril, String bracos,
-                                      String observacao) {
+    public void setFormularioNutricionista(String dataAtendimento, String nomeAssistido, String motivoAtendimento,
+                                           String encaminhamento, String altura, String peso, String cintura, String quadril,
+                                           String bracos, int alimentarSozinho, int servirSozinho, int qtdAlimento,
+            int prepararSozinho, int habitoIntestinal, int mastigacao, int patologia, int alergiaAlimentar, int preferenciaAlimentar, int naoConsome, String observacao) {
 
+        formularioNutricionista.setDataAtendimento(dataAtendimento);
         formularioNutricionista.setNomeAssistido(nomeAssistido);
         formularioNutricionista.setMotivoAtendimento(motivoAtendimento);
         formularioNutricionista.setEncaminhamento(encaminhamento);
@@ -35,17 +37,16 @@ public class CriaFormularioNutricionistaPresenter implements CriaFormularioNutri
         formularioNutricionista.setCintura(cintura);
         formularioNutricionista.setQuadril(quadril);
         formularioNutricionista.setBracos(bracos);
-        /*formularioNutricionista.setAlimentarSozinho(alimentarSozinho);
+        formularioNutricionista.setAlimentarSozinho(alimentarSozinho);
         formularioNutricionista.setServirSozinho(servirSozinho);
         formularioNutricionista.setQtdAlimento(qtdAlimento);
         formularioNutricionista.setPrepararSozinho(prepararSozinho);
         formularioNutricionista.setHabitoIntestinal(habitoIntestinal);
         formularioNutricionista.setMastigacao(mastigacao);
         formularioNutricionista.setPatologia(patologia);
-        formularioNutricionista.setIntoleranciAlimentar(intoleranciAlimentar);
         formularioNutricionista.setAlergiaAlimentar(alergiaAlimentar);
         formularioNutricionista.setPreferenciaAlimentar(preferenciaAlimentar);
-        formularioNutricionista.setNaoConsome(naoConsome);*/
+        formularioNutricionista.setNaoConsome(naoConsome);
         formularioNutricionista.setObservacao(observacao);
 
         insereFormularioNutricionista(formularioNutricionista);
@@ -53,8 +54,9 @@ public class CriaFormularioNutricionistaPresenter implements CriaFormularioNutri
 
     public void getFormularioNutricionista() {
         if (formularioNutricionista != null){
-            view.setInfosFormularioNutricionista(formularioNutricionista.getNomeAssistido(), formularioNutricionista.getMotivoAtendimento(), formularioNutricionista.getEncaminhamento(), formularioNutricionista.getAltura(),
-                    formularioNutricionista.getPeso(), formularioNutricionista.getCintura(), formularioNutricionista.getQuadril(), formularioNutricionista.getBracos(), formularioNutricionista.getObservacao());
+            view.setInfosFormularioNutricionista(formularioNutricionista.getDataAtendimento(), formularioNutricionista.getNomeAssistido(), formularioNutricionista.getMotivoAtendimento(), formularioNutricionista.getEncaminhamento(), formularioNutricionista.getAltura(),
+                    formularioNutricionista.getPeso(), formularioNutricionista.getCintura(), formularioNutricionista.getQuadril(), formularioNutricionista.getBracos(), formularioNutricionista.getAlimentarSozinho(), formularioNutricionista.getServirSozinho(), formularioNutricionista.getQtdAlimento(), formularioNutricionista.getPrepararSozinho(), formularioNutricionista.getHabitoIntestinal(),
+                    formularioNutricionista.getMastigacao(), formularioNutricionista.getPatologia(), formularioNutricionista.getAlergiaAlimentar(), formularioNutricionista.getPreferenciaAlimentar(), formularioNutricionista.getNaoConsome(), formularioNutricionista.getObservacao());
         }
 
     }
@@ -70,10 +72,3 @@ public class CriaFormularioNutricionistaPresenter implements CriaFormularioNutri
         dao.close();
     }
 }
-
-/*formularioNutricionista.getAlimentarSozinho(),
-                formularioNutricionista.getServirSozinho(), formularioNutricionista.getQtdAlimento(), formularioNutricionista.getPrepararSozinho(), formularioNutricionista.getHabitoIntestinal(), formularioNutricionista.getMastigacao(),
-                formularioNutricionista.getPatologia(), formularioNutricionista.getIntoleranciAlimentar(), formularioNutricionista.getAlergiaAlimentar(), formularioNutricionista.getPreferenciaAlimentar(), formularioNutricionista.getNaoConsome()*/
-
-/*String alimentarSozinho, String servirSozinho, String qtdAlimento, String prepararSozinho, String habitoIntestinal, String mastigacao, String patologia,
-                                      String intoleranciAlimentar, String alergiaAlimentar, String preferenciaAlimentar, String naoConsome,*/

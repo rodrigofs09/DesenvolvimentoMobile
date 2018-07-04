@@ -13,6 +13,3 @@ public interface ListaFormulariosNutricionistaContract {
         void carregaLista();
     }
 }
-
-/*String alimentarSozinho, String servirSozinho, String qtdAlimento, String prepararSozinho, String habitoIntestinal, String mastigacao, String patologia,
-                                String intoleranciAlimentar, String alergiaAlimentar, String preferenciaAlimentar, String naoConsome*/

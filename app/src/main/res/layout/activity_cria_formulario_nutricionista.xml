@@ -8,7 +8,7 @@
     tools:context=".FormularioNutricionista.CriaFormularioNutricionista.CriaFormularioNutricionistaActivity"
     android:theme="@style/FormTheme">
 
-    <include layout="@layout/toolbar"></include>
+    <include layout="@layout/toolbar" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -26,29 +26,19 @@
                 android:descendantFocusability="beforeDescendants"
                 android:focusableInTouchMode="true">
 
-                <android.support.design.widget.TextInputLayout
-                    android:id="@+id/text_input_layout_data"
+                <TextView
+                    android:id="@+id/dataFormulario"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColorHint="@color/black"
-                    android:layout_marginTop="8dp">
-
-                    <android.support.design.widget.TextInputEditText
-                        android:id="@+id/editTextData"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="8dp"
-                        android:maxLines="1"
-                        android:lines="1"
-                        android:textColor="@color/black"
-                        android:imeOptions="actionNext"
-                        android:hint="Data Atendimento"
-                        android:textColorHint="@color/black"
-                        android:inputType="text"/>
-
-                </android.support.design.widget.TextInputLayout>
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:hint="@string/dataAtendimento"
+                    android:textColorHint="@color/black"/>
 
                 <android.support.design.widget.TextInputLayout
                     android:id="@+id/text_input_layout_nome"
@@ -68,7 +58,7 @@
                         android:lines="1"
                         android:textColor="@color/black"
                         android:imeOptions="actionNext"
-                        android:hint="Nome do Assistido"
+                        android:hint="@string/nomeDoAssistido"
                         android:textColorHint="@color/black"
                         android:inputType="text"/>
 
@@ -87,7 +77,7 @@
                         android:layout_marginEnd="8dp"
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
-                        android:hint="Motivo do Atendimento"
+                        android:hint="@string/motivoAtendimento"
                         android:maxLines="1"
                         android:lines="1"
                         android:textColor="@color/black"
@@ -110,7 +100,7 @@
                         android:layout_marginEnd="8dp"
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
-                        android:hint="Encaminhamento"
+                        android:hint="@string/encaminhamento"
                         android:maxLines="1"
                         android:lines="1"
                         android:textColor="@color/black"
@@ -140,7 +130,7 @@
                             android:layout_marginEnd="8dp"
                             android:layout_marginStart="8dp"
                             android:layout_marginTop="8dp"
-                            android:hint="Altura (Cm)"
+                            android:hint="@string/altura"
                             android:maxLines="1"
                             android:lines="1"
                             android:textColor="@color/black"
@@ -163,7 +153,7 @@
                             android:layout_marginTop="8dp"
                             android:layout_marginEnd="8dp"
                             android:layout_marginStart="8dp"
-                            android:hint="Peso (Kg)"
+                            android:hint="@string/peso"
                             android:maxLines="1"
                             android:lines="1"
                             android:textColor="@color/black"
@@ -186,7 +176,7 @@
                             android:layout_marginEnd="8dp"
                             android:layout_marginStart="8dp"
                             android:layout_marginTop="8dp"
-                            android:hint="Braços (Cm)"
+                            android:hint="@string/bracos"
                             android:maxLines="1"
                             android:lines="1"
                             android:textColor="@color/black"
@@ -219,7 +209,7 @@
                             android:layout_marginEnd="8dp"
                             android:layout_marginStart="8dp"
                             android:layout_marginTop="8dp"
-                            android:hint="Quadril (Cm)"
+                            android:hint="@string/quadril"
                             android:imeOptions="actionNext"
                             android:inputType="numberDecimal"
                             android:lines="1"
@@ -242,7 +232,7 @@
                             android:layout_marginEnd="8dp"
                             android:layout_marginStart="8dp"
                             android:layout_marginTop="8dp"
-                            android:hint="Cintura (Cm)"
+                            android:hint="@string/cintura"
                             android:maxLines="1"
                             android:lines="1"
                             android:textColor="@color/black"
@@ -261,7 +251,7 @@
                     android:layout_marginEnd="12dp"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="8dp"
-                    android:text="Alimenta-se sozinho?"
+                    android:text="@string/perguntaAlimentaSozinho"
                     android:textColor="@color/black"/>
 
                 <RadioGroup
@@ -277,14 +267,15 @@
                         android:id="@+id/r1sim"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Sim" />
+                        android:text="@string/sim" />
 
                     <RadioButton
                         android:id="@+id/r1nao"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="50dp"
-                        android:text="Não" />
+                        android:layout_marginStart="50dp"
+                        android:text="@string/nao" />
 
                 </RadioGroup>
 
@@ -295,7 +286,7 @@
                     android:layout_marginEnd="12dp"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="8dp"
-                    android:text="Serve-se sozinho?"
+                    android:text="@string/perguntaServeSozinho"
                     android:textColor="@color/black"/>
 
                 <RadioGroup
@@ -311,14 +302,15 @@
                         android:id="@+id/r2sim"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Sim" />
+                        android:text="@string/sim" />
 
                     <RadioButton
                         android:id="@+id/r2nao"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="50dp"
-                        android:text="Não" />
+                        android:layout_marginStart="50dp"
+                        android:text="@string/nao" />
 
                 </RadioGroup>
 
@@ -329,7 +321,7 @@
                     android:layout_marginEnd="12dp"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="8dp"
-                    android:text="Sabe a quantidade de alimento que deve comer?"
+                    android:text="@string/perguntaSabeQtdAlimento"
                     android:textColor="@color/black"				/>
 
                 <RadioGroup
@@ -344,14 +336,15 @@
                         android:id="@+id/r3sim"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Sim" />
+                        android:text="@string/sim" />
 
                     <RadioButton
                         android:id="@+id/r3nao"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="50dp"
-                        android:text="Não" />
+                        android:layout_marginStart="50dp"
+                        android:text="@string/nao" />
 
                 </RadioGroup>
 
@@ -363,7 +356,7 @@
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="8dp"
                     android:textColor="@color/black"
-                    android:text="Sabe preparar o proprio alimento" />
+                    android:text="@string/perguntaSabePrepararAlimento" />
 
                 <RadioGroup
                     android:layout_width="match_parent"
@@ -377,14 +370,15 @@
                         android:id="@+id/r4sim"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Sim" />
+                        android:text="@string/sim" />
 
                     <RadioButton
                         android:id="@+id/r4nao"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="50dp"
-                        android:text="Não" />
+                        android:layout_marginStart="50dp"
+                        android:text="@string/nao" />
 
                 </RadioGroup>
 
@@ -396,7 +390,7 @@
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="8dp"
                     android:textColor="@color/black"
-                    android:text="Hábito intestinal?" />
+                    android:text="@string/perguntaHabitoIntestinal" />
 
                 <RadioGroup
                     android:id="@+id/RadioGroupHabitoIntestinal"
@@ -410,21 +404,23 @@
                         android:id="@+id/r5abaixo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Abaixo" />
+                        android:text="@string/abaixo" />
 
                     <RadioButton
                         android:id="@+id/r5regular"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="31dp"
-                        android:text="Regular" />
+                        android:layout_marginStart="31dp"
+                        android:text="@string/regular" />
 
                     <RadioButton
                         android:id="@+id/r5bom"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="56dp"
-                        android:text="Bom" />
+                        android:layout_marginStart="56dp"
+                        android:text="@string/bom" />
 
 
                 </RadioGroup>
@@ -437,7 +433,7 @@
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="8dp"
                     android:textColor="@color/black"
-                    android:text="Mastigação" />
+                    android:text="@string/mastigacao" />
 
                 <RadioGroup
                     android:layout_width="match_parent"
@@ -451,21 +447,23 @@
                         android:id="@+id/r6rapida"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Rápida" />
+                        android:text="@string/rapida" />
 
                     <RadioButton
                         android:id="@+id/r6moderada"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="31dp"
-                        android:text="Moderada" />
+                        android:layout_marginStart="31dp"
+                        android:text="@string/moderada" />
 
                     <RadioButton
                         android:id="@+id/r6devagar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="40dp"
-                        android:text="Devagar" />
+                        android:layout_marginStart="40dp"
+                        android:text="@string/devagar" />
 
 
                 </RadioGroup>
@@ -478,7 +476,7 @@
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="8dp"
                     android:textColor="@color/black"
-                    android:text="Patologia" />
+                    android:text="@string/patologia" />
 
                 <RadioGroup
                     android:layout_width="match_parent"
@@ -492,14 +490,15 @@
                         android:id="@+id/r7sim"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Sim" />
+                        android:text="@string/sim" />
 
                     <RadioButton
                         android:id="@+id/r7nao"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="50dp"
-                        android:text="Não" />
+                        android:layout_marginStart="50dp"
+                        android:text="@string/nao" />
 
                 </RadioGroup>
 
@@ -511,41 +510,8 @@
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    android:hint="Quais"
+                    android:hint="@string/quais"
                     android:inputType="text" />
-
-                <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="12dp"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginTop="8dp"
-                    android:textColor="@color/black"
-                    android:text="Intolerância" />
-
-                <RadioGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:id="@+id/RadioGroupIntoleranciaAlimentar"
-                    android:layout_marginEnd="12dp"
-                    android:layout_marginStart="12dp">
-
-                    <RadioButton
-                        android:id="@+id/r8sim"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Sim" />
-
-                    <RadioButton
-                        android:id="@+id/r8nao"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="50dp"
-                        android:text="Não" />
-
-                </RadioGroup>
 
                 <TextView
                     android:id="@+id/textView9"
@@ -555,7 +521,7 @@
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="8dp"
                     android:textColor="@color/black"
-                    android:text="Alergia" />
+                    android:text="@string/alergia" />
 
                 <RadioGroup
                     android:layout_width="match_parent"
@@ -569,14 +535,15 @@
                         android:id="@+id/r9sim"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Sim" />
+                        android:text="@string/sim" />
 
                     <RadioButton
                         android:id="@+id/r9nao"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="50dp"
-                        android:text="Não" />
+                        android:layout_marginStart="50dp"
+                        android:text="@string/nao" />
 
                 </RadioGroup>
 
@@ -588,7 +555,7 @@
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    android:hint="Quais"
+                    android:hint="@string/quais"
                     android:inputType="text" />
 
                 <TextView
@@ -599,7 +566,7 @@
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="8dp"
                     android:textColor="@color/black"
-                    android:text="Possui preferência por alguns alimentos?" />
+                    android:text="@string/perguntaPreferenciaAlimentos" />
 
                 <RadioGroup
                     android:layout_width="match_parent"
@@ -613,14 +580,15 @@
                         android:id="@+id/r10sim"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Sim" />
+                        android:text="@string/sim" />
 
                     <RadioButton
                         android:id="@+id/r10nao"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="50dp"
-                        android:text="Não" />
+                        android:layout_marginStart="50dp"
+                        android:text="@string/nao" />
 
                 </RadioGroup>
 
@@ -632,7 +600,7 @@
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    android:hint="Quais"
+                    android:hint="@string/quais"
                     android:inputType="text" />
 
                 <TextView
@@ -643,7 +611,7 @@
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="8dp"
                     android:textColor="@color/black"
-                    android:text="Não consome algum alimento?" />
+                    android:text="@string/perguntaNaoConsomeAlimentos" />
 
                 <RadioGroup
                     android:layout_width="match_parent"
@@ -657,14 +625,15 @@
                         android:id="@+id/r11sim"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Sim" />
+                        android:text="@string/sim" />
 
                     <RadioButton
                         android:id="@+id/r11nao"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="50dp"
-                        android:text="Não" />
+                        android:layout_marginStart="50dp"
+                        android:text="@string/nao" />
 
                 </RadioGroup>
 
@@ -676,7 +645,7 @@
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    android:hint="Quais"
+                    android:hint="@string/quais"
                     android:inputType="text" />
 
                 <android.support.design.widget.TextInputLayout
@@ -697,7 +666,7 @@
                         android:lines="1"
                         android:textColor="@color/black"
                         android:imeOptions="actionDone"
-                        android:hint="Observação"
+                        android:hint="@string/observacao"
                         android:textColorHint="@color/black"
                         android:inputType="text"/>
                 </android.support.design.widget.TextInputLayout>
@@ -715,7 +684,7 @@
                 android:textColor="@color/white"
                 android:textSize="17sp"
                 android:background="@drawable/havelock_blue_rounded_corners"
-                android:text="Finalizar" />
+                android:text="@string/finalizar" />
 
         </LinearLayout>
 

@@ -10,6 +10,46 @@
     <string name="formularioNutricionista">Nutricionista</string>
     <string name="formularioEducadoraFisica">Educadora Física</string>
     <string name="educadoraEspecial">Educadora Especial</string>
+    <string name="semRelatorios">Não há relatórios cadastrados</string>
+    <string name="nomeAssistido">NomeAssistido</string>
+    <string name="mensagens">Mensagens</string>
+    <string name="data">Data do atendimento</string>
+    <string name="proximo">Próximo</string>
+    <string name="novoRelatorio">Novo Relatório</string>
+    <string name="buscaRelatorio">Buscar Relatório</string>
+    <string name="dataAtendimento">Selecione a Data do Atendimento</string>
+    <string name="nomeDoAssistido">Nome do Assistido</string>
+    <string name="motivoAtendimento">Motivo do Atendimento</string>
+    <string name="encaminhamento">Encaminhamento</string>
+    <string name="altura">Altura (cm)</string>
+    <string name="peso">Peso (Kg)</string>
+    <string name="bracos">Braços (cm)</string>
+    <string name="quadril">Quadril (cm)</string>
+    <string name="cintura">Cintura (cm)</string>
+    <string name="sim">Sim</string>
+    <string name="nao">Não</string>
+    <string name="abaixo">Abaixo</string>
+    <string name="regular">Regular</string>
+    <string name="bom">Bom</string>
+    <string name="rapida">Rápida</string>
+    <string name="moderada">Moderada</string>
+    <string name="devagar">Devagar</string>
+    <string name="perguntaAlimentaSozinho">Alimenta-se sozinho?</string>
+    <string name="perguntaServeSozinho">Serve-se sozinho?</string>
+    <string name="perguntaSabeQtdAlimento">Sabe a quantidade de alimento que deve comer?</string>
+    <string name="perguntaSabePrepararAlimento">Sabe preparar o proprio alimento</string>
+    <string name="perguntaHabitoIntestinal">Hábito intestinal?</string>
+    <string name="mastigacao">Mastigação</string>
+    <string name="patologia">Patologia</string>
+    <string name="quais">Quais?</string>
+    <string name="intolerancia">Intolerância?</string>
+    <string name="alergia">Alergia?</string>
+    <string name="perguntaPreferenciaAlimentos">Possui preferência por alguns alimentos?</string>
+    <string name="perguntaNaoConsomeAlimentos">Não consome algum alimento?</string>
+    <string name="observacao">Observação</string>
+    <string name="finalizar">Finalizar</string>
+    <string name="procurar">Procurar relatório</string>
+
     <string-array name="names">
         <item>Nutricionista</item>
         <item>Educadora Física</item>

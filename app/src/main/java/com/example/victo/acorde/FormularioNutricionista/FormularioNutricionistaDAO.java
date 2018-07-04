@@ -18,7 +18,7 @@ public class FormularioNutricionistaDAO extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         String sql = "CREATE TABLE IF NOT EXISTS FormularioNutricionista (" +
                 "    id INTEGER PRIMARY KEY, " +
-                "    dataAtendimento DATE," +
+                "    dataAtendimento VARCHAR," +
                 "    nomeAssistido VARCHAR, " +
                 "    motivoAtendimento VARCHAR, " +
                 "    encaminhamento VARCHAR, " +
@@ -27,17 +27,16 @@ public class FormularioNutricionistaDAO extends SQLiteOpenHelper {
                 "    cintura VARCHAR, " +
                 "    quadril VARCHAR, " +
                 "    bracos VARCHAR, " +
-                "    alimentarSozinho VARCHAR, " +
-                "    servirSozinho VARCHAR, " +
-                "    qtdAlimento VARCHAR, " +
-                "    prepararSozinho VARCHAR, " +
-                "    habitoIntestinal VARCHAR, " +
-                "    mastigacao VARCHAR, " +
-                "    patologia VARCHAR, " +
-                "    intoleranciAlimentar VARCHAR, " +
-                "    alergiaAlimentar VARCHAR, " +
-                "    preferenciaAlimentar VARCHAR, " +
-                "    naoConsome VARCHAR, " +
+                "    alimentarSozinho INTEGER, " +
+                "    servirSozinho INTEGER, " +
+                "    qtdAlimento INTEGER, " +
+                "    prepararSozinho INTEGER, " +
+                "    habitoIntestinal INTEGER, " +
+                "    mastigacao INTEGER, " +
+                "    patologia INTEGER, " +
+                "    alergiaAlimentar INTEGER, " +
+                "    preferenciaAlimentar INTEGER, " +
+                "    naoConsome INTEGER, " +
                 "    observacao VARCHAR);";
         db.execSQL(sql);
     }
@@ -77,7 +76,7 @@ public class FormularioNutricionistaDAO extends SQLiteOpenHelper {
     private ContentValues pegaDadosFormularioNU(FormularioNutricionista formularioNutricionista) {
         ContentValues dados = new ContentValues();
 
-        //dados.put("dataAtendimento", formularioNutricionista.getDataAtendimento().toString());
+        dados.put("dataAtendimento", formularioNutricionista.getDataAtendimento());
         dados.put("nomeAssistido", formularioNutricionista.getNomeAssistido());
         dados.put("motivoAtendimento", formularioNutricionista.getMotivoAtendimento());
         dados.put("encaminhamento", formularioNutricionista.getEncaminhamento());
@@ -93,7 +92,6 @@ public class FormularioNutricionistaDAO extends SQLiteOpenHelper {
         dados.put("habitoIntestinal", formularioNutricionista.getHabitoIntestinal());
         dados.put("mastigacao", formularioNutricionista.getMastigacao());
         dados.put("patologia", formularioNutricionista.getPatologia());
-        dados.put("intoleranciAlimentar", formularioNutricionista.getIntoleranciAlimentar());
         dados.put("alergiaAlimentar", formularioNutricionista.getAlergiaAlimentar());
         dados.put("preferenciaAlimentar", formularioNutricionista.getPreferenciaAlimentar());
         dados.put("naoConsome", formularioNutricionista.getNaoConsome());
@@ -108,15 +106,13 @@ public class FormularioNutricionistaDAO extends SQLiteOpenHelper {
         SQLiteDatabase db = getReadableDatabase();
         Cursor cursor = db.rawQuery(sql, null);
 
-        //SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
-
-        List<FormularioNutricionista> formulariosNutricionista = new ArrayList<FormularioNutricionista>();
+        List<FormularioNutricionista> formulariosNutricionista = new ArrayList<>();
 
         while (cursor.moveToNext()) {
 
             FormularioNutricionista formularioNutricionista = new FormularioNutricionista();
             formularioNutricionista.setId(cursor.getLong(cursor.getColumnIndex("id")));
-            //formularioNutricionista.setDataAtendimento(formato.parse(cursor.getString(cursor.getColumnIndex("dataAtendimento"))));
+            formularioNutricionista.setDataAtendimento((cursor.getString(cursor.getColumnIndex("dataAtendimento"))));
             formularioNutricionista.setNomeAssistido((cursor.getString(cursor.getColumnIndex("nomeAssistido"))));
             formularioNutricionista.setMotivoAtendimento((cursor.getString(cursor.getColumnIndex("motivoAtendimento"))));
             formularioNutricionista.setEncaminhamento((cursor.getString(cursor.getColumnIndex("encaminhamento"))));
@@ -125,6 +121,16 @@ public class FormularioNutricionistaDAO extends SQLiteOpenHelper {
             formularioNutricionista.setCintura((cursor.getString(cursor.getColumnIndex("cintura"))));
             formularioNutricionista.setQuadril((cursor.getString(cursor.getColumnIndex("quadril"))));
             formularioNutricionista.setBracos((cursor.getString(cursor.getColumnIndex("bracos"))));
+            formularioNutricionista.setAlimentarSozinho((cursor.getInt(cursor.getColumnIndex("alimentarSozinho"))));
+            formularioNutricionista.setServirSozinho((cursor.getInt(cursor.getColumnIndex("servirSozinho"))));
+            formularioNutricionista.setQtdAlimento((cursor.getInt(cursor.getColumnIndex("qtdAlimento"))));
+            formularioNutricionista.setPrepararSozinho((cursor.getInt(cursor.getColumnIndex("prepararSozinho"))));
+            formularioNutricionista.setHabitoIntestinal((cursor.getInt(cursor.getColumnIndex("habitoIntestinal"))));
+            formularioNutricionista.setMastigacao((cursor.getInt(cursor.getColumnIndex("mastigacao"))));
+            formularioNutricionista.setPatologia((cursor.getInt(cursor.getColumnIndex("patologia"))));
+            formularioNutricionista.setAlergiaAlimentar((cursor.getInt(cursor.getColumnIndex("alergiaAlimentar"))));
+            formularioNutricionista.setPreferenciaAlimentar((cursor.getInt(cursor.getColumnIndex("preferenciaAlimentar"))));
+            formularioNutricionista.setNaoConsome((cursor.getInt(cursor.getColumnIndex("naoConsome"))));
             formularioNutricionista.setObservacao((cursor.getString(cursor.getColumnIndex("observacao"))));
 
             formulariosNutricionista.add(formularioNutricionista);

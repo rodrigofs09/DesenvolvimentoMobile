@@ -6,7 +6,7 @@ import java.util.Date;
 public class FormularioNutricionista implements Serializable {
 
     private Long id;
-    private Date dataAtendimento;
+    private String dataAtendimento;
     //private String tipoAtendimento;
     private String nomeAssistido;
     private String motivoAtendimento;
@@ -17,17 +17,16 @@ public class FormularioNutricionista implements Serializable {
     private String cintura;
     private String quadril;
     private String bracos;
-    private String alimentarSozinho;
-    private String servirSozinho;
-    private String qtdAlimento;
-    private String prepararSozinho;
-    private String habitoIntestinal;
-    private String mastigacao;
-    private String patologia;
-    private String intoleranciAlimentar;
-    private String alergiaAlimentar;
-    private String preferenciaAlimentar;
-    private String naoConsome;
+    private int alimentarSozinho;
+    private int servirSozinho;
+    private int qtdAlimento;
+    private int prepararSozinho;
+    private int habitoIntestinal;
+    private int mastigacao;
+    private int patologia;
+    private int alergiaAlimentar;
+    private int preferenciaAlimentar;
+    private int naoConsome;
     private String observacao;
 
     public Long getId() {
@@ -38,13 +37,9 @@ public class FormularioNutricionista implements Serializable {
         this.id = id;
     }
 
-    public Date getDataAtendimento() {
-        return dataAtendimento;
-    }
+    public String getDataAtendimento() { return dataAtendimento; }
 
-    public void setDataAtendimento(Date data) {
-        this.dataAtendimento = data;
-    }
+    public void setDataAtendimento(String data) {this.dataAtendimento = data;}
 
     public String getNomeAssistido() {
         return nomeAssistido;
@@ -110,91 +105,83 @@ public class FormularioNutricionista implements Serializable {
         this.bracos = bracos;
     }
 
-    public String getAlimentarSozinho() {
+    public int getAlimentarSozinho() {
         return alimentarSozinho;
     }
 
-    public void setAlimentarSozinho(String alimentarSozinho) {
+    public void setAlimentarSozinho(int alimentarSozinho) {
         this.alimentarSozinho = alimentarSozinho;
     }
 
-    public String getServirSozinho() {
+    public int getServirSozinho() {
         return servirSozinho;
     }
 
-    public void setServirSozinho(String servirSozinho) {
+    public void setServirSozinho(int servirSozinho) {
         this.servirSozinho = servirSozinho;
     }
 
-    public String getQtdAlimento() {
+    public int getQtdAlimento() {
         return qtdAlimento;
     }
 
-    public void setQtdAlimento(String qtdAlimento) {
+    public void setQtdAlimento(int qtdAlimento) {
         this.qtdAlimento = qtdAlimento;
     }
 
-    public String getPrepararSozinho() {
+    public int getPrepararSozinho() {
         return prepararSozinho;
     }
 
-    public void setPrepararSozinho(String prepararSozinho) {
+    public void setPrepararSozinho(int prepararSozinho) {
         this.prepararSozinho = prepararSozinho;
     }
 
-    public String getHabitoIntestinal() {
+    public int getHabitoIntestinal() {
         return habitoIntestinal;
     }
 
-    public void setHabitoIntestinal(String habitoIntestinal) {
+    public void setHabitoIntestinal(int habitoIntestinal) {
         this.habitoIntestinal = habitoIntestinal;
     }
 
-    public String getMastigacao() {
+    public int getMastigacao() {
         return mastigacao;
     }
 
-    public void setMastigacao(String mastigacao) {
+    public void setMastigacao(int mastigacao) {
         this.mastigacao = mastigacao;
     }
 
-    public String getPatologia() {
+    public int getPatologia() {
         return patologia;
     }
 
-    public void setPatologia(String patologia) {
+    public void setPatologia(int patologia) {
         this.patologia = patologia;
     }
 
-    public String getIntoleranciAlimentar() {
-        return intoleranciAlimentar;
-    }
-
-    public void setIntoleranciAlimentar(String intoleranciAlimentar) {
-        this.intoleranciAlimentar = intoleranciAlimentar;
-    }
-
-    public String getAlergiaAlimentar() {
+    public int getAlergiaAlimentar() {
         return alergiaAlimentar;
     }
 
-    public void setAlergiaAlimentar(String alergiaAlimentar) {
+    public void setAlergiaAlimentar(int alergiaAlimentar) {
         this.alergiaAlimentar = alergiaAlimentar;
     }
 
-    public String getPreferenciaAlimentar() {
+    public int getPreferenciaAlimentar() {
         return preferenciaAlimentar;
     }
 
-    public void setPreferenciaAlimentar(String preferenciaAlimentar) {
+    public void setPreferenciaAlimentar(int preferenciaAlimentar) {
         this.preferenciaAlimentar = preferenciaAlimentar;
     }
 
-    public String getNaoConsome() {
+    public int getNaoConsome() {
         return naoConsome;
     }
 
-    public void setNaoConsome(String naoConsome) {
+    public void setNaoConsome(int naoConsome) {
         this.naoConsome = naoConsome;
     }
 

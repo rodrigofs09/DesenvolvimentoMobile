@@ -6,11 +6,11 @@
     android:orientation="vertical"
     tools:context=".FormularioNutricionista.ListaFormulariosNutricionista.ListaFormulariosNutricionistaActivity">
 
-    <include layout="@layout/toolbar"></include>
+    <include layout="@layout/toolbar" />
 
     <ListView
         android:id="@+id/lista_formulario_nutricionista"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:dividerHeight="1dp" >
 
@@ -22,7 +22,7 @@
         android:id="@+id/vazio"
         android:layout_gravity="center"
         android:gravity="center"
-        android:text="Não há relatórios cadastrados"
+        android:text="@string/semRelatorios"
         android:textColor="@color/black"/>
 
 </LinearLayout>
