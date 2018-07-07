@@ -1,12 +1,11 @@
 package com.example.victo.acorde.FormularioNutricionista.CriaFormularioNutricionista;
 
 import android.app.DatePickerDialog;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
@@ -101,8 +100,9 @@ public class CriaFormularioNutricionistaActivity extends AppCompatActivity imple
 
                 DatePickerDialog dialog = new DatePickerDialog(CriaFormularioNutricionistaActivity.this,
                         android.R.style.Theme_Holo_Light_Dialog_MinWidth, mDateSetListener, year, month, day);
-                if(dialog.getWindow()!=null)
+                if(dialog.getWindow()!=null) {
                     dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                }
                 dialog.show();
             }
         });

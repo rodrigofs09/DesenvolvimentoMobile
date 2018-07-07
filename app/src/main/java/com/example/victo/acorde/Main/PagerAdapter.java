@@ -6,9 +6,9 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 
 public class PagerAdapter extends FragmentStatePagerAdapter {
 
-    int numberOfTabs;
+    private int numberOfTabs;
 
-    public PagerAdapter(FragmentManager fm, int numberOfTabs) {
+    PagerAdapter(FragmentManager fm, int numberOfTabs) {
         super(fm);
         this.numberOfTabs = numberOfTabs;
     }
@@ -19,14 +19,9 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
         switch (position){
 
             case 0:
-                CriaRelatorioPPFragment ppCria = new CriaRelatorioPPFragment();
-                return ppCria;
+                return new CriaRelatorioPPFragment();
             case 1:
-                BuscaRelatorioPPFragment ppBusca = new BuscaRelatorioPPFragment();
-                return ppBusca;
-            case 2:
-                MensagensPPFragment ppMsg = new MensagensPPFragment();
-                return ppMsg;
+                return new BuscaRelatorioPPFragment();
             default:
                 return null;
         }

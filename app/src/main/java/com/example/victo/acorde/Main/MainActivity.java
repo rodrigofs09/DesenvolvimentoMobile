@@ -8,7 +8,7 @@ import android.os.Bundle;
 
 import com.example.victo.acorde.R;
 
-public class MainActivity extends AppCompatActivity implements CriaRelatorioPPFragment.OnFragmentInteractionListener, BuscaRelatorioPPFragment.OnFragmentInteractionListener, MensagensPPFragment.OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements CriaRelatorioPPFragment.OnFragmentInteractionListener, BuscaRelatorioPPFragment.OnFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,9 +16,9 @@ public class MainActivity extends AppCompatActivity implements CriaRelatorioPPFr
         setContentView(R.layout.activity_main);
 
         final TabLayout tabLayout = findViewById(R.id.tablayout);
-        tabLayout.setTabGravity(tabLayout.GRAVITY_FILL);
+        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
-        final ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
+        final ViewPager viewPager = findViewById(R.id.viewpager);
         final PagerAdapter viewAdapter = new PagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(viewAdapter);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));

@@ -7,8 +7,9 @@
     android:orientation="vertical"
     tools:context=".Main.CriaRelatorioPPFragment">
 
+
     <TextView
-        android:id="@+id/novoRelatorio"
+        android:id="@+id/infoNovoRelatorio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -17,8 +18,8 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:hint="@string/novoRelatorio"
-        android:textSize="24sp"
+        android:hint="@string/infoNovoRelatorio"
+        android:textSize="22sp"
         android:textColor="@color/black"
         android:layout_gravity="center_vertical"
         android:textColorHint="@color/black"
@@ -58,7 +59,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginTop="50dp"
-        android:text="@string/proximo"
+        android:text="@string/proximoNovoRelatorio"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="17sp"

@@ -14,8 +14,10 @@
     <string name="nomeAssistido">NomeAssistido</string>
     <string name="mensagens">Mensagens</string>
     <string name="data">Data do atendimento</string>
-    <string name="proximo">Próximo</string>
-    <string name="novoRelatorio">Novo Relatório</string>
+    <string name="proximoListarRelatorio">Visualizar relatórios</string>
+    <string name="proximoNovoRelatorio">Criar relatório</string>
+    <string name="infoNovoRelatorio">Para criar um novo relatório, selecione abaixo o profissional </string>
+    <string name="novoRelatorio">Criar novo relatório</string>
     <string name="buscaRelatorio">Buscar Relatório</string>
     <string name="dataAtendimento">Selecione a Data do Atendimento</string>
     <string name="nomeDoAssistido">Nome do Assistido</string>

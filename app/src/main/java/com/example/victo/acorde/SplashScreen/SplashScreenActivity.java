@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
-import com.example.victo.acorde.Login.LoginActivity;
+import com.example.victo.acorde.Main.MainActivity;
 import com.example.victo.acorde.R;
 
 public class SplashScreenActivity extends AppCompatActivity {
@@ -18,7 +18,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             public void run() {
                 // Actions to do after 2 seconds
-                Intent abreApp = new Intent(SplashScreenActivity.this, LoginActivity.class);
+                Intent abreApp = new Intent(SplashScreenActivity.this, MainActivity.class);
                 startActivity(abreApp);
                 finish();
             }

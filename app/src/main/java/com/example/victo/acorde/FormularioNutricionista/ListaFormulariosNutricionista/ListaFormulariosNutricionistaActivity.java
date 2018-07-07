@@ -3,15 +3,14 @@ package com.example.victo.acorde.FormularioNutricionista.ListaFormulariosNutrici
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.SearchView;
+
+import android.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.ContextMenu;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -25,11 +24,15 @@ import butterknife.OnItemClick;
 
 public class ListaFormulariosNutricionistaActivity extends AppCompatActivity implements ListaFormulariosNutricionistaContract.View {
 
+    @BindView(R.id.searchViewNutricionista)
+    SearchView filtroBusca;
+
     @BindView(R.id.vazio)
     TextView vazio;
 
     @BindView(R.id.lista_formulario_nutricionista)
     ListView listaFormulariosNutricionista;
+
 
     ListaFormulariosNutricionistaContract.Presenter presenter = null;
 
@@ -100,35 +103,30 @@ public class ListaFormulariosNutricionistaActivity extends AppCompatActivity imp
     @Override
     public void atualizaLista(ListaFormulariosNutricionistaAdapter adapter) {
         listaFormulariosNutricionista.setAdapter(adapter);
-    }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
         final ListaFormulariosNutricionistaAdapter adapterNutricionista = (ListaFormulariosNutricionistaAdapter) listaFormulariosNutricionista.getAdapter();
 
-        getMenuInflater().inflate(R.menu.menu_search, menu);
-        MenuItem myActionMenuItem = menu.findItem(R.id.menuSearch);
+        filtroBusca.setOnQueryTextListener(
+                new SearchView.OnQueryTextListener(){
 
-        SearchView searchView = (SearchView)myActionMenuItem.getActionView();
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String s) {
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String s) {
-                if (TextUtils.isEmpty(s)){
-                    adapterNutricionista.filter("");
-                    listaFormulariosNutricionista.clearTextFilter();
+                    @Override
+                    public boolean onQueryTextSubmit(String s) {
+                        return false;
+                    }
+                    @Override
+                    public boolean onQueryTextChange(String s) {
+                        if (TextUtils.isEmpty(s)){
+                            adapterNutricionista.filter("");
+                            listaFormulariosNutricionista.clearTextFilter();
+                        }
+                        else {
+                            adapterNutricionista.filter(s);
+                        }
+                        return true;
+                    }
                 }
-                else {
-                    adapterNutricionista.filter(s);
-                }
-                return true;
-            }
-        });
-        return true;
+        );
     }
+
 }
 

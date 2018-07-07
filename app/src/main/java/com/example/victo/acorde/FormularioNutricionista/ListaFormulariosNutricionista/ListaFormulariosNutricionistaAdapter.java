@@ -67,8 +67,6 @@ public class ListaFormulariosNutricionistaAdapter extends BaseAdapter {
         campoNome.setText(formulariosNutricionista.getNomeAssistido());
         TextView campoData = tela.findViewById(R.id.item_data);
         campoData.setText(formulariosNutricionista.getDataAtendimento());
-        TextView campoMotivo = tela.findViewById(R.id.item_motivo);
-        campoMotivo.setText(formulariosNutricionista.getMotivoAtendimento());
 
         return tela;
     }
@@ -86,10 +84,6 @@ public class ListaFormulariosNutricionistaAdapter extends BaseAdapter {
                     formularioNutricionista.add(formularioNutricionista1);
                 }
                 if (formularioNutricionista1.getDataAtendimento().toLowerCase(Locale.getDefault())
-                        .contains(charText)){
-                    formularioNutricionista.add(formularioNutricionista1);
-                }
-                if (formularioNutricionista1.getMotivoAtendimento().toLowerCase(Locale.getDefault())
                         .contains(charText)){
                     formularioNutricionista.add(formularioNutricionista1);
                 }

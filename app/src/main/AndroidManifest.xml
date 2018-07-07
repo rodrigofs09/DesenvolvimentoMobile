@@ -19,9 +19,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Login.LoginActivity"
-            android:theme="@style/AppThemeNoActionBar" />
-        <activity
             android:name=".Main.MainActivity"
             android:theme="@style/AppThemeNoActionBar" />
         <activity
@@ -35,7 +32,7 @@
         <activity android:name=".FormularioEducadoraEspecial.CriaFormularioEducadoraEspecial.CriaFormularioEducadoraEspecialActivity" />
         <activity android:name=".FormularioEducadoraEspecial.ListaFormulariosEducadoraEspecial.ListaFormulariosEducadoraEspecialActivity" />
         <activity android:name=".FomularioPsicopedagoga.CriaFormularioPsicopedagoga.CriaFormularioPsicopedagogaActivity" />
-        <activity android:name=".FomularioPsicopedagoga.ListaFormulariosPsicopedagoga.ListaFormulariosPsicopedagogaActivity"></activity>
+        <activity android:name=".FomularioPsicopedagoga.ListaFormulariosPsicopedagoga.ListaFormulariosPsicopedagogaActivity" />
     </application>
 
 </manifest>
