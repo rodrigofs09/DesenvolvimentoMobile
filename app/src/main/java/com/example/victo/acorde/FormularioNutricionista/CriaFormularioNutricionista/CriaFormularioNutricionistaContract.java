@@ -9,6 +9,9 @@ public interface CriaFormularioNutricionistaContract {
                                 String altura, String peso, String cintura, String quadril,
                                 String bracos, int alimentarSozinho, int servirSozinho, int qtdAlimento, int prepararSozinho, int habitoIntestinal, int mastigacao, int patologia,
                                              int alergiaAlimentar, int preferenciaAlimentar, int naoConsome, String observacao);
+        void erroNome ();
+        void erroData ();
+        void registroComSucesso();
     }
 
     interface Presenter {
@@ -18,5 +21,9 @@ public interface CriaFormularioNutricionistaContract {
                                         int alergiaAlimentar, int preferenciaAlimentar, int naoConsome, String observacao);
         void getFormularioNutricionista();
         void insereFormularioNutricionista(FormularioNutricionista formularioNutricionista);
+
+        void registrar(String nome, String data);
     }
+
+
 }

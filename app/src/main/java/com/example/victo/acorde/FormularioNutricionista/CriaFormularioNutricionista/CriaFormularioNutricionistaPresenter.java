@@ -1,6 +1,7 @@
 package com.example.victo.acorde.FormularioNutricionista.CriaFormularioNutricionista;
 
 import android.content.Context;
+import android.text.TextUtils;
 
 import com.example.victo.acorde.FormularioNutricionista.FormularioNutricionista;
 import com.example.victo.acorde.FormularioNutricionista.FormularioNutricionistaDAO;
@@ -70,5 +71,17 @@ public class CriaFormularioNutricionistaPresenter implements CriaFormularioNutri
             dao.insereFormularioNU(formularioNutricionista);
         }
         dao.close();
+    }
+
+    public void registrar(String nome, String data){
+        if (TextUtils.isEmpty(nome)) {
+            view.erroNome();
+        }
+        else if (TextUtils.isEmpty(data)) {
+            view.erroData();
+        }
+        else{
+            view.registroComSucesso();
+        }
     }
 }

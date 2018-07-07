@@ -33,7 +33,6 @@ public class ListaFormulariosNutricionistaActivity extends AppCompatActivity imp
     @BindView(R.id.lista_formulario_nutricionista)
     ListView listaFormulariosNutricionista;
 
-
     ListaFormulariosNutricionistaContract.Presenter presenter = null;
 
     @Override

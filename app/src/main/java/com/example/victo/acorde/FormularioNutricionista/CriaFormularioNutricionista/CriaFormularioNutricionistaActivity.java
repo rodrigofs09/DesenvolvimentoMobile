@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
@@ -24,9 +25,14 @@ import java.util.Calendar;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.OnTextChanged;
 
 public class CriaFormularioNutricionistaActivity extends AppCompatActivity implements CriaFormularioNutricionistaContract.View {
 
+    @BindView(R.id.text_input_layout_nome)
+    TextInputLayout nomeInputLayout;
+    @BindView(R.id.text_input_layout_data)
+    TextInputLayout dataInputLayout;
     @BindView(R.id.dataFormulario)
     TextView campoDataAtendimento;
     @BindView(R.id.editTextNome)
@@ -138,11 +144,7 @@ public class CriaFormularioNutricionistaActivity extends AppCompatActivity imple
 
     @OnClick(R.id.buttonFinalizar)
     public void cliqueFinalizar(){
-        presenter.setFormularioNutricionista(campoDataAtendimento.getText().toString(), campoNomeAssistido.getText().toString(),campoMotivoAtendimento.getText().toString(),campoEncaminhamento.getText().toString(),campoAltura.getText().toString(),
-                campoPeso.getText().toString(),campoCintura.getText().toString(),campoQuadril.getText().toString(),campoBracos.getText().toString(), campoAlimentarSozinho.getCheckedRadioButtonId(), campoServirSozinho.getCheckedRadioButtonId(), campoQtdAlimento.getCheckedRadioButtonId(), campoPrepararSozinho.getCheckedRadioButtonId(), campoHabitoIntestinal.getCheckedRadioButtonId(),
-                campoMastigacao.getCheckedRadioButtonId(), campoPatologia.getCheckedRadioButtonId(), campoAlergiaAlimentar.getCheckedRadioButtonId(), campoPreferenciaAlimentar.getCheckedRadioButtonId(), campoNaoConsome.getCheckedRadioButtonId(), campoObservacao.getText().toString());
-        Toast.makeText(getApplicationContext(), "Relatório salvo com sucesso", Toast.LENGTH_SHORT).show();
-        finish();
+        presenter.registrar(campoNomeAssistido.getText().toString(), campoDataAtendimento.getText().toString());
     }
 
     @Override
@@ -169,4 +171,37 @@ public class CriaFormularioNutricionistaActivity extends AppCompatActivity imple
         campoNaoConsome.check(naoConsome);
         campoObservacao.setText(observacao);
     }
+
+    @OnTextChanged(R.id.editTextNome)
+    public void validaNome (){
+        nomeInputLayout.setErrorEnabled( false );
+        nomeInputLayout.setError( "" );
+    }
+
+    @OnTextChanged (R.id.dataFormulario)
+    public void validaData (){
+        dataInputLayout.setErrorEnabled( false );
+        dataInputLayout.setError( "" );
+    }
+
+    public void erroNome(){
+        nomeInputLayout.setErrorEnabled( true );
+        nomeInputLayout.setError(getString(R.string.invalid_name));
+        Toast.makeText(getApplicationContext(), "Nome inválido", Toast.LENGTH_SHORT).show();
+    }
+
+    public void erroData(){
+        dataInputLayout.setErrorEnabled( true );
+        dataInputLayout.setError(getString(R.string.invalid_date));
+        Toast.makeText(getApplicationContext(), "Data inválida", Toast.LENGTH_SHORT).show();
+    }
+
+    public void registroComSucesso(){
+        presenter.setFormularioNutricionista(campoDataAtendimento.getText().toString(), campoNomeAssistido.getText().toString(),campoMotivoAtendimento.getText().toString(),campoEncaminhamento.getText().toString(),campoAltura.getText().toString(),
+                campoPeso.getText().toString(),campoCintura.getText().toString(),campoQuadril.getText().toString(),campoBracos.getText().toString(), campoAlimentarSozinho.getCheckedRadioButtonId(), campoServirSozinho.getCheckedRadioButtonId(), campoQtdAlimento.getCheckedRadioButtonId(), campoPrepararSozinho.getCheckedRadioButtonId(), campoHabitoIntestinal.getCheckedRadioButtonId(),
+                campoMastigacao.getCheckedRadioButtonId(), campoPatologia.getCheckedRadioButtonId(), campoAlergiaAlimentar.getCheckedRadioButtonId(), campoPreferenciaAlimentar.getCheckedRadioButtonId(), campoNaoConsome.getCheckedRadioButtonId(), campoObservacao.getText().toString());
+        Toast.makeText(getApplicationContext(), "Relatório salvo com sucesso", Toast.LENGTH_SHORT).show();
+        finish();
+    }
+
 }
