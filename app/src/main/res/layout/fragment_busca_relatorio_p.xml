@@ -17,7 +17,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:hint="@string/buscaRelatorio"
+        android:hint="@string/proximoListarRelatorio"
         android:textSize="24sp"
         android:textColor="@color/black"
         android:layout_gravity="center_vertical"
@@ -25,41 +25,66 @@
         android:gravity="center"
         />
 
-    <LinearLayout
+    <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginTop="40dp"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        android:id="@+id/RadioGroupBuscar"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp">
 
+        <RadioButton
+            android:id="@+id/buscaNutricionista"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="@string/formularioNutricionista" />
 
-        <Spinner
-            android:id="@+id/funcionariaBuscaSpinner"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:textSize="30sp"/>
+        <RadioButton
+            android:id="@+id/buscaEducadoraFisica"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="@string/formularioEducadoraFisica" />
 
+        <RadioButton
+            android:id="@+id/buscaEducadoraEspecial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="@string/educadoraEspecial" />
 
-    </LinearLayout>
+        <RadioButton
+            android:id="@+id/buscaPsicopedagoga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="@string/formularioPsicopedagoga" />
+
+    </RadioGroup>
 
     <Button
-        android:id="@+id/proximo"
+        android:id="@+id/buscar"
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginTop="50dp"
-        android:text="@string/proximoListarRelatorio"
+        android:text="@string/buscar"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="17sp"

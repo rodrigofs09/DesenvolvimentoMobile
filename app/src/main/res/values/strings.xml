@@ -3,22 +3,24 @@
     <string name="username">Nome de usuário</string>
     <string name="password">Senha</string>
     <string name="sign_in">Entrar</string>
+    <string name="invalid_username">Usuário inválido</string>
     <string name="invalid_name">Nome inválido</string>
-    <string name="invalid_date">Data inválida</string>
     <string name="invalid_password">Senha inválida</string>
     <string name="developer_name">ACORDE SÃO CARLOS</string>
     <string name="formularioNutricionista">Nutricionista</string>
     <string name="formularioEducadoraFisica">Educadora Física</string>
     <string name="educadoraEspecial">Educadora Especial</string>
+    <string name="formularioPsicopedagoga">Psicopedagoga</string>
     <string name="semRelatorios">Não há relatórios cadastrados</string>
     <string name="nomeAssistido">NomeAssistido</string>
     <string name="mensagens">Mensagens</string>
+    <string name="invalid_date">Data inválida</string>
     <string name="data">Data do atendimento</string>
     <string name="proximoListarRelatorio">Visualizar relatórios</string>
     <string name="proximoNovoRelatorio">Criar relatório</string>
-    <string name="infoNovoRelatorio">Para criar um novo relatório, selecione abaixo o profissional </string>
-    <string name="novoRelatorio">Criar novo relatório</string>
-    <string name="buscaRelatorio">Buscar Relatório</string>
+    <string name="infoNovoRelatorio">Cadastrar novo relatório</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="buscar">Buscar</string>
     <string name="dataAtendimento">Selecione a Data do Atendimento</string>
     <string name="nomeDoAssistido">Nome do Assistido</string>
     <string name="motivoAtendimento">Motivo do Atendimento</string>
@@ -51,10 +53,4 @@
     <string name="observacao">Observação</string>
     <string name="finalizar">Finalizar</string>
     <string name="procurar">Procurar relatório</string>
-
-    <string-array name="names">
-        <item>Nutricionista</item>
-        <item>Educadora Física</item>
-        <item>Educadora Especial</item>
-    </string-array>
 </resources>

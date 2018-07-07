@@ -8,11 +8,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.Spinner;
-
+import android.widget.RadioGroup;
+import com.example.victo.acorde.FomularioPsicopedagoga.ListaFormulariosPsicopedagoga.ListaFormulariosPsicopedagogaActivity;
+import com.example.victo.acorde.FormularioEducadoraEspecial.ListaFormulariosEducadoraEspecial.ListaFormulariosEducadoraEspecialActivity;
 import com.example.victo.acorde.FormularioEducadoraFisica.ListaFormulariosEducadoraFisica.ListaFormulariosEducadoraFisicaActivity;
 import com.example.victo.acorde.FormularioNutricionista.ListaFormulariosNutricionista.ListaFormulariosNutricionistaActivity;
 import com.example.victo.acorde.R;
@@ -21,30 +20,15 @@ public class BuscaRelatorioPPFragment extends Fragment implements View.OnClickLi
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
-    private View view;
-    private Button proximo;
-    private Spinner mySpinner;
-    private Context context;
-
     private String mParam1;
     private String mParam2;
-
-    private int tipoFuncionaria;
-    private String selectedItemText;
-
     private OnFragmentInteractionListener mListener;
+    private View view;
+    private Button buscar;
+    private RadioGroup funcionario;
+    private Intent vaiProFormulario;
 
     public BuscaRelatorioPPFragment() {
-
-    }
-
-    public void setTipoFuncionaria(int tipoFuncionaria) {
-        this.tipoFuncionaria = tipoFuncionaria;
-    }
-
-    public int getTipoFuncionaria() {
-        return tipoFuncionaria;
     }
 
     public static BuscaRelatorioPPFragment newInstance(String param1, String param2) {
@@ -68,32 +52,10 @@ public class BuscaRelatorioPPFragment extends Fragment implements View.OnClickLi
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
         view = inflater.inflate(R.layout.fragment_busca_relatorio_p, container, false);
-        proximo = view.findViewById(R.id.proximo);
-        mySpinner = view.findViewById(R.id.funcionariaBuscaSpinner);
-
-        proximo.setOnClickListener(this);
-
-        final ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(getContext(),
-                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.names));
-
-        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        mySpinner.setAdapter(myAdapter);
-
-        mySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
-                setTipoFuncionaria(position);
-                selectedItemText = (String) adapterView.getItemAtPosition(position);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
-
+        buscar = view.findViewById(R.id.buscar);
+        funcionario = view.findViewById(R.id.RadioGroupBuscar);
+        buscar.setOnClickListener(this);
         return view;
     }
 
@@ -116,24 +78,28 @@ public class BuscaRelatorioPPFragment extends Fragment implements View.OnClickLi
 
     @Override
     public void onClick(View view) {
-
         switch (view.getId()) {
-            case R.id.proximo:
-                if(getTipoFuncionaria() == 0){ //Abre a lista da nutricionista
-                    Intent vaiPraLista = new Intent(getActivity() , ListaFormulariosNutricionistaActivity.class);
-                    startActivity(vaiPraLista);
+            case R.id.buscar:
+                switch (funcionario.getCheckedRadioButtonId()) {
+                    case R.id.buscaNutricionista:
+                        vaiProFormulario = new Intent(getActivity(), ListaFormulariosNutricionistaActivity.class);
+                        startActivity(vaiProFormulario);
+                        break;
+                    case R.id.buscaEducadoraFisica:
+                        vaiProFormulario = new Intent(getActivity(), ListaFormulariosEducadoraFisicaActivity.class);
+                        startActivity(vaiProFormulario);
+                        break;
+                    case R.id.buscaEducadoraEspecial:
+                        vaiProFormulario = new Intent(getActivity(), ListaFormulariosEducadoraEspecialActivity.class);
+                        startActivity(vaiProFormulario);
+                        break;
+                    case R.id.buscaPsicopedagoga:
+                        vaiProFormulario = new Intent(getActivity(), ListaFormulariosPsicopedagogaActivity.class);
+                        startActivity(vaiProFormulario);
+                        break;
+                    default:
+                        break;
                 }
-                /*if(getTipoFuncionaria() == 1){ //Abre a lista da educadora fisica
-                    Intent vaiPraLista = new Intent(getActivity() , ListaFormulariosEducadoraFisicaActivity.this);
-                    startActivity(vaiPraLista);
-                }*/
-                /*if(getTipoFuncionaria() == 2){ //Abre a lista da educadora especial
-                    Intent vaiPraLista = new Intent(getActivity() , EducadoraEspecialLista.class);
-                    startActivity(vaiPraLista);
-                }*/
-                break;
-            default:
-                break;
         }
 
     }
