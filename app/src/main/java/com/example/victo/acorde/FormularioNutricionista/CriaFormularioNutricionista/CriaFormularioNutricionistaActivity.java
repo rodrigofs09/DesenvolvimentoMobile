@@ -145,11 +145,6 @@ public class CriaFormularioNutricionistaActivity extends AppCompatActivity imple
         finish();
     }
 
-    RadioButton verificaRadioButton(RadioGroup rg){
-        int selectedID = rg.getCheckedRadioButtonId();
-        return findViewById(selectedID);
-    }
-
     @Override
     public void setInfosFormularioNutricionista(String dataAtendimento, String nomeAssistido, String motivoAtendimento, String encaminhamento, String altura, String peso, String cintura, String quadril, String bracos, int alimentarSozinho, int servirSozinho, int qtdAlimento, int prepararSozinho, int habitoIntestinal, int mastigacao, int patologia,
                                                 int alergiaAlimentar, int preferenciaAlimentar, int naoConsome, String observacao){
