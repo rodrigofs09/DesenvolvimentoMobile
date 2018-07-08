@@ -24,7 +24,7 @@ public class CriaFormularioPsicopedagogaPresenter implements CriaFormularioPsico
             this.formularioPsicopedagoga = formularioPsicopedagoga;
     }
 
-    public void setFormularioPsicopedagoga(String dataAtendimento, String nomeAssistido, String motivoAtendimento, String encaminhamento,
+    public void setFormularioPsicopedagoga(String dataAtendimento, String nomeAssistido, String motivoAtendimento, String encaminhamento, String idade,
                                            int tipoAtendimento, int aspectosTrabalhados, int aspectosTrabalhadosAcupuntura, int atividadesLudicasLeitura, int atividadesCoordenacaoSurtiramEfeito,
                                            int avaliacoesObtiveramResultadosPositivos, int planejamentoSeguePercursoEsperado, int materiaisSaoSuficientesParaAtividades, String observacao) {
 
@@ -32,7 +32,7 @@ public class CriaFormularioPsicopedagogaPresenter implements CriaFormularioPsico
         formularioPsicopedagoga.setNomeAssistido(nomeAssistido);
         formularioPsicopedagoga.setMotivoAtendimento(motivoAtendimento);
         formularioPsicopedagoga.setEncaminhamento(encaminhamento);
-
+        formularioPsicopedagoga.setIdade(idade);
         formularioPsicopedagoga.setTipoAtendimento(tipoAtendimento);
         formularioPsicopedagoga.setAspectosTrabalhados(aspectosTrabalhados);
         formularioPsicopedagoga.setAspectosTrabalhadosAcupuntura(aspectosTrabalhadosAcupuntura);
@@ -49,7 +49,7 @@ public class CriaFormularioPsicopedagogaPresenter implements CriaFormularioPsico
 
     public void getFormularioPsicopedagoga() {
         if (formularioPsicopedagoga != null){
-            view.setInfosFormularioPsicopedagoga(formularioPsicopedagoga.getDataAtendimento(), formularioPsicopedagoga.getNomeAssistido(), formularioPsicopedagoga.getMotivoAtendimento(), formularioPsicopedagoga.getEncaminhamento(), formularioPsicopedagoga.getTipoAtendimento(),
+            view.setInfosFormularioPsicopedagoga(formularioPsicopedagoga.getDataAtendimento(), formularioPsicopedagoga.getNomeAssistido(), formularioPsicopedagoga.getMotivoAtendimento(), formularioPsicopedagoga.getEncaminhamento(), formularioPsicopedagoga.getIdade(), formularioPsicopedagoga.getTipoAtendimento(),
                     formularioPsicopedagoga.getAspectosTrabalhados(), formularioPsicopedagoga.getAspectosTrabalhadosAcupuntura(), formularioPsicopedagoga.getAtividadesLudicasLeitura(), formularioPsicopedagoga.getAtividadesCoordenacaoSurtiramEfeito(),
                     formularioPsicopedagoga.getAvaliacoesObtiveramResultadosPositivos(), formularioPsicopedagoga.getPlanejamentoSeguePercursoEsperado(), formularioPsicopedagoga.getMateriaisSaoSuficientesParaAtividades(), formularioPsicopedagoga.getObservacao());
         }

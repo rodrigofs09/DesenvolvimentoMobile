@@ -114,7 +114,6 @@ public class CriaFormularioEducadoraFisicaActivity extends AppCompatActivity imp
             @Override
             public void onDateSet(DatePicker view, int year, int month, int day) {
                 month = month + 1;
-                //Log.d(TAG, "onDateSet: mm/dd/yyy: " + month + "/" + day + "/" + year);
 
                 date = day + "/" + month + "/" + year;
                 campoDataAtendimento.setText(date);
@@ -141,11 +140,6 @@ public class CriaFormularioEducadoraFisicaActivity extends AppCompatActivity imp
     @OnClick(R.id.buttonFinalizar)
     public void cliqueFinalizar(){
         presenter.registrar(campoNomeAssistido.getText().toString(), campoDataAtendimento.getText().toString());
-    }
-
-    RadioButton verificaRadioButton(RadioGroup rg){
-        int selectedID = rg.getCheckedRadioButtonId();
-        return findViewById(selectedID);
     }
 
     @Override

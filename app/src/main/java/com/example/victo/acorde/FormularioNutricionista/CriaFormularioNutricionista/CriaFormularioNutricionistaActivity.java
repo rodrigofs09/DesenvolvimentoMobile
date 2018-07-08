@@ -41,6 +41,8 @@ public class CriaFormularioNutricionistaActivity extends AppCompatActivity imple
     EditText campoMotivoAtendimento;
     @BindView(R.id.editTextEncaminhamento)
     EditText campoEncaminhamento;
+    @BindView(R.id.editTextIdade)
+    EditText campoIdade;
     @BindView(R.id.editTextAltura)
     EditText campoAltura;
     @BindView(R.id.editTextPeso)
@@ -117,7 +119,6 @@ public class CriaFormularioNutricionistaActivity extends AppCompatActivity imple
             @Override
             public void onDateSet(DatePicker view, int year, int month, int day) {
                 month = month + 1;
-                //Log.d(TAG, "onDateSet: mm/dd/yyy: " + month + "/" + day + "/" + year);
 
                 date = day + "/" + month + "/" + year;
                 campoDataAtendimento.setText(date);
@@ -148,12 +149,13 @@ public class CriaFormularioNutricionistaActivity extends AppCompatActivity imple
     }
 
     @Override
-    public void setInfosFormularioNutricionista(String dataAtendimento, String nomeAssistido, String motivoAtendimento, String encaminhamento, String altura, String peso, String cintura, String quadril, String bracos, int alimentarSozinho, int servirSozinho, int qtdAlimento, int prepararSozinho, int habitoIntestinal, int mastigacao, int patologia,
+    public void setInfosFormularioNutricionista(String dataAtendimento, String nomeAssistido, String motivoAtendimento, String encaminhamento, String idade, String altura, String peso, String cintura, String quadril, String bracos, int alimentarSozinho, int servirSozinho, int qtdAlimento, int prepararSozinho, int habitoIntestinal, int mastigacao, int patologia,
                                                 int alergiaAlimentar, int preferenciaAlimentar, int naoConsome, String observacao){
         campoDataAtendimento.setText(dataAtendimento);
         campoNomeAssistido.setText(nomeAssistido);
         campoMotivoAtendimento.setText(motivoAtendimento);
         campoEncaminhamento.setText(encaminhamento);
+        campoIdade.setText(idade);
         campoAltura.setText(altura);
         campoPeso.setText(peso);
         campoCintura.setText(cintura);
@@ -197,7 +199,7 @@ public class CriaFormularioNutricionistaActivity extends AppCompatActivity imple
     }
 
     public void registroComSucesso(){
-        presenter.setFormularioNutricionista(campoDataAtendimento.getText().toString(), campoNomeAssistido.getText().toString(),campoMotivoAtendimento.getText().toString(),campoEncaminhamento.getText().toString(),campoAltura.getText().toString(),
+        presenter.setFormularioNutricionista(campoDataAtendimento.getText().toString(), campoNomeAssistido.getText().toString(),campoMotivoAtendimento.getText().toString(),campoEncaminhamento.getText().toString(),campoIdade.getText().toString(),campoAltura.getText().toString(),
                 campoPeso.getText().toString(),campoCintura.getText().toString(),campoQuadril.getText().toString(),campoBracos.getText().toString(), campoAlimentarSozinho.getCheckedRadioButtonId(), campoServirSozinho.getCheckedRadioButtonId(), campoQtdAlimento.getCheckedRadioButtonId(), campoPrepararSozinho.getCheckedRadioButtonId(), campoHabitoIntestinal.getCheckedRadioButtonId(),
                 campoMastigacao.getCheckedRadioButtonId(), campoPatologia.getCheckedRadioButtonId(), campoAlergiaAlimentar.getCheckedRadioButtonId(), campoPreferenciaAlimentar.getCheckedRadioButtonId(), campoNaoConsome.getCheckedRadioButtonId(), campoObservacao.getText().toString());
         Toast.makeText(getApplicationContext(), "Relatório salvo com sucesso", Toast.LENGTH_SHORT).show();

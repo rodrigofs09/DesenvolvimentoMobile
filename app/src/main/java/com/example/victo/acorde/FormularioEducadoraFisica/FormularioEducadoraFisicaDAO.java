@@ -19,6 +19,7 @@ public class FormularioEducadoraFisicaDAO extends SQLiteOpenHelper{
     public void onCreate(SQLiteDatabase db) {
         String sql = "CREATE TABLE IF NOT EXISTS FormularioEducadoraFisica (" +
                 "    id INTEGER PRIMARY KEY, " +
+                "    dataAtendimento VARCHAR," +
                 "    nomeAssistido VARCHAR, " +
                 "    motivoAtendimento VARCHAR, " +
                 "    encaminhamento VARCHAR, " +
@@ -75,6 +76,7 @@ public class FormularioEducadoraFisicaDAO extends SQLiteOpenHelper{
     private ContentValues pegaDadosRelatorioEF(FormularioEducadoraFisica formularioEducadoraFisica) {
         ContentValues dados = new ContentValues();
 
+        dados.put("dataAtendimento", formularioEducadoraFisica.getDataAtendimento());
         dados.put("nomeAssistido", formularioEducadoraFisica.getNomeAssistido());
         dados.put("motivoAtendimento", formularioEducadoraFisica.getMotivoAtendimento());
         dados.put("encaminhamento", formularioEducadoraFisica.getEncaminhamento());
@@ -108,7 +110,9 @@ public class FormularioEducadoraFisicaDAO extends SQLiteOpenHelper{
         while(cursor.moveToNext()){
 
             FormularioEducadoraFisica formularioEducadoraFisica = new FormularioEducadoraFisica();
+
             formularioEducadoraFisica.setId(cursor.getLong(cursor.getColumnIndex("id")));
+            formularioEducadoraFisica.setDataAtendimento((cursor.getString(cursor.getColumnIndex("dataAtendimento"))));
             formularioEducadoraFisica.setNomeAssistido((cursor.getString(cursor.getColumnIndex("nomeAssistido"))));
             formularioEducadoraFisica.setMotivoAtendimento((cursor.getString(cursor.getColumnIndex("motivoAtendimento"))));
             formularioEducadoraFisica.setEncaminhamento((cursor.getString(cursor.getColumnIndex("encaminhamento"))));

@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +23,7 @@ public class FormularioPsicopedagogaDAO extends SQLiteOpenHelper {
                 "    nomeAssistido VARCHAR, " +
                 "    motivoAtendimento VARCHAR, " +
                 "    encaminhamento INTEGER, " +
+                "    idade VARCHAR, " +
                 "    tipoAtendimento INTEGER, " +
                 "    aspectosTrabalhados INTEGER, " +
                 "    aspectosTrabalhadosAcupuntura INTEGER, " +
@@ -75,7 +75,7 @@ public class FormularioPsicopedagogaDAO extends SQLiteOpenHelper {
         dados.put("nomeAssistido", formularioPsicopedagoga.getNomeAssistido());
         dados.put("motivoAtendimento", formularioPsicopedagoga.getMotivoAtendimento());
         dados.put("encaminhamento", formularioPsicopedagoga.getEncaminhamento());
-
+        dados.put("idade", formularioPsicopedagoga.getIdade());
         dados.put("tipoAtendimento", formularioPsicopedagoga.getTipoAtendimento());
         dados.put("aspectosTrabalhados", formularioPsicopedagoga.getAspectosTrabalhados());
         dados.put("aspectosTrabalhadosAcupuntura", formularioPsicopedagoga.getAspectosTrabalhadosAcupuntura());
@@ -107,7 +107,7 @@ public class FormularioPsicopedagogaDAO extends SQLiteOpenHelper {
             formularioPsicopedagoga.setNomeAssistido((cursor.getString(cursor.getColumnIndex("nomeAssistido"))));
             formularioPsicopedagoga.setMotivoAtendimento((cursor.getString(cursor.getColumnIndex("motivoAtendimento"))));
             formularioPsicopedagoga.setEncaminhamento((cursor.getString(cursor.getColumnIndex("encaminhamento"))));
-
+            formularioPsicopedagoga.setIdade((cursor.getString(cursor.getColumnIndex("idade"))));
             formularioPsicopedagoga.setTipoAtendimento((cursor.getInt(cursor.getColumnIndex("tipoAtendimento"))));
             formularioPsicopedagoga.setAspectosTrabalhados((cursor.getInt(cursor.getColumnIndex("aspectosTrabalhados"))));
             formularioPsicopedagoga.setAspectosTrabalhadosAcupuntura((cursor.getInt(cursor.getColumnIndex("aspectosTrabalhadosAcupuntura"))));

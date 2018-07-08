@@ -6,12 +6,10 @@ public class FormularioPsicopedagoga implements Serializable {
 
     private Long id;
     private String dataAtendimento;
-    //private String tipoAtendimento;
     private String nomeAssistido;
     private String motivoAtendimento;
     private String encaminhamento;
-    //private String profissional;
-
+    private String idade;
     private int tipoAtendimento;
     private int aspectosTrabalhados;
     private int aspectosTrabalhadosAcupuntura;
@@ -57,6 +55,14 @@ public class FormularioPsicopedagoga implements Serializable {
 
     public void setEncaminhamento(String encaminhamento) {
         this.encaminhamento = encaminhamento;
+    }
+
+    public String getIdade() {
+        return idade;
+    }
+
+    public void setIdade(String idade) {
+        this.idade = idade;
     }
 
     public int getTipoAtendimento(){

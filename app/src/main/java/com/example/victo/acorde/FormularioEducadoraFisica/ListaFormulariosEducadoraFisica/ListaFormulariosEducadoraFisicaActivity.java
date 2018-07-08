@@ -42,8 +42,8 @@ public class ListaFormulariosEducadoraFisicaActivity extends AppCompatActivity i
 
         ButterKnife.bind(this);
 
-        /*Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);*/
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle(R.string.formularioEducadoraFisica);
