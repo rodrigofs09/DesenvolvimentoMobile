@@ -99,7 +99,7 @@ public class FormularioEducadoraFisicaDAO extends SQLiteOpenHelper{
 
     public List<FormularioEducadoraFisica> buscaRelatorioEF() {
 
-        String sql = "SELECT * FROM EducadoraFisica;";
+        String sql = "SELECT * FROM FormularioEducadoraFisica;";
         SQLiteDatabase db = getReadableDatabase();
         Cursor cursor = db.rawQuery(sql, null);
 
