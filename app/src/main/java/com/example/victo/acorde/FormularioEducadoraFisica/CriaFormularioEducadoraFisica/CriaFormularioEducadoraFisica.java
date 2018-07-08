@@ -8,6 +8,9 @@ public interface CriaFormularioEducadoraFisica {
         void setInfosFormularioEducadoraFisica(String dataAtendimento, String nomeAssistido, String motivoAtendimento, String encaminhamento, String idade, String peso, String altura
                 , String bracoDireito, String bracoEsquerdo, String pernaDireita, String pernaEsquerda, String cintura, String quadril, int desempenhoGeral, int desempenhoEspecifico, int aspectosMotrizes
                 , int aspectosCognitivos, int aspectosSociais, String observacao);
+        void erroNome ();
+        void erroData ();
+        void registroComSucesso();
     }
 
     interface Presenter {
@@ -17,5 +20,6 @@ public interface CriaFormularioEducadoraFisica {
                 , int aspectosCognitivos, int aspectosSociais, String observacao);
         void getFormularioEducadoraFisica();
         void insereFormularioEducadoraFisica(FormularioEducadoraFisica formularioEducadoraFisica);
+        void registrar(String nome, String data);
     }
 }

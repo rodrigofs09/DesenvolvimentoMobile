@@ -4,6 +4,7 @@ import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -24,10 +25,14 @@ import java.util.Calendar;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.OnTextChanged;
 
 public class CriaFormularioEducadoraFisicaActivity extends AppCompatActivity implements CriaFormularioEducadoraFisica.View {
 
-
+    @BindView(R.id.text_input_layout_nome)
+    TextInputLayout nomeInputLayout;
+    @BindView(R.id.text_input_layout_data)
+    TextInputLayout dataInputLayout;
     @BindView(R.id.dataFormulario)
     TextView campoDataAtendimento;
     @BindView(R.id.editTextNome)
@@ -66,8 +71,8 @@ public class CriaFormularioEducadoraFisicaActivity extends AppCompatActivity imp
     RadioGroup campoAspectosSociais;
     @BindView(R.id.editTextObservacao)
     EditText campoObservacao;
-    /*@BindView(R.id.toolbar)
-    Toolbar toolbar;*/
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
 
     CriaFormularioEducadoraFisica.Presenter presenter;
 
@@ -81,7 +86,7 @@ public class CriaFormularioEducadoraFisicaActivity extends AppCompatActivity imp
 
         ButterKnife.bind(this);
 
-        /*setSupportActionBar(toolbar);*/
+        setSupportActionBar(toolbar);
 
         if(getSupportActionBar()!=null){
             getSupportActionBar().setTitle(R.string.formularioEducadoraFisica);
@@ -135,12 +140,7 @@ public class CriaFormularioEducadoraFisicaActivity extends AppCompatActivity imp
 
     @OnClick(R.id.buttonFinalizar)
     public void cliqueFinalizar(){
-        presenter.setFormularioEducadoraFisica(campoDataAtendimento.getText().toString(), campoNomeAssistido.getText().toString(),campoMotivoAtendimento.getText().toString(),campoEncaminhamento.getText().toString(),campoIdade.getText().toString()
-                ,campoPeso.getText().toString(),campoAltura.getText().toString(),campoBracoDireito.getText().toString(),campoBracoEsquerdo.getText().toString(),campoPernaDireita.getText().toString()
-                ,campoPernaEsquerda.getText().toString(),campoCintura.getText().toString(),campoQuadril.getText().toString(),campoDesempenhoGeral.getCheckedRadioButtonId(), campoDesempenhoEspecifico.getCheckedRadioButtonId()
-                ,campoAspectosMotrizes.getCheckedRadioButtonId(),campoAspectosCognitivos.getCheckedRadioButtonId(),campoAspectosSociais.getCheckedRadioButtonId(), campoObservacao.getText().toString());
-        Toast.makeText(getApplicationContext(), "Relatório salvo com sucesso", Toast.LENGTH_SHORT).show();
-        finish();
+        presenter.registrar(campoNomeAssistido.getText().toString(), campoDataAtendimento.getText().toString());
     }
 
     RadioButton verificaRadioButton(RadioGroup rg){
@@ -171,6 +171,39 @@ public class CriaFormularioEducadoraFisicaActivity extends AppCompatActivity imp
         campoAspectosCognitivos.check(aspectosCognitivos);
         campoAspectosSociais.check(aspectosSociais);
         campoObservacao.setText(observacao);
+    }
+
+    @OnTextChanged(R.id.editTextNome)
+    public void validaNome (){
+        nomeInputLayout.setErrorEnabled( false );
+        nomeInputLayout.setError( "" );
+    }
+
+    @OnTextChanged (R.id.dataFormulario)
+    public void validaData (){
+        dataInputLayout.setErrorEnabled( false );
+        dataInputLayout.setError( "" );
+    }
+
+    public void erroNome(){
+        nomeInputLayout.setErrorEnabled( true );
+        nomeInputLayout.setError(getString(R.string.invalid_name));
+        Toast.makeText(getApplicationContext(), "Nome inválido", Toast.LENGTH_SHORT).show();
+    }
+
+    public void erroData(){
+        dataInputLayout.setErrorEnabled( true );
+        dataInputLayout.setError(getString(R.string.invalid_date));
+        Toast.makeText(getApplicationContext(), "Data inválida", Toast.LENGTH_SHORT).show();
+    }
+
+    public void registroComSucesso(){
+        presenter.setFormularioEducadoraFisica(campoDataAtendimento.getText().toString(), campoNomeAssistido.getText().toString(),campoMotivoAtendimento.getText().toString(),campoEncaminhamento.getText().toString(),campoIdade.getText().toString()
+                ,campoPeso.getText().toString(),campoAltura.getText().toString(),campoBracoDireito.getText().toString(),campoBracoEsquerdo.getText().toString(),campoPernaDireita.getText().toString()
+                ,campoPernaEsquerda.getText().toString(),campoCintura.getText().toString(),campoQuadril.getText().toString(),campoDesempenhoGeral.getCheckedRadioButtonId(), campoDesempenhoEspecifico.getCheckedRadioButtonId()
+                ,campoAspectosMotrizes.getCheckedRadioButtonId(),campoAspectosCognitivos.getCheckedRadioButtonId(),campoAspectosSociais.getCheckedRadioButtonId(), campoObservacao.getText().toString());
+        Toast.makeText(getApplicationContext(), "Relatório salvo com sucesso", Toast.LENGTH_SHORT).show();
+        finish();
     }
 
 }

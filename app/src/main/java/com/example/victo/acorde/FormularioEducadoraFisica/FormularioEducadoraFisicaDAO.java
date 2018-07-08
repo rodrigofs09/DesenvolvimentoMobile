@@ -12,7 +12,7 @@ import java.util.List;
 public class FormularioEducadoraFisicaDAO extends SQLiteOpenHelper{
 
     public FormularioEducadoraFisicaDAO(Context context){
-        super(context,"Acorde", null, 2);
+        super(context,"Acorde", null, 4);
     }
 
     @Override
@@ -103,7 +103,7 @@ public class FormularioEducadoraFisicaDAO extends SQLiteOpenHelper{
         SQLiteDatabase db = getReadableDatabase();
         Cursor cursor = db.rawQuery(sql, null);
 
-        List<FormularioEducadoraFisica> formularioEducadoraFisicas = new ArrayList<FormularioEducadoraFisica>();
+        List<FormularioEducadoraFisica> formularioEducadoraFisicas = new ArrayList<>();
 
         while(cursor.moveToNext()){
 

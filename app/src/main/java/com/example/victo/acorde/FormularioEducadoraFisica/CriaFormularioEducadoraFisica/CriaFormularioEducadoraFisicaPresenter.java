@@ -1,6 +1,7 @@
 package com.example.victo.acorde.FormularioEducadoraFisica.CriaFormularioEducadoraFisica;
 
 import android.content.Context;
+import android.text.TextUtils;
 
 import com.example.victo.acorde.FormularioEducadoraFisica.FormularioEducadoraFisica;
 import com.example.victo.acorde.FormularioEducadoraFisica.FormularioEducadoraFisicaDAO;
@@ -67,6 +68,18 @@ public class CriaFormularioEducadoraFisicaPresenter implements CriaFormularioEdu
             dao.insereRelatorioEF(formularioEducadoraFisica);
         }
         dao.close();
+    }
+
+    public void registrar(String nome, String data){
+        if (TextUtils.isEmpty(nome)) {
+            view.erroNome();
+        }
+        else if (TextUtils.isEmpty(data)) {
+            view.erroData();
+        }
+        else{
+            view.registroComSucesso();
+        }
     }
 
 }

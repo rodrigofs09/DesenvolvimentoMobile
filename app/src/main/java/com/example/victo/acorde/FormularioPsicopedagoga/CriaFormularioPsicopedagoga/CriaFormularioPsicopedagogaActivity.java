@@ -77,7 +77,7 @@ public class CriaFormularioPsicopedagogaActivity extends AppCompatActivity imple
 
         setContentView(R.layout.activity_cria_formulario_psicopedagoga);
         ButterKnife.bind(this);
-        // setSupportActionBar(toolbar);
+        setSupportActionBar(toolbar);
 
         if(getSupportActionBar()!=null){
             getSupportActionBar().setTitle(R.string.formularioPsicopedagoga);

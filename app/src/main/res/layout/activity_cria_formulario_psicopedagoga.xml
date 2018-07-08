@@ -53,7 +53,9 @@
                             android:textColor="@color/black"
                             android:textSize="18sp"
                             android:hint="@string/dataAtendimento"
-                            android:textColorHint="@color/black"/>
+                            android:textColorHint="@color/black"
+                            android:drawableRight="@drawable/calendar"
+                            android:drawableEnd="@drawable/calendar" />
 
                     </android.support.design.widget.TextInputLayout>
 
@@ -62,14 +64,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColorHint="@color/black"
-                        android:layout_marginTop="8dp">
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp">
 
                         <android.support.design.widget.TextInputEditText
                             android:id="@+id/editTextNome"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginEnd="8dp"
-                            android:layout_marginStart="8dp"
                             android:layout_marginTop="8dp"
                             android:maxLines="1"
                             android:lines="1"
@@ -142,8 +144,8 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:id="@+id/RadioGroupTipoAtendimento"
-                        android:layout_marginEnd="12dp"
-                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp">
 
                         <RadioButton
@@ -176,8 +178,8 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:id="@+id/RadioGroupAspectosTrabalhados"
-                        android:layout_marginEnd="12dp"
-                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp">
 
                         <RadioButton
@@ -214,8 +216,8 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:id="@+id/RadioGroupAspectosTrabalhadosAcupuntura"
-                        android:layout_marginEnd="12dp"
-                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp">
 
                         <LinearLayout
@@ -294,8 +296,8 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:id="@+id/RadioGroupAtividadesLudicasLeitura"
-                        android:layout_marginEnd="12dp"
-                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp">
 
                         <RadioButton
@@ -328,8 +330,8 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:id="@+id/RadioGroupAtividadesCoordenacaoSurtiramEfeito"
-                        android:layout_marginEnd="12dp"
-                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp">
 
                         <RadioButton
@@ -362,47 +364,47 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:id="@+id/RadioGroupAvaliacoesObtiveramResultadosPositivos"
-                        android:layout_marginEnd="12dp"
-                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp">
 
                         <RadioButton
                             android:id="@+id/r61"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="1" />
+                            android:text="@string/um" />
 
                         <RadioButton
                             android:id="@+id/r62"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="35dp"
-                            android:layout_marginStart="35dp"
-                            android:text="2" />
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginStart="25dp"
+                            android:text="@string/dois" />
 
                         <RadioButton
                             android:id="@+id/r63"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="35dp"
-                            android:layout_marginStart="35dp"
-                            android:text="3" />
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginStart="25dp"
+                            android:text="@string/tres" />
 
                         <RadioButton
                             android:id="@+id/r64"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="35dp"
-                            android:layout_marginStart="35dp"
-                            android:text="4" />
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginStart="25dp"
+                            android:text="@string/quatro" />
 
                         <RadioButton
                             android:id="@+id/r65"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="35dp"
-                            android:layout_marginStart="35dp"
-                            android:text="5" />
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginStart="25dp"
+                            android:text="@string/cinco" />
                     </RadioGroup>
 
                     <TextView
@@ -420,55 +422,55 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:id="@+id/RadioGroupPlanejamentoSeguePercursoEsperado"
-                        android:layout_marginEnd="12dp"
-                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp">
 
                         <RadioButton
                             android:id="@+id/r71"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="1" />
+                            android:text="@string/um" />
 
                         <RadioButton
                             android:id="@+id/r72"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="35dp"
-                            android:layout_marginStart="35dp"
-                            android:text="2" />
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginStart="25dp"
+                            android:text="@string/dois" />
 
                         <RadioButton
                             android:id="@+id/r73"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="35dp"
-                            android:layout_marginStart="35dp"
-                            android:text="3" />
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginStart="25dp"
+                            android:text="@string/tres" />
 
                         <RadioButton
                             android:id="@+id/r74"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="35dp"
-                            android:layout_marginStart="35dp"
-                            android:text="4" />
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginStart="25dp"
+                            android:text="@string/quatro" />
 
                         <RadioButton
                             android:id="@+id/r75"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="35dp"
-                            android:layout_marginStart="35dp"
-                            android:text="5" />
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginStart="25dp"
+                            android:text="@string/cinco" />
                     </RadioGroup>
 
                     <TextView
                         android:id="@+id/textView8"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="12dp"
-                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
                         android:text="@string/perguntaMateriaisSaoSuficientesParaAtividades"
                         android:textColor="@color/black"/>
@@ -478,47 +480,47 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:id="@+id/RadioGroupMateriaisSaoSuficientesParaAtividades"
-                        android:layout_marginEnd="12dp"
-                        android:layout_marginStart="12dp"
-                        android:layout_marginTop="8dp">
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp">
 
                         <RadioButton
                             android:id="@+id/r81"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="1" />
+                            android:text="@string/um" />
 
                         <RadioButton
                             android:id="@+id/r82"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="35dp"
-                            android:layout_marginStart="35dp"
-                            android:text="2" />
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginStart="25dp"
+                            android:text="@string/dois" />
 
                         <RadioButton
                             android:id="@+id/r83"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="35dp"
-                            android:layout_marginStart="35dp"
-                            android:text="3" />
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginStart="25dp"
+                            android:text="@string/tres" />
 
                         <RadioButton
                             android:id="@+id/r84"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="35dp"
-                            android:layout_marginStart="35dp"
-                            android:text="4" />
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginStart="25dp"
+                            android:text="@string/quatro" />
 
                         <RadioButton
                             android:id="@+id/r85"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="35dp"
-                            android:layout_marginStart="35dp"
-                            android:text="5" />
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginStart="25dp"
+                            android:text="@string/cinco" />
                     </RadioGroup>
 
                     <android.support.design.widget.TextInputLayout
