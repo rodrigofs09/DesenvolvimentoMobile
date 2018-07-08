@@ -293,8 +293,8 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:id="@+id/RadioGroupAlimentarSozinho"
-                        android:layout_marginEnd="12dp"
-                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp">
 
                         <RadioButton
@@ -328,8 +328,8 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:id="@+id/RadioGroupServirSozinho"
-                        android:layout_marginEnd="12dp"
-                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp">
 
                         <RadioButton
@@ -363,8 +363,8 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:id="@+id/RadioGroupQtdAlimento"
-                        android:layout_marginEnd="12dp"
-                        android:layout_marginStart="12dp">
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp">
 
                         <RadioButton
                             android:id="@+id/r3sim"
@@ -397,8 +397,8 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:id="@+id/RadioGroupPrepararAlimento"
-                        android:layout_marginEnd="12dp"
-                        android:layout_marginStart="12dp">
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp">
 
                         <RadioButton
                             android:id="@+id/r4sim"
@@ -430,8 +430,8 @@
                         android:id="@+id/RadioGroupHabitoIntestinal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="12dp"
-                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
                         android:orientation="horizontal">
 
                         <RadioButton
@@ -474,8 +474,8 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:id="@+id/RadioGroupMastigacao"
-                        android:layout_marginEnd="12dp"
-                        android:layout_marginStart="12dp">
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp">
 
                         <RadioButton
                             android:id="@+id/r6rapida"
@@ -517,8 +517,8 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:id="@+id/RadioGroupPatologia"
-                        android:layout_marginEnd="12dp"
-                        android:layout_marginStart="12dp">
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp">
 
                         <RadioButton
                             android:id="@+id/r7sim"
@@ -536,17 +536,6 @@
 
                     </RadioGroup>
 
-                    <android.support.design.widget.TextInputEditText
-                        android:id="@+id/editTextPatologia"
-                        android:visibility="gone"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="8dp"
-                        android:hint="@string/quais"
-                        android:inputType="text" />
-
                     <TextView
                         android:id="@+id/textView9"
                         android:layout_width="match_parent"
@@ -562,8 +551,8 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:id="@+id/RadioGroupAlergiaAlimentar"
-                        android:layout_marginEnd="12dp"
-                        android:layout_marginStart="12dp">
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp">
 
                         <RadioButton
                             android:id="@+id/r9sim"
@@ -581,17 +570,6 @@
 
                     </RadioGroup>
 
-                    <android.support.design.widget.TextInputEditText
-                        android:id="@+id/editTextAlergia"
-                        android:visibility="gone"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="8dp"
-                        android:hint="@string/quais"
-                        android:inputType="text" />
-
                     <TextView
                         android:id="@+id/textView10"
                         android:layout_width="match_parent"
@@ -607,8 +585,8 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:id="@+id/RadioGroupPreferenciaAlimentar"
-                        android:layout_marginEnd="12dp"
-                        android:layout_marginStart="12dp">
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp">
 
                         <RadioButton
                             android:id="@+id/r10sim"
@@ -626,17 +604,6 @@
 
                     </RadioGroup>
 
-                    <android.support.design.widget.TextInputEditText
-                        android:id="@+id/editTextAlimentosPreferidos"
-                        android:visibility="gone"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="8dp"
-                        android:hint="@string/quais"
-                        android:inputType="text" />
-
                     <TextView
                         android:id="@+id/textView11"
                         android:layout_width="match_parent"
@@ -652,8 +619,8 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:id="@+id/RadioGroupNaoConsome"
-                        android:layout_marginEnd="12dp"
-                        android:layout_marginStart="12dp">
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp">
 
                         <RadioButton
                             android:id="@+id/r11sim"
@@ -670,17 +637,6 @@
                             android:text="@string/nao" />
 
                     </RadioGroup>
-
-                    <android.support.design.widget.TextInputEditText
-                        android:id="@+id/editTextNaoConsomeAlimento"
-                        android:visibility="gone"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="8dp"
-                        android:hint="@string/quais"
-                        android:inputType="text" />
 
                     <android.support.design.widget.TextInputLayout
                         android:id="@+id/text_input_layout_observacao"
