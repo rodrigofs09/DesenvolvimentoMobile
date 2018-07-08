@@ -22,6 +22,7 @@
     <string name="cadastrar">Cadastrar</string>
     <string name="buscar">Buscar</string>
     <string name="dataAtendimento">Selecione a Data do Atendimento</string>
+    <string name="nomeProfissional">Nome do profissional</string>
     <string name="nomeDoAssistido">Nome do Assistido</string>
     <string name="motivoAtendimento">Motivo do Atendimento</string>
     <string name="encaminhamento">Encaminhamento</string>
