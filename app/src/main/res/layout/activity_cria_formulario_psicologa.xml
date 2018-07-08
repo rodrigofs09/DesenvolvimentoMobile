@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".FormularioPsicologa.CriaFormularioPsicologa.CriaFormularioPsicologaActivity"
+    android:theme="@style/FormTheme">
+
+    <include layout="@layout/toolbar" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="5dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:descendantFocusability="beforeDescendants"
+                    android:focusableInTouchMode="true">
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/text_input_layout_data"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginStart="12dp">
+
+                    <TextView
+                        android:id="@+id/dataFormulario"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:hint="@string/dataAtendimento"
+                        android:textColorHint="@color/black"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/text_input_layout_nome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/black"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/editTextNome"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:maxLines="1"
+                            android:lines="1"
+                            android:textColor="@color/black"
+                            android:imeOptions="actionNext"
+                            android:hint="@string/nomeDoAssistido"
+                            android:textColorHint="@color/black"
+                            android:inputType="text"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+                        <TextView
+                            android:id="@+id/tipoAtendimento"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Tipo Do Atendimento :"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textSize="18sp" />
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/atendimentoIndividual"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Individual" />
+
+                            <RadioButton
+                                android:id="@+id/atendimentoGrupal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Grupal" />
+
+                            <RadioButton
+                                android:id="@+id/atendimentoEmergencial"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Emergencial" />
+
+                        </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tipoIndividual"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Tipo de  Atendimento Individual :"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textSize="18sp" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/tipoIndividualEmocional"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Emocional" />
+
+                        <RadioButton
+                            android:id="@+id/tipoIndividualAcupuntura"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Acupuntura" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/individualEmocional"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Emocional, aspectos trabalhados :"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textSize="18sp" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/aspecInternos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Conflitos Internos" />
+
+                        <RadioButton
+                            android:id="@+id/aspecFamiliaresCuidadores"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Conflitos Familiares/Cuidadores" />
+
+                        <RadioButton
+                            android:id="@+id/aspecAcorde"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Conflitos Acorde" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/individualAcupuntura"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Acupuntura, aspectos trabalhados :"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textSize="18sp" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/aspecAgitacao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Agitação" />
+
+                        <RadioButton
+                            android:id="@+id/aspecAnsiedade"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Ansiedade" />
+
+                        <RadioButton
+                            android:id="@+id/aspecAgressividade"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Agressividade" />
+
+                        <RadioButton
+                            android:id="@+id/aspecCompulsao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Compulsão" />
+
+                        <RadioButton
+                            android:id="@+id/aspecCrisesEpileticas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Crises Epiléticas" />
+
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/grupalTemas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Atendimento Grupal, tema trabalhado :"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textSize="18sp" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/temaEmocoes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Emoções" />
+
+                        <RadioButton
+                            android:id="@+id/temaSentimentos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Ansiedade" />
+
+                        <RadioButton
+                            android:id="@+id/temaRelacionamentos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Relacionamento com familiares/cuidadores" />
+
+                        <RadioButton
+                            android:id="@+id/temaMotivacao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Motivação" />
+
+                        <RadioButton
+                            android:id="@+id/temaAtualidades"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Atualidades" />
+
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/encaminhamentoAcorde"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Encaminhamento na Acorde :"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textSize="18sp" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/encaminhamentoFono"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Fonoaudiologia" />
+
+                        <RadioButton
+                            android:id="@+id/encaminhamentoFisio"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Fisioterapia" />
+
+                        <RadioButton
+                            android:id="@+id/encaminhamentoTO"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Terapia Ocupacional" />
+
+                        <RadioButton
+                            android:id="@+id/encaminhamentoEduEsp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Educação Especial" />
+
+                        <RadioButton
+                            android:id="@+id/encaminhamentoPedago"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Pedagogia/Psicopedagogia" />
+
+                        <RadioButton
+                            android:id="@+id/encaminhamentoAtFisica"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Atividade Física" />
+                    </RadioGroup>
+
+                    <TextView
+                    android:id="@+id/encaminhamentoExterno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Encaminhamento Externo :"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textSize="18sp" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/encaminhamentoPsiquiatra"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Médico Psiquiatra" />
+
+                        <RadioButton
+                            android:id="@+id/encaminhamentoNeuro"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Médico Neurologista" />
+
+                        <RadioButton
+                            android:id="@+id/encaminhamentoEndocrinologista"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Médico Endocrinologista" />
+
+                        <RadioButton
+                            android:id="@+id/encaminhamentoDentista"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Dentista" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/atendimentoFamiliaCuidadores"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Atendimento à Família/Cuidadores :"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textSize="18sp" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/anamneses"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Anamneses" />
+
+                        <RadioButton
+                            android:id="@+id/atFamiliaCuidadoresAcorde"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Famílias/Cuidadores dos assistidos da Acorde" />
+
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/visitaDomiciliar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Visitas Domiciliares :"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textSize="18sp" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/exito"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Êxito" />
+
+                        <RadioButton
+                            android:id="@+id/ngmResidencia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Não havia ninguém na residência" />
+
+                    </RadioGroup>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/text_input_layout_observacao"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/black"
+                        android:layout_marginTop="8dp">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/editTextObservacao"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:maxLines="1"
+                            android:lines="1"
+                            android:textColor="@color/black"
+                            android:imeOptions="actionDone"
+                            android:hint="@string/observacao"
+                            android:textColorHint="@color/black"
+                            android:inputType="text"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/buttonFinalizar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    android:background="@drawable/havelock_blue_rounded_corners"
+                    android:text="@string/finalizar" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
