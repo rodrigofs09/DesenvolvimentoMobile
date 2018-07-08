@@ -6,29 +6,24 @@ import java.sql.Date;
 public class FormularioEducadoraFisica implements Serializable {
 
     private Long id;
+    private String dataAtendimento;
     private String nomeAssistido;
     private String motivoAtendimento;
     private String encaminhamento;
-    private String arco;
-    private String mms;
-    private String mmii;
-    private String tronco;
-    private String marcha1;
-    private String marcha2;
-    private String marcha3;
-    private String polichinelo;
-    private String polichineloObs;
-    private String lego;
-    private String legoObs;
-    private String pintar;
-    private String controle;
-    private String dimensaoC;
-    private String dimensaoFrente;
-    private String dimensaoTras;
-    private String dimensaoDireita;
-    private String dimensaoEsquerda;
-    private String dimensaoCima;
-    private String dimensaoBaixo;
+    private String idade;
+    private String peso;
+    private String altura;
+    private String bracoDireito;
+    private String bracoEsquerdo;
+    private String pernaDireita;
+    private String pernaEsquerda;
+    private String cintura;
+    private String quadril;
+    private int desempenhoGeral;
+    private int desempenhoEspecifico;
+    private int aspectosMotrizes;
+    private int aspectosCognitivos;
+    private int aspectosSociais;
     private String observacao;
 
     public Long getId() {
@@ -38,6 +33,10 @@ public class FormularioEducadoraFisica implements Serializable {
     public void setId(Long id) {
         this.id = id;
     }
+
+    public String getDataAtendimento() { return dataAtendimento; }
+
+    public void setDataAtendimento(String data) {this.dataAtendimento = data;}
 
     public String getNomeAssistido() {
         return nomeAssistido;
@@ -63,164 +62,114 @@ public class FormularioEducadoraFisica implements Serializable {
         this.encaminhamento = encaminhamento;
     }
 
-    public String getArco() {
-        return arco;
+    public String getIdade() {
+        return idade;
     }
 
-    public void setArco(String arco) {
-        this.arco = arco;
+    public void setIdade(String idade) {
+        this.idade = idade;
     }
 
-    public String getMms() {
-        return mms;
+    public String getPeso() {
+        return peso;
     }
 
-    public void setMms(String mms) {
-        this.mms = mms;
+    public void setPeso(String peso) {
+        this.peso = peso;
     }
 
-    public String getMmii() {
-        return mmii;
+    public String getAltura() {
+        return altura;
     }
 
-    public void setMmii(String mmii) {
-        this.mmii = mmii;
+    public void setAltura(String altura) { this.altura = altura;}
+
+    public String getBracoDireito() {
+        return bracoDireito;
     }
 
-    public String getTronco() {
-        return tronco;
+    public void setBracoDireito(String bracoDireito) {
+        this.bracoDireito = bracoDireito;
     }
 
-    public void setTronco(String tronco) {
-        this.tronco = tronco;
+    public String getBracoEsquerdo() {
+        return bracoEsquerdo;
     }
 
-    public String getMarcha1() {
-        return marcha1;
+    public void setBracoEsquerdo(String bracoEsquerdo) {
+        this.bracoEsquerdo = bracoEsquerdo;
     }
 
-    public void setMarcha1(String marcha1) {
-        this.marcha1 = marcha1;
+    public String getPernaDireita() {
+        return pernaDireita;
     }
 
-    public String getMarcha2() {
-        return marcha2;
+    public void setPernaDireita(String pernaDireita) {
+        this.pernaDireita = pernaDireita;
     }
 
-    public void setMarcha2(String marcha2) {
-        this.marcha2 = marcha2;
+    public String getPernaEsquerda() {
+        return pernaEsquerda;
     }
 
-    public String getMarcha3() {
-        return marcha3;
+    public void setPernaEsquerda(String pernaEsquerda) {
+        this.pernaEsquerda = pernaEsquerda;
     }
 
-    public void setMarcha3(String marcha3) {
-        this.marcha3 = marcha3;
+    public String getCintura() {
+        return cintura;
     }
 
-    public String getPolichinelo() {
-        return polichinelo;
+    public void setCintura(String cintura) {
+        this.cintura = cintura;
     }
 
-    public void setPolichinelo(String polichinelo) {
-        this.polichinelo = polichinelo;
+    public String getQuadril() {
+        return quadril;
     }
 
-    public String getPolichineloObs() {
-        return polichineloObs;
+    public void setQuadril(String quadril) {
+        this.quadril = quadril;
     }
 
-    public void setPolichineloObs(String polichineloObs) {
-        this.polichineloObs = polichineloObs;
+    public int getDesempenhoGeral() {
+        return desempenhoGeral;
     }
 
-    public String getLego() {
-        return lego;
+    public void setDesempenhoGeral(int desempenhoGeral) {
+        this.desempenhoGeral = desempenhoGeral;
     }
 
-    public void setLego(String lego) {
-        this.lego = lego;
+    public int getDesempenhoEspecifico() {
+        return desempenhoEspecifico;
     }
 
-    public String getLegoObs() {
-        return legoObs;
+    public void setDesempenhoEspecifico(int desempenhoEspecifico) {
+        this.desempenhoEspecifico = desempenhoEspecifico;
     }
 
-    public void setLegoObs(String legoObs) {
-        this.legoObs = legoObs;
+    public int getAspectosMotrizes() {
+        return aspectosMotrizes;
     }
 
-    public String getPintar() {
-        return pintar;
+    public void setAspectosMotrizes(int aspectosMotrizes) {
+        this.aspectosMotrizes = aspectosMotrizes;
     }
 
-    public void setPintar(String pintar) {
-        this.pintar = pintar;
+    public int getAspectosCognitivos() {
+        return aspectosCognitivos;
     }
 
-    public String getControle() {
-        return controle;
+    public void setAspectosCognitivos(int aspectosCognitivos) {
+        this.aspectosCognitivos = aspectosCognitivos;
     }
 
-    public void setControle(String controle) {
-        this.controle = controle;
+    public int getAspectosSociais() {
+        return aspectosSociais;
     }
 
-    public String getDimensaoC() {
-        return dimensaoC;
-    }
-
-    public void setDimensaoC(String dimensaoC) {
-        this.dimensaoC = dimensaoC;
-    }
-
-    public String getDimensaoFrente() {
-        return dimensaoFrente;
-    }
-
-    public void setDimensaoFrente(String dimensaoFrente) {
-        this.dimensaoFrente = dimensaoFrente;
-    }
-
-    public String getDimensaoTras() {
-        return dimensaoTras;
-    }
-
-    public void setDimensaoTras(String dimensaoTras) {
-        this.dimensaoTras = dimensaoTras;
-    }
-
-    public String getDimensaoDireita() {
-        return dimensaoDireita;
-    }
-
-    public void setDimensaoDireita(String dimensaoDireita) {
-        this.dimensaoDireita = dimensaoDireita;
-    }
-
-    public String getDimensaoEsquerda() {
-        return dimensaoEsquerda;
-    }
-
-    public void setDimensaoEsquerda(String dimensaoEsquerda) {
-        this.dimensaoEsquerda = dimensaoEsquerda;
-    }
-
-    public String getDimensaoCima() {
-        return dimensaoCima;
-    }
-
-    public void setDimensaoCima(String dimensaoCima) {
-        this.dimensaoCima = dimensaoCima;
-    }
-
-    public String getDimensaoBaixo() {
-        return dimensaoBaixo;
-    }
-
-    public void setDimensaoBaixo(String dimensaoBaixo) {
-        this.dimensaoBaixo = dimensaoBaixo;
+    public void setAspectosSociais(int aspectosSociais) {
+        this.aspectosSociais = aspectosSociais;
     }
 
     public String getObservacao() {
