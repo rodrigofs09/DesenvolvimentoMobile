@@ -53,4 +53,24 @@
     <string name="observacao">Observação</string>
     <string name="finalizar">Finalizar</string>
     <string name="procurar">Procurar relatório</string>
+
+    <string name="perguntaAtendimentoPsicologico">Tipo de atendimento</string>
+    <string name="emocional">Emocional</string>
+    <string name="acupuntura">Acupuntura</string>
+    <string name="perguntaAspectosTrabalhados">Aspectos trabalhados</string>
+    <string name="conflitosInternos">Conflitos internos</string>
+    <string name="conflitosFamiliaresCuidadores">Conflitos com familiares/cuidadores</string>
+    <string name="conflitosAcorde">Conflitos na Acorde</string>
+    <string name="perguntaAspectosTrabalhadosAcupuntura">Aspectos trabalhados na acupuntura</string>
+    <string name="agitacao">Agitação</string>
+    <string name="ansiedade">Ansiedade</string>
+    <string name="agressividade">Agressividade</string>
+    <string name="compulsao">Compulsão</string>
+    <string name="crisesEpileticas">Crises Epiléticas</string>
+    <string name="equilibrio">Equilíbrio</string>
+    <string name="perguntaAtividadesLudicasLeitura">Foram realizadas atividades lúdicas de leitura?</string>
+    <string name="perguntaAtividadesCoordenacaoSurtiramEfeito">As atividades que envolveram coordenação motora surtiram o resultado esperado?</string>
+    <string name="perguntaAvaliacoesObtiveramResultadosPositivos">As avaliações grupais e individuais obtiveram resultados positivos para averiguar as condições de cada atendido?</string>
+    <string name="perguntaPlanejamentoSeguePercursoEsperado">O planejamento segue o percurso esperado?</string>
+    <string name="perguntaMateriaisSaoSuficientesParaAtividades">Os materiais são suficientes para a realização das atividades?</string>
 </resources>
