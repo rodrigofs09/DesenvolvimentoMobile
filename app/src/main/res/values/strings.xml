@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Acorde</string>
+    <string name="app_name">Acorde - Registro de Relatórios</string>
     <string name="username">Nome de usuário</string>
     <string name="password">Senha</string>
     <string name="sign_in">Entrar</string>

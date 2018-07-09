@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -50,7 +51,7 @@ public class BuscaRelatorioPPFragment extends Fragment implements View.OnClickLi
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_busca_relatorio_p, container, false);
         buscar = view.findViewById(R.id.buscar);
@@ -87,10 +88,6 @@ public class BuscaRelatorioPPFragment extends Fragment implements View.OnClickLi
                         break;
                     case R.id.buscaEducadoraFisica:
                         vaiProFormulario = new Intent(getActivity(), ListaFormulariosEducadoraFisicaActivity.class);
-                        startActivity(vaiProFormulario);
-                        break;
-                    case R.id.buscaEducadoraEspecial:
-                        vaiProFormulario = new Intent(getActivity(), ListaFormulariosEducadoraEspecialActivity.class);
                         startActivity(vaiProFormulario);
                         break;
                     case R.id.buscaPsicopedagoga:
