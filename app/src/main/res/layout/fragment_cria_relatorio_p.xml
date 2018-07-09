@@ -69,16 +69,6 @@
                     android:text="@string/formularioEducadoraFisica" />
 
                 <RadioButton
-                    android:id="@+id/cadastraEducadoraEspecial"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="15dp"
-                    android:text="@string/educadoraEspecial" />
-
-                <RadioButton
                     android:id="@+id/cadastraPsicopedagoga"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

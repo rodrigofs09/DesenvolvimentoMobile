@@ -95,10 +95,6 @@ public class CriaRelatorioPPFragment extends Fragment implements View.OnClickLis
                         vaiProFormulario = new Intent(getActivity(), CriaFormularioEducadoraFisicaActivity.class);
                         startActivity(vaiProFormulario);
                         break;
-                    case R.id.cadastraEducadoraEspecial:
-                        vaiProFormulario = new Intent(getActivity(), CriaFormularioEducadoraEspecialActivity.class);
-                        startActivity(vaiProFormulario);
-                        break;
                     case R.id.cadastraPsicopedagoga:
                         vaiProFormulario = new Intent(getActivity(), CriaFormularioPsicopedagogaActivity.class);
                         startActivity(vaiProFormulario);
