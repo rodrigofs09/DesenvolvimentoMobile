@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RadioGroup;
+
+import com.example.victo.acorde.FormularioPsicologa.ListaFormulariosPsicologa.ListaFormulariosPsicologaActivity;
 import com.example.victo.acorde.FormularioPsicopedagoga.ListaFormulariosPsicopedagoga.ListaFormulariosPsicopedagogaActivity;
 import com.example.victo.acorde.FormularioEducadoraEspecial.ListaFormulariosEducadoraEspecial.ListaFormulariosEducadoraEspecialActivity;
 import com.example.victo.acorde.FormularioEducadoraFisica.ListaFormulariosEducadoraFisica.ListaFormulariosEducadoraFisicaActivity;
@@ -85,6 +87,7 @@ public class BuscaRelatorioPPFragment extends Fragment implements View.OnClickLi
                         vaiProFormulario = new Intent(getActivity(), ListaFormulariosNutricionistaActivity.class);
                         startActivity(vaiProFormulario);
                         break;
+
                     case R.id.buscaEducadoraFisica:
                         vaiProFormulario = new Intent(getActivity(), ListaFormulariosEducadoraFisicaActivity.class);
                         startActivity(vaiProFormulario);
@@ -95,6 +98,10 @@ public class BuscaRelatorioPPFragment extends Fragment implements View.OnClickLi
                         break;
                     case R.id.buscaPsicopedagoga:
                         vaiProFormulario = new Intent(getActivity(), ListaFormulariosPsicopedagogaActivity.class);
+                        startActivity(vaiProFormulario);
+                        break;
+                    case R.id.buscaPsicologa:
+                        vaiProFormulario = new Intent(getActivity(), ListaFormulariosPsicologaActivity.class);
                         startActivity(vaiProFormulario);
                         break;
                     default:

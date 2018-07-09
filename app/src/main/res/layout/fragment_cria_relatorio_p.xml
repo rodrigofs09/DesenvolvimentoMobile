@@ -45,6 +45,7 @@
             android:layout_marginBottom="15dp"
             android:text="@string/formularioNutricionista" />
 
+
         <RadioButton
             android:id="@+id/cadastraEducadoraFisica"
             android:layout_width="wrap_content"
@@ -74,6 +75,17 @@
             android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
             android:text="@string/formularioPsicopedagoga" />
+
+        <RadioButton
+            android:id="@+id/cadastraPsicologa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="@string/formularioPsicologa" />
+
 
     </RadioGroup>
 

@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RadioGroup;
 
+import com.example.victo.acorde.FormularioPsicologa.CriaFormularioPsicologa.CriaFormularioPsicologaActivity;
 import com.example.victo.acorde.FormularioPsicopedagoga.CriaFormularioPsicopedagoga.CriaFormularioPsicopedagogaActivity;
 import com.example.victo.acorde.FormularioEducadoraEspecial.CriaFormularioEducadoraEspecial.CriaFormularioEducadoraEspecialActivity;
 import com.example.victo.acorde.FormularioEducadoraFisica.CriaFormularioEducadoraFisica.CriaFormularioEducadoraFisicaActivity;
@@ -100,6 +101,10 @@ public class CriaRelatorioPPFragment extends Fragment implements View.OnClickLis
                         break;
                     case R.id.cadastraPsicopedagoga:
                         vaiProFormulario = new Intent(getActivity(), CriaFormularioPsicopedagogaActivity.class);
+                        startActivity(vaiProFormulario);
+                        break;
+                    case R.id.cadastraPsicologa:
+                        vaiProFormulario = new Intent(getActivity(), CriaFormularioPsicologaActivity.class);
                         startActivity(vaiProFormulario);
                         break;
                     default:

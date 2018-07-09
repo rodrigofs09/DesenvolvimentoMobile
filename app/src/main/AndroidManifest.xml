@@ -34,6 +34,12 @@
         <activity android:name=".FormularioEducadoraEspecial.ListaFormulariosEducadoraEspecial.ListaFormulariosEducadoraEspecialActivity" />
         <activity android:name=".FormularioPsicopedagoga.CriaFormularioPsicopedagoga.CriaFormularioPsicopedagogaActivity" />
         <activity android:name=".FormularioPsicopedagoga.ListaFormulariosPsicopedagoga.ListaFormulariosPsicopedagogaActivity" />
+        <activity
+            android:name=".FormularioPsicologa.CriaFormularioPsicologa.CriaFormularioPsicologaActivity"
+            />
+        <activity
+            android:name=".FormularioPsicologa.ListaFormulariosPsicologa.ListaFormulariosPsicologaActivity"
+            />
     </application>
 
 </manifest>
