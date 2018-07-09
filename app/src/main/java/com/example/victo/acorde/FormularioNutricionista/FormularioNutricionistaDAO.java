@@ -22,6 +22,7 @@ public class FormularioNutricionistaDAO extends SQLiteOpenHelper {
                 "    nomeAssistido VARCHAR, " +
                 "    motivoAtendimento VARCHAR, " +
                 "    encaminhamento VARCHAR, " +
+                "    idade VARCHAR, " +
                 "    altura VARCHAR, " +
                 "    peso VARCHAR, " +
                 "    cintura VARCHAR, " +
@@ -80,6 +81,7 @@ public class FormularioNutricionistaDAO extends SQLiteOpenHelper {
         dados.put("nomeAssistido", formularioNutricionista.getNomeAssistido());
         dados.put("motivoAtendimento", formularioNutricionista.getMotivoAtendimento());
         dados.put("encaminhamento", formularioNutricionista.getEncaminhamento());
+        dados.put("idade", formularioNutricionista.getIdade());
         dados.put("altura", formularioNutricionista.getAltura());
         dados.put("peso", formularioNutricionista.getPeso());
         dados.put("cintura", formularioNutricionista.getCintura());
@@ -116,6 +118,7 @@ public class FormularioNutricionistaDAO extends SQLiteOpenHelper {
             formularioNutricionista.setNomeAssistido((cursor.getString(cursor.getColumnIndex("nomeAssistido"))));
             formularioNutricionista.setMotivoAtendimento((cursor.getString(cursor.getColumnIndex("motivoAtendimento"))));
             formularioNutricionista.setEncaminhamento((cursor.getString(cursor.getColumnIndex("encaminhamento"))));
+            formularioNutricionista.setIdade((cursor.getString(cursor.getColumnIndex("idade"))));
             formularioNutricionista.setAltura((cursor.getString(cursor.getColumnIndex("altura"))));
             formularioNutricionista.setPeso((cursor.getString(cursor.getColumnIndex("peso"))));
             formularioNutricionista.setCintura((cursor.getString(cursor.getColumnIndex("cintura"))));

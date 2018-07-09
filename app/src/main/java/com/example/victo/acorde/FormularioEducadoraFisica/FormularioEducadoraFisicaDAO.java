@@ -12,13 +12,14 @@ import java.util.List;
 public class FormularioEducadoraFisicaDAO extends SQLiteOpenHelper{
 
     public FormularioEducadoraFisicaDAO(Context context){
-        super(context,"Acorde", null, 2);
+        super(context,"Acorde", null, 4);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
         String sql = "CREATE TABLE IF NOT EXISTS FormularioEducadoraFisica (" +
                 "    id INTEGER PRIMARY KEY, " +
+                "    dataAtendimento VARCHAR," +
                 "    nomeAssistido VARCHAR, " +
                 "    motivoAtendimento VARCHAR, " +
                 "    encaminhamento VARCHAR, " +
@@ -75,6 +76,7 @@ public class FormularioEducadoraFisicaDAO extends SQLiteOpenHelper{
     private ContentValues pegaDadosRelatorioEF(FormularioEducadoraFisica formularioEducadoraFisica) {
         ContentValues dados = new ContentValues();
 
+        dados.put("dataAtendimento", formularioEducadoraFisica.getDataAtendimento());
         dados.put("nomeAssistido", formularioEducadoraFisica.getNomeAssistido());
         dados.put("motivoAtendimento", formularioEducadoraFisica.getMotivoAtendimento());
         dados.put("encaminhamento", formularioEducadoraFisica.getEncaminhamento());
@@ -99,16 +101,18 @@ public class FormularioEducadoraFisicaDAO extends SQLiteOpenHelper{
 
     public List<FormularioEducadoraFisica> buscaRelatorioEF() {
 
-        String sql = "SELECT * FROM EducadoraFisica;";
+        String sql = "SELECT * FROM FormularioEducadoraFisica;";
         SQLiteDatabase db = getReadableDatabase();
         Cursor cursor = db.rawQuery(sql, null);
 
-        List<FormularioEducadoraFisica> formularioEducadoraFisicas = new ArrayList<FormularioEducadoraFisica>();
+        List<FormularioEducadoraFisica> formularioEducadoraFisicas = new ArrayList<>();
 
         while(cursor.moveToNext()){
 
             FormularioEducadoraFisica formularioEducadoraFisica = new FormularioEducadoraFisica();
+
             formularioEducadoraFisica.setId(cursor.getLong(cursor.getColumnIndex("id")));
+            formularioEducadoraFisica.setDataAtendimento((cursor.getString(cursor.getColumnIndex("dataAtendimento"))));
             formularioEducadoraFisica.setNomeAssistido((cursor.getString(cursor.getColumnIndex("nomeAssistido"))));
             formularioEducadoraFisica.setMotivoAtendimento((cursor.getString(cursor.getColumnIndex("motivoAtendimento"))));
             formularioEducadoraFisica.setEncaminhamento((cursor.getString(cursor.getColumnIndex("encaminhamento"))));

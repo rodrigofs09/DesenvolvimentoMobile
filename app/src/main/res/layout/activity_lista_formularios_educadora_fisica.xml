@@ -1,9 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:theme="@style/FormTheme"
     tools:context=".FormularioEducadoraFisica.ListaFormulariosEducadoraFisica.ListaFormulariosEducadoraFisicaActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <include layout="@layout/toolbar" />
+
+    <SearchView
+        android:id="@+id/searchViewEducadoraFisica"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Filtrar por nome ou data"
+        android:iconifiedByDefault="false"
+        android:layout_marginBottom="15dp"
+        android:focusableInTouchMode="true"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/vazio"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/semRelatorios"
+        android:textColor="@color/black"/>
+
+    <ListView
+        android:id="@+id/lista_formulario_EducadoraFisica"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="1dp">
+
+    </ListView>
+
+</LinearLayout>

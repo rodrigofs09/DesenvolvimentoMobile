@@ -40,15 +40,15 @@ public class VisualizaFormularioNutricionistaPresenter implements VisualizaFormu
         formularioNutricionista.setCintura(cintura);
         formularioNutricionista.setQuadril(quadril);
         formularioNutricionista.setBracos(bracos);
-        formularioNutricionista.setAlimentarSozinho(alimentarSozinho);
-        formularioNutricionista.setServirSozinho(servirSozinho);
-        formularioNutricionista.setQtdAlimento(qtdAlimento);
-        formularioNutricionista.setPrepararSozinho(prepararSozinho);
-        formularioNutricionista.setHabitoIntestinal(habitoIntestinal);
-        formularioNutricionista.setMastigacao(mastigacao);
-        formularioNutricionista.setPatologia(patologia);
-        formularioNutricionista.setAlergiaAlimentar(alergiaAlimentar);
-        formularioNutricionista.setPreferenciaAlimentar(preferenciaAlimentar);
+        formularioNutricionista.setCategoriaAtendimento(alimentarSozinho);
+        formularioNutricionista.setIndividualTipo(servirSozinho);
+        formularioNutricionista.setTipoEmocionalAspectos(qtdAlimento);
+        formularioNutricionista.setTipoAcupunturaAspectos(prepararSozinho);
+        formularioNutricionista.setTemaGrupal(habitoIntestinal);
+        formularioNutricionista.setEncaminhamentoAcorde(mastigacao);
+        formularioNutricionista.setEncaminhamentoExterno(patologia);
+        formularioNutricionista.setAtendimentoFamiliaCuidadores(alergiaAlimentar);
+        formularioNutricionista.setVisitasDomiciliares(preferenciaAlimentar);
         formularioNutricionista.setNaoConsome(naoConsome);
         formularioNutricionista.setObservacao(observacao);
 

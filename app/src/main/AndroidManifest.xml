@@ -23,23 +23,36 @@
             android:theme="@style/AppThemeNoActionBar" />
         <activity
             android:name=".FormularioNutricionista.CriaFormularioNutricionista.CriaFormularioNutricionistaActivity"
-            android:theme="@style/AppThemeNoActionBar" />
+            android:theme="@style/AppThemeNoActionBar"
+            android:windowSoftInputMode="stateHidden"/>
         <activity
             android:name=".FormularioNutricionista.ListaFormulariosNutricionista.ListaFormulariosNutricionistaActivity"
             android:theme="@style/AppThemeNoActionBar"
             android:windowSoftInputMode="stateHidden"/>
-        <activity android:name=".FormularioEducadoraFisica.CriaFormularioEducadoraFisica.CriaFormularioEducadoraFisicaActivity" />
-        <activity android:name=".FormularioEducadoraFisica.ListaFormulariosEducadoraFisica.ListaFormulariosEducadoraFisicaActivity" />
-        <activity android:name=".FormularioEducadoraEspecial.CriaFormularioEducadoraEspecial.CriaFormularioEducadoraEspecialActivity" />
-        <activity android:name=".FormularioEducadoraEspecial.ListaFormulariosEducadoraEspecial.ListaFormulariosEducadoraEspecialActivity" />
-        <activity android:name=".FormularioPsicopedagoga.CriaFormularioPsicopedagoga.CriaFormularioPsicopedagogaActivity" />
-        <activity android:name=".FormularioPsicopedagoga.ListaFormulariosPsicopedagoga.ListaFormulariosPsicopedagogaActivity" />
         <activity
-            android:name=".FormularioPsicologa.CriaFormularioPsicologa.CriaFormularioPsicologaActivity"
-            />
+            android:name=".FormularioEducadoraFisica.CriaFormularioEducadoraFisica.CriaFormularioEducadoraFisicaActivity"
+            android:theme="@style/AppThemeNoActionBar"
+            android:windowSoftInputMode="stateHidden"/>
         <activity
-            android:name=".FormularioPsicologa.ListaFormulariosPsicologa.ListaFormulariosPsicologaActivity"
+            android:name=".FormularioEducadoraFisica.ListaFormulariosEducadoraFisica.ListaFormulariosEducadoraFisicaActivity"
+            android:theme="@style/AppThemeNoActionBar"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".FormularioEducadoraEspecial.CriaFormularioEducadoraEspecial.CriaFormularioEducadoraEspecialActivity"
+            android:theme="@style/AppThemeNoActionBar"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".FormularioEducadoraEspecial.ListaFormulariosEducadoraEspecial.ListaFormulariosEducadoraEspecialActivity"
+            android:theme="@style/AppThemeNoActionBar"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".FormularioPsicopedagoga.CriaFormularioPsicopedagoga.CriaFormularioPsicopedagogaActivity"
+            android:theme="@style/AppThemeNoActionBar"
+            android:windowSoftInputMode="stateHidden"
             />
+        <activity android:name=".FormularioPsicopedagoga.ListaFormulariosPsicopedagoga.ListaFormulariosPsicopedagogaActivity"
+            android:theme="@style/AppThemeNoActionBar"
+            android:windowSoftInputMode="stateHidden"/>
     </application>
 
 </manifest>

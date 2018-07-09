@@ -43,7 +43,8 @@ public class CriaFormularioPsicopedagogaActivity extends AppCompatActivity imple
     EditText campoMotivoAtendimento;
     @BindView(R.id.editTextEncaminhamento)
     EditText campoEncaminhamento;
-
+    @BindView(R.id.editTextIdade)
+    EditText campoIdade;
     @BindView(R.id.RadioGroupTipoAtendimento)
     RadioGroup campoTipoAtendimento;
     @BindView(R.id.RadioGroupAspectosTrabalhados)
@@ -77,7 +78,7 @@ public class CriaFormularioPsicopedagogaActivity extends AppCompatActivity imple
 
         setContentView(R.layout.activity_cria_formulario_psicopedagoga);
         ButterKnife.bind(this);
-        // setSupportActionBar(toolbar);
+        setSupportActionBar(toolbar);
 
         if(getSupportActionBar()!=null){
             getSupportActionBar().setTitle(R.string.formularioPsicopedagoga);
@@ -106,7 +107,6 @@ public class CriaFormularioPsicopedagogaActivity extends AppCompatActivity imple
             @Override
             public void onDateSet(DatePicker view, int year, int month, int day) {
                 month = month + 1;
-                //Log.d(TAG, "onDateSet: mm/dd/yyy: " + month + "/" + day + "/" + year);
 
                 date = day + "/" + month + "/" + year;
                 campoDataAtendimento.setText(date);
@@ -137,7 +137,7 @@ public class CriaFormularioPsicopedagogaActivity extends AppCompatActivity imple
     }
 
     @Override
-    public void setInfosFormularioPsicopedagoga(String dataAtendimento, String nomeAssistido, String motivoAtendimento, String encaminhamento,
+    public void setInfosFormularioPsicopedagoga(String dataAtendimento, String nomeAssistido, String motivoAtendimento, String encaminhamento, String idade,
                                                 int tipoAtendimento, int aspectosTrabalhados, int aspectosTrabalhadosAcupuntura, int atividadesLudicasLeitura, int atividadesCoordenacaoSurtiramEfeito,
                                                 int avaliacoesObtiveramResultadosPositivos, int planejamentoSeguePercursoEsperado, int materiaisSaoSuficientesParaAtividades, String observacao){
 
@@ -145,7 +145,7 @@ public class CriaFormularioPsicopedagogaActivity extends AppCompatActivity imple
         campoNomeAssistido.setText(nomeAssistido);
         campoMotivoAtendimento.setText(motivoAtendimento);
         campoEncaminhamento.setText(encaminhamento);
-
+        campoIdade.setText(idade);
         campoTipoAtendimento.check(tipoAtendimento);
         campoAspectosTrabalhados.check(aspectosTrabalhados);
         campoAspectosTrabalhadosAcupuntura.check(aspectosTrabalhadosAcupuntura);
@@ -184,7 +184,7 @@ public class CriaFormularioPsicopedagogaActivity extends AppCompatActivity imple
 
     public void registroComSucesso(){
         presenter.setFormularioPsicopedagoga(campoDataAtendimento.getText().toString(), campoNomeAssistido.getText().toString(), campoMotivoAtendimento.getText().toString(), campoEncaminhamento.getText().toString(),
-                campoTipoAtendimento.getCheckedRadioButtonId(), campoAspectosTrabalhados.getCheckedRadioButtonId(), campoAspectosTrabalhadosAcupuntura.getCheckedRadioButtonId(),
+                campoIdade.getText().toString(), campoTipoAtendimento.getCheckedRadioButtonId(), campoAspectosTrabalhados.getCheckedRadioButtonId(), campoAspectosTrabalhadosAcupuntura.getCheckedRadioButtonId(),
                 campoAtividadesLudicasLeitura.getCheckedRadioButtonId(), campoAtividadesCoordenacaoSurtiramEfeito.getCheckedRadioButtonId(), campoAvaliacoesObtiveramResultadosPositivos.getCheckedRadioButtonId(),
                 campoPlanejamentoSeguePercursoEsperado.getCheckedRadioButtonId(), campoMateriaisSaoSuficientesParaAtividades.getCheckedRadioButtonId(), campoObservacao.getText().toString());
 
