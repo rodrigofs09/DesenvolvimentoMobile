@@ -49,16 +49,6 @@
                 android:layout_marginTop="8dp">
 
                 <RadioButton
-                    android:id="@+id/buscaNutricionista"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="15dp"
-                    android:text="@string/formularioNutricionista" />
-
-                <RadioButton
                     android:id="@+id/buscaEducadoraFisica"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -66,7 +56,30 @@
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="15dp"
                     android:layout_marginBottom="15dp"
-                    android:text="@string/formularioEducadoraFisica" />
+                    android:text="@string/formularioEducadoraFisica"
+                    android:textSize="18sp"/>
+
+                <RadioButton
+                    android:id="@+id/buscaNutricionista"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="@string/formularioNutricionista"
+                    android:textSize="18sp"/>
+
+                <RadioButton
+                    android:id="@+id/buscaPsicologa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="@string/formularioPsicologa"
+                    android:textSize="18sp"/>
 
                 <RadioButton
                     android:id="@+id/buscaPsicopedagoga"
@@ -76,19 +89,9 @@
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="15dp"
                     android:layout_marginBottom="15dp"
-                    android:text="@string/formularioPsicopedagoga" />
+                    android:text="@string/formularioPsicopedagoga"
+                    android:textSize="18sp"/>
 
-        <RadioButton
-            android:id="@+id/buscaPsicologa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp"
-            android:text="@string/formularioPsicologa" />
-
-    </RadioGroup>
             </RadioGroup>
 
             <Button

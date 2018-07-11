@@ -52,9 +52,11 @@
                         android:maxLines="1"
                         android:lines="1"
                         android:textColor="@color/black"
-                        android:textSize="18sp"
+                        android:textSize="19sp"
                         android:hint="@string/dataAtendimento"
-                        android:textColorHint="@color/black"/>
+                        android:textColorHint="@color/black"
+                        android:drawableRight="@drawable/calendar"
+                        android:drawableEnd="@drawable/calendar"/>
 
                     </android.support.design.widget.TextInputLayout>
 
@@ -99,47 +101,48 @@
                             android:maxLines="1"
                             android:lines="1"
                             android:textColor="@color/black"
-                            android:imeOptions="actionNext"
+                            android:imeOptions="actionDone"
                             android:hint="@string/psicoIdade"
                             android:textColorHint="@color/black"
-                            android:inputType="text"/>
+                            android:inputType="number"/>
 
                     </android.support.design.widget.TextInputLayout>
                         <TextView
                             android:id="@+id/tipoAtendimentoTxt"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="8dp"
                             android:text="@string/psico_tipo_do_atendimento"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@color/black"
                             android:textSize="18sp" />
 
                     <RadioGroup
                         android:id="@+id/tipoAtendimento"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="horizontal">
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="vertical">
 
                         <RadioButton
                             android:id="@+id/atendimentoIndividual"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/psico_individual" />
 
                         <RadioButton
                             android:id="@+id/atendimentoGrupal"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/psico_grupal" />
 
                         <RadioButton
                             android:id="@+id/atendimentoEmergencial"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/psico_emergencial" />
 
                     </RadioGroup>
@@ -148,29 +151,33 @@
                         android:id="@+id/tipoIndividual"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:text="@string/psico_tipo_de_atendimento_individual"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/black"
+                        />
 
                     <RadioGroup
                         android:id="@+id/individualTipo"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:orientation="vertical"
+                        android:layout_marginTop="8dp">
 
                         <RadioButton
                             android:id="@+id/tipoIndividualEmocional"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/psico_emocional" />
 
                         <RadioButton
                             android:id="@+id/tipoIndividualAcupuntura"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/psico_acupuntura" />
                     </RadioGroup>
 
@@ -178,36 +185,38 @@
                         android:id="@+id/individualEmocional"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:text="@string/psico_emocional_aspectos_trabalhados"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/black"/>
 
                     <RadioGroup
                         android:id="@+id/individualTipoEmocional"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp">
 
                         <RadioButton
                             android:id="@+id/aspecInternos"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/psico_conflitos_internos" />
 
                         <RadioButton
                             android:id="@+id/aspecFamiliaresCuidadores"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/psico_conflitos_familiares_cuidadores" />
 
                         <RadioButton
                             android:id="@+id/aspecAcorde"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/psico_conflitos_acorde" />
                     </RadioGroup>
 
@@ -215,50 +224,51 @@
                         android:id="@+id/individualAcupuntura"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
                         android:text="@string/psico_acupuntura_aspectos_trabalhados"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        android:textColor="@color/black"/>
 
                     <RadioGroup
                         android:id="@+id/individualTipoAcupuntura"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp">
 
                         <RadioButton
                             android:id="@+id/aspecAgitacao"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/psico_agitacao" />
 
                         <RadioButton
                             android:id="@+id/aspecAnsiedade"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/psico_ansiedade" />
 
                         <RadioButton
                             android:id="@+id/aspecAgressividade"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/psico_agressividade" />
 
                         <RadioButton
                             android:id="@+id/aspecCompulsao"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/psico_compulsao" />
 
                         <RadioButton
                             android:id="@+id/aspecCrisesEpileticas"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/psico_crises_epil_ticas" />
 
                     </RadioGroup>
@@ -267,50 +277,50 @@
                         android:id="@+id/grupalTemas"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
                         android:text="@string/psico_atendimento_grupal_tema_trabalhado"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        android:textColor="@color/black"/>
 
                     <RadioGroup
                         android:id="@+id/grupalTema"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp">
 
                         <RadioButton
                             android:id="@+id/temaEmocoes"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/psico_emocoes" />
 
                         <RadioButton
                             android:id="@+id/temaSentimentos"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/psico_ansiedade" />
 
                         <RadioButton
                             android:id="@+id/temaRelacionamentos"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/psico_relacionamento_com_familiares_cuidadores" />
 
                         <RadioButton
                             android:id="@+id/temaMotivacao"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/psico_motivacao" />
 
                         <RadioButton
                             android:id="@+id/temaAtualidades"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/psico_atualidades" />
 
                     </RadioGroup>
@@ -320,56 +330,55 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/psico_encaminhamento_na_acorde"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/black"/>
 
                     <RadioGroup
                         android:id="@+id/encaminhamentoAcorde"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
                         android:orientation="vertical">
 
                         <RadioButton
                             android:id="@+id/encaminhamentoFono"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/psico_fonoaudiologia" />
 
                         <RadioButton
                             android:id="@+id/encaminhamentoFisio"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/psico_fisioterapia" />
 
                         <RadioButton
                             android:id="@+id/encaminhamentoTO"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/psico_terapia_ocupacional" />
 
                         <RadioButton
                             android:id="@+id/encaminhamentoEduEsp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/psico_educa_o_especial" />
 
                         <RadioButton
                             android:id="@+id/encaminhamentoPedago"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/psico_pedagogia_psicopedagogia" />
 
                         <RadioButton
                             android:id="@+id/encaminhamentoAtFisica"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/psico_atividade_f_sica" />
                     </RadioGroup>
 
@@ -378,42 +387,43 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/psico_encaminhamento_externo"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/black"/>
 
                     <RadioGroup
                         android:id="@+id/encaminhamentoExterno"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
                         android:orientation="vertical">
 
                         <RadioButton
                             android:id="@+id/encaminhamentoPsiquiatra"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/psico_m_dico_psiquiatra" />
 
                         <RadioButton
                             android:id="@+id/encaminhamentoNeuro"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/psico_m_dico_neurologista" />
 
                         <RadioButton
                             android:id="@+id/encaminhamentoEndocrinologista"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/psico_m_dico_endocrinologista" />
 
                         <RadioButton
                             android:id="@+id/encaminhamentoDentista"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/psico_dentista" />
                     </RadioGroup>
 
@@ -421,29 +431,32 @@
                         android:id="@+id/atendimentoFamiliaCuidadores"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:text="@string/psico_atendimento_fam_lia_cuidadores"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/black"/>
 
                     <RadioGroup
                         android:id="@+id/atendimentoResp"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp">
 
                         <RadioButton
                             android:id="@+id/anamneses"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/psico_anamneses" />
 
                         <RadioButton
                             android:id="@+id/atFamiliaCuidadoresAcorde"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/psico_fam_lias_cuidadores_dos_assistidos_da_acorde" />
 
                     </RadioGroup>
@@ -452,29 +465,32 @@
                         android:id="@+id/visitaDomiciliarTxt"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
                         android:text="@string/psico_visitas_domiciliares"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        android:textColor="@color/black"/>
 
                     <RadioGroup
                         android:id="@+id/visitaDomiciliar"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp">
 
                         <RadioButton
                             android:id="@+id/exito"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/psico_xito" />
 
                         <RadioButton
                             android:id="@+id/ngmResidencia"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/psico_n_o_havia_ningu_m_na_resid_ncia" />
 
                     </RadioGroup>

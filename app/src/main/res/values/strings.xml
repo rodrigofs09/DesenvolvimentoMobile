@@ -132,4 +132,5 @@
     <string name="psico_visitas_domiciliares">Visitas Domiciliares :</string>
     <string name="psico_xito">Êxito</string>
     <string name="psico_n_o_havia_ningu_m_na_resid_ncia">Não havia ninguém na residência</string>
+    <string name="nomeProfissional">Nome Profissional</string>
 </resources>

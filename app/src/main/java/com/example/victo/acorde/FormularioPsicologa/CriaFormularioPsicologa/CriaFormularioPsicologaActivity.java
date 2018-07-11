@@ -73,7 +73,7 @@ public class CriaFormularioPsicologaActivity extends AppCompatActivity implement
 
         ButterKnife.bind(this);
 
-        //setSupportActionBar(toolbar);
+        setSupportActionBar(toolbar);
 
         if(getSupportActionBar()!=null){
             getSupportActionBar().setTitle(R.string.formularioPsicologa);

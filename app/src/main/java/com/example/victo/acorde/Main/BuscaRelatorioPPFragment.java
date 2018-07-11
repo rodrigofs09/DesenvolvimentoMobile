@@ -84,21 +84,20 @@ public class BuscaRelatorioPPFragment extends Fragment implements View.OnClickLi
         switch (view.getId()) {
             case R.id.buscar:
                 switch (funcionario.getCheckedRadioButtonId()) {
-                    case R.id.buscaNutricionista:
-                        vaiProFormulario = new Intent(getActivity(), ListaFormulariosNutricionistaActivity.class);
-                        startActivity(vaiProFormulario);
-                        break;
-
                     case R.id.buscaEducadoraFisica:
                         vaiProFormulario = new Intent(getActivity(), ListaFormulariosEducadoraFisicaActivity.class);
                         startActivity(vaiProFormulario);
                         break;
-                    case R.id.buscaPsicopedagoga:
-                        vaiProFormulario = new Intent(getActivity(), ListaFormulariosPsicopedagogaActivity.class);
+                    case R.id.buscaNutricionista:
+                        vaiProFormulario = new Intent(getActivity(), ListaFormulariosNutricionistaActivity.class);
                         startActivity(vaiProFormulario);
                         break;
                     case R.id.buscaPsicologa:
                         vaiProFormulario = new Intent(getActivity(), ListaFormulariosPsicologaActivity.class);
+                        startActivity(vaiProFormulario);
+                        break;
+                    case R.id.buscaPsicopedagoga:
+                        vaiProFormulario = new Intent(getActivity(), ListaFormulariosPsicopedagogaActivity.class);
                         startActivity(vaiProFormulario);
                         break;
                     default:

@@ -42,7 +42,7 @@ public class ListaFormulariosPsicologaActivity extends AppCompatActivity impleme
         ButterKnife.bind(this);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
+        setSupportActionBar(toolbar);
 
         if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle(R.string.formularioPsicologa);

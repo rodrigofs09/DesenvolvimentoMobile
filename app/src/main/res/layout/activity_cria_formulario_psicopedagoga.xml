@@ -161,12 +161,13 @@
                         android:layout_marginStart="12dp"
                         android:layout_marginTop="8dp"
                         android:text="@string/perguntaAtendimentoPsicologico"
-                        android:textColor="@color/black"/>
+                        android:textColor="@color/black"
+                        android:textSize="18sp"/>
 
                     <RadioGroup
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
+                        android:orientation="vertical"
                         android:id="@+id/RadioGroupTipoAtendimento"
                         android:layout_marginEnd="8dp"
                         android:layout_marginStart="8dp"
@@ -182,8 +183,6 @@
                             android:id="@+id/r1acupuntura"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="50dp"
-                            android:layout_marginStart="50dp"
                             android:text="@string/acupuntura" />
                     </RadioGroup>
 
@@ -195,7 +194,8 @@
                         android:layout_marginStart="12dp"
                         android:layout_marginTop="8dp"
                         android:text="@string/perguntaAspectosTrabalhados"
-                        android:textColor="@color/black"/>
+                        android:textColor="@color/black"
+                        android:textSize="18sp"/>
 
                     <RadioGroup
                         android:layout_width="match_parent"
@@ -233,7 +233,8 @@
                         android:layout_marginStart="12dp"
                         android:layout_marginTop="8dp"
                         android:text="@string/perguntaAspectosTrabalhadosAcupuntura"
-                        android:textColor="@color/black"/>
+                        android:textColor="@color/black"
+                        android:textSize="18sp"/>
 
                     <RadioGroup
                         android:layout_width="match_parent"
@@ -290,12 +291,13 @@
                         android:layout_marginStart="12dp"
                         android:layout_marginTop="8dp"
                         android:text="@string/perguntaAtividadesLudicasLeitura"
-                        android:textColor="@color/black"/>
+                        android:textColor="@color/black"
+                        android:textSize="18sp"/>
 
                     <RadioGroup
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
+                        android:orientation="vertical"
                         android:id="@+id/RadioGroupAtividadesLudicasLeitura"
                         android:layout_marginEnd="8dp"
                         android:layout_marginStart="8dp"
@@ -311,8 +313,6 @@
                             android:id="@+id/r4nao"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="50dp"
-                            android:layout_marginStart="50dp"
                             android:text="@string/nao" />
                     </RadioGroup>
 
@@ -324,12 +324,13 @@
                         android:layout_marginStart="12dp"
                         android:layout_marginTop="8dp"
                         android:text="@string/perguntaAtividadesCoordenacaoSurtiramEfeito"
-                        android:textColor="@color/black"/>
+                        android:textColor="@color/black"
+                        android:textSize="18sp"/>
 
                     <RadioGroup
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
+                        android:orientation="vertical"
                         android:id="@+id/RadioGroupAtividadesCoordenacaoSurtiramEfeito"
                         android:layout_marginEnd="8dp"
                         android:layout_marginStart="8dp"
@@ -345,8 +346,6 @@
                             android:id="@+id/r5nao"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="50dp"
-                            android:layout_marginStart="50dp"
                             android:text="@string/nao" />
                     </RadioGroup>
 
@@ -358,12 +357,13 @@
                         android:layout_marginStart="12dp"
                         android:layout_marginTop="8dp"
                         android:text="@string/perguntaAvaliacoesObtiveramResultadosPositivos"
-                        android:textColor="@color/black"/>
+                        android:textColor="@color/black"
+                        android:textSize="18sp"/>
 
                     <RadioGroup
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
+                        android:orientation="vertical"
                         android:id="@+id/RadioGroupAvaliacoesObtiveramResultadosPositivos"
                         android:layout_marginEnd="8dp"
                         android:layout_marginStart="8dp"
@@ -379,32 +379,24 @@
                             android:id="@+id/r62"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="25dp"
-                            android:layout_marginStart="25dp"
                             android:text="@string/dois" />
 
                         <RadioButton
                             android:id="@+id/r63"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="25dp"
-                            android:layout_marginStart="25dp"
                             android:text="@string/tres" />
 
                         <RadioButton
                             android:id="@+id/r64"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="25dp"
-                            android:layout_marginStart="25dp"
                             android:text="@string/quatro" />
 
                         <RadioButton
                             android:id="@+id/r65"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="25dp"
-                            android:layout_marginStart="25dp"
                             android:text="@string/cinco" />
                     </RadioGroup>
 
@@ -416,12 +408,13 @@
                         android:layout_marginStart="12dp"
                         android:layout_marginTop="8dp"
                         android:text="@string/perguntaPlanejamentoSeguePercursoEsperado"
-                        android:textColor="@color/black"/>
+                        android:textColor="@color/black"
+                        android:textSize="18sp"/>
 
                     <RadioGroup
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
+                        android:orientation="vertical"
                         android:id="@+id/RadioGroupPlanejamentoSeguePercursoEsperado"
                         android:layout_marginEnd="8dp"
                         android:layout_marginStart="8dp"
@@ -437,32 +430,24 @@
                             android:id="@+id/r72"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="25dp"
-                            android:layout_marginStart="25dp"
                             android:text="@string/dois" />
 
                         <RadioButton
                             android:id="@+id/r73"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="25dp"
-                            android:layout_marginStart="25dp"
                             android:text="@string/tres" />
 
                         <RadioButton
                             android:id="@+id/r74"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="25dp"
-                            android:layout_marginStart="25dp"
                             android:text="@string/quatro" />
 
                         <RadioButton
                             android:id="@+id/r75"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="25dp"
-                            android:layout_marginStart="25dp"
                             android:text="@string/cinco" />
                     </RadioGroup>
 
@@ -474,12 +459,13 @@
                         android:layout_marginStart="12dp"
                         android:layout_marginTop="8dp"
                         android:text="@string/perguntaMateriaisSaoSuficientesParaAtividades"
-                        android:textColor="@color/black"/>
+                        android:textColor="@color/black"
+                        android:textSize="18sp"/>
 
                     <RadioGroup
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
+                        android:orientation="vertical"
                         android:id="@+id/RadioGroupMateriaisSaoSuficientesParaAtividades"
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="8dp"
@@ -495,32 +481,24 @@
                             android:id="@+id/r82"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="25dp"
-                            android:layout_marginStart="25dp"
                             android:text="@string/dois" />
 
                         <RadioButton
                             android:id="@+id/r83"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="25dp"
-                            android:layout_marginStart="25dp"
                             android:text="@string/tres" />
 
                         <RadioButton
                             android:id="@+id/r84"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="25dp"
-                            android:layout_marginStart="25dp"
                             android:text="@string/quatro" />
 
                         <RadioButton
                             android:id="@+id/r85"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="25dp"
-                            android:layout_marginStart="25dp"
                             android:text="@string/cinco" />
                     </RadioGroup>
 

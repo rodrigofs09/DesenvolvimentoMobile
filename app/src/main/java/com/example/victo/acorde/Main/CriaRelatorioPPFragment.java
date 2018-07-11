@@ -87,20 +87,20 @@ public class CriaRelatorioPPFragment extends Fragment implements View.OnClickLis
         switch (view.getId()) {
             case R.id.cadastrar:
                 switch (funcionario.getCheckedRadioButtonId()) {
-                    case R.id.cadastraNutricionista:
-                        vaiProFormulario = new Intent(getActivity(), CriaFormularioNutricionistaActivity.class);
-                        startActivity(vaiProFormulario);
-                        break;
                     case R.id.cadastraEducadoraFisica:
                         vaiProFormulario = new Intent(getActivity(), CriaFormularioEducadoraFisicaActivity.class);
                         startActivity(vaiProFormulario);
                         break;
-                    case R.id.cadastraPsicopedagoga:
-                        vaiProFormulario = new Intent(getActivity(), CriaFormularioPsicopedagogaActivity.class);
+                    case R.id.cadastraNutricionista:
+                        vaiProFormulario = new Intent(getActivity(), CriaFormularioNutricionistaActivity.class);
                         startActivity(vaiProFormulario);
                         break;
                     case R.id.cadastraPsicologa:
                         vaiProFormulario = new Intent(getActivity(), CriaFormularioPsicologaActivity.class);
+                        startActivity(vaiProFormulario);
+                        break;
+                    case R.id.cadastraPsicopedagoga:
+                        vaiProFormulario = new Intent(getActivity(), CriaFormularioPsicopedagogaActivity.class);
                         startActivity(vaiProFormulario);
                         break;
                     default:
