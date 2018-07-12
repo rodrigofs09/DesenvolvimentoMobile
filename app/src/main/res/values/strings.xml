@@ -17,9 +17,9 @@
     <string name="mensagens">Mensagens</string>
     <string name="invalid_date">Data inválida</string>
     <string name="data">Data do atendimento</string>
-    <string name="proximoListarRelatorio">Selecione o profissional para visualizar seus relatórios existentes</string>
+    <string name="proximoListarRelatorio">Buscar Relatórios</string>
     <string name="proximoNovoRelatorio">Criar relatório</string>
-    <string name="infoNovoRelatorio">Selecione o profissional para criar um novo relatório</string>
+    <string name="infoNovoRelatorio">Novo Relatório</string>
     <string name="cadastrar">Criar relatório</string>
     <string name="buscar">Visualizar relatórios</string>
     <string name="dataAtendimento">Clique para alterar a Data do Atendimento</string>
